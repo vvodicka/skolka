@@ -9,5 +9,5 @@
  */
 angular.module('skolkaApp')
     .controller('MainCtrl', function ($scope) {
-
+       
     });

@@ -10,11 +10,12 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
-    <link rel="stylesheet" href="bower_components/angular-hamburger-toggle/dist/angular-hamburger-toggle.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons"-->
+    <!--rel="stylesheet">-->
     <!-- endbuild -->
 </head>
 <body ng-app="skolkaApp">
@@ -24,63 +25,59 @@
 <![endif]-->
 
 <!-- Add your site or application content here -->
-<div class="header" ng-controller="SidebarCtrl">
-    <md-toolbar>
-        <div class="md-toolbar-tools">
-            <hamburger-toggle state="isSidenavOpen" ng-show="!bigScreen">Menu</hamburger-toggle>
-            <h2>
-                <span>Toolbar with Standard Buttons</span>
-            </h2>
-        </div>
-    </md-toolbar>
+<div ng-controller="CommonCtrl">
+    <div class="header" ng-controller="SidebarCtrl">
+        <md-toolbar class="top-toolbar" layout-padding>
+            <div layout="row">
+                <div flex="15" ng-show="!bigScreen">
+                    <span class="glyphicon glyphicon-menu-hamburger burger-icon"
+                          ng-click="toggleSidebar('sidebar')"></span>
+                </div>
+                <div layout="column">
+                    <div layout="row">
+                        <div layout="column">
+                            <div class="main-header" translate="HEADER"></div>
+                            <div class="sub-header" translate="SUB_HEADER"></div>
+                        </div>
+                        <div style="text-align: left; height: 85px">
+                            <span class="helper"></span>
+                            <img class="logo-img" src="images/leaf.png" alt="Leaf"/>
+                        </div>
+                        <!--<div style="text-align: center; float: left" ng-show="!bigScreen">-->
+                        <!--<img class="logo-img-mobile" src="images/leaf.png" alt="Leaf"/>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+            </div>
+        </md-toolbar>
 
-    <md-content flex>
         <section layout="row" flex>
-            <md-sidenav class="md-sidenav-left"
-                        md-component-id="sidebar"
-                        md-is-locked-open="$mdMedia('gt-md')"
-                        md-is-open="isSidenavOpen"
-                        md-whiteframe="4">
-                <md-toolbar class="md-theme-light">
-                    <h1 class="md-toolbar-tools">
-                        Sidenav Left
-                    </h1>
+            <md-sidenav
+                    md-component-id="sidebar"
+                    md-is-open="isSidenavOpen"
+                    ng-show="!bigScreen">
+                <md-toolbar class="mobile-menu-header">
+                    <h2 layout-padding translate="NAV_HEADER"></h2>
                 </md-toolbar>
-                <md-content layout-padding>
-                    <form>
-                        <md-input-container>
-                            <label for="testInput">Test input</label>
-                            <input type="text" id="testInput"
-                                   ng-model="data" md-autofocus>
-                        </md-input-container>
-                    </form>
+                <md-content>
+                    <ul class="mobile-menu-list">
+                        <li>Lorem</li>
+                        <li>Ipsum</li>
+                        <li>Dolor</li>
+                    </ul>
                 </md-content>
             </md-sidenav>
 
-            <div layout="column" layout-fill layout-align="top center" layout-padding ng-view=""></div>
+            <div layout-fill layout-padding layout-align="top center" class="main-container" ng-view=""></div>
         </section>
-    </md-content>
-</div>
+    </div>
 
-<div class="footer">
-    <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+    <div class="footer">
+        <div class="container" style="text-align: center">
+            <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+        </div>
     </div>
 </div>
-
-
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-<script>
-    !function (A, n, g, u, l, a, r) {
-        A.GoogleAnalyticsObject = l, A[l] = A[l] || function () {
-                    (A[l].q = A[l].q || []).push(arguments)
-                }, A[l].l = +new Date, a = n.createElement(g),
-                r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
-    }(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-    ga('create', 'UA-XXXXX-X');
-    ga('send', 'pageview');
-</script>
 
 <!-- build:js(.) scripts/vendor.js -->
 <!-- bower:js -->
@@ -96,7 +93,7 @@
 <script src="bower_components/angular-touch/angular-touch.js"></script>
 <script src="bower_components/angular-aria/angular-aria.js"></script>
 <script src="bower_components/angular-material/angular-material.js"></script>
-<script src="bower_components/angular-hamburger-toggle/dist/angular-hamburger-toggle.js"></script>
+<script src="bower_components/angular-translate/angular-translate.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
@@ -105,6 +102,7 @@
 <script src="scripts/controllers/main.js"></script>
 <script src="scripts/controllers/about.js"></script>
 <script src="scripts/controllers/sidebar.js"></script>
+<script src="scripts/controllers/common.js"></script>
 <!-- endbuild -->
 </body>
 </html>

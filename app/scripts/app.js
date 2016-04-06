@@ -17,9 +17,9 @@ angular
         'ngRoute',
         'ngSanitize',
         'ngMaterial',
-        'ngHamburger'
+        'pascalprecht.translate'
     ])
-    .config(function ($routeProvider) {
+    .config(function ($routeProvider, $translateProvider) {
         $routeProvider
             .when('/', {
                 templateUrl: 'views/main.html',
@@ -32,4 +32,20 @@ angular
             .otherwise({
                 redirectTo: '/'
             });
+        // add translation table
+        $translateProvider
+            .useSanitizeValueStrategy('sanitize')
+            .translations('en', translationsEn)
+            .translations('sk', translationsSk)
+            .preferredLanguage('sk');
     });
+
+var translationsSk = {
+    HEADER: 'Štvorlístok',
+    SUB_HEADER: 'Detské centrum',
+    NAV_HEADER: 'Navigácia'
+};
+
+var translationsEn = {
+    header: 'Child centre 4 leaf'
+};
