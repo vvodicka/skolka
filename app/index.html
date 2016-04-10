@@ -26,26 +26,46 @@
 
 <!-- Add your site or application content here -->
 <div ng-controller="CommonCtrl">
+    <md-content>
     <div class="header" ng-controller="SidebarCtrl">
-        <md-toolbar class="top-toolbar" layout-padding>
+        <md-toolbar class="top-toolbar" layout-padding ng-class="{'main-content-padding' : bigScreen}">
             <div layout="row">
                 <div flex="15" ng-show="!bigScreen">
                     <span class="glyphicon glyphicon-menu-hamburger burger-icon"
                           ng-click="toggleSidebar('sidebar')"></span>
                 </div>
-                <div layout="column">
+                <div layout="column" flex>
                     <div layout="row">
                         <div layout="column">
-                            <div class="main-header" translate="HEADER"></div>
-                            <div class="sub-header" translate="SUB_HEADER"></div>
+                            <a class="header-link" href="#/">
+                                <div class="main-header" translate="HEADER"></div>
+                                <div class="sub-header" translate="SUB_HEADER"></div>
+                            </a>
                         </div>
                         <div style="text-align: left; height: 85px">
-                            <span class="helper"></span>
                             <img class="logo-img" src="images/leaf.png" alt="Leaf"/>
                         </div>
-                        <!--<div style="text-align: center; float: left" ng-show="!bigScreen">-->
-                        <!--<img class="logo-img-mobile" src="images/leaf.png" alt="Leaf"/>-->
-                        <!--</div>-->
+                        <div class="big-screen-menu" style="height: 85px; width: 100%"
+                             ng-show="bigScreen">
+                            <md-button class="md-raised big-menu-item" href="#/" aria-label="{{'ABOUT_US' | translate}}">
+                                <span translate="ABOUT_US"></span>
+                            </md-button>
+                            <md-button class="md-raised big-menu-item" href="#/healthy-kindergarten" aria-label="{{'HEALTHY_KINDEGARTEN' | translate}}">
+                                <span translate="HEALTHY_KINDEGARTEN"></span>
+                            </md-button>
+                            <md-button class="md-raised big-menu-item" href="#/daily-schedule" aria-label="{{'DAILY_SCHEDULE' | translate}}">
+                                <span translate="DAILY_SCHEDULE"></span>
+                            </md-button>
+                            <md-button class="md-raised big-menu-item" href="#/gallery" aria-label="{{'GALLERY' | translate}}">
+                                <span translate="GALLERY"></span>
+                            </md-button>
+                            <md-button class="md-raised big-menu-item" href="#/pricelist" aria-label="{{'PRICELIST' | translate}}">
+                                <span translate="PRICELIST"></span>
+                            </md-button>
+                            <md-button class="md-raised big-menu-item" href="#/contact" aria-label="{{'CONTACT' | translate}}">
+                                <span translate="CONTACT"></span>
+                            </md-button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -57,13 +77,16 @@
                     md-is-open="isSidenavOpen"
                     ng-show="!bigScreen">
                 <md-toolbar class="mobile-menu-header">
-                    <h2 layout-padding translate="NAV_HEADER"></h2>
+                    <h2 layout-padding translate="NAV_HEADER" ng-click="toggleSidebar('sidebar')"></h2>
                 </md-toolbar>
                 <md-content>
                     <ul class="mobile-menu-list">
-                        <li>Lorem</li>
-                        <li>Ipsum</li>
-                        <li>Dolor</li>
+                        <li><a href="#/" translate="ABOUT_US"></a></li>
+                        <li><a href="#/healthy-kindergarten" translate="HEALTHY_KINDEGARTEN"></a></li>
+                        <li><a href="#/daily-schedule" translate="DAILY_SCHEDULE"></a></li>
+                        <li><a href="#/gallery" translate="GALLERY"></a></li>
+                        <li><a href="#/pricelist" translate="PRICELIST"></a></li>
+                        <li><a href="#/contact" translate="CONTACT"></a></li>
                     </ul>
                 </md-content>
             </md-sidenav>
@@ -74,9 +97,10 @@
 
     <div class="footer">
         <div class="container" style="text-align: center">
-            <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+            <p translate="FOOTER"></p>
         </div>
     </div>
+        </md-content>
 </div>
 
 <!-- build:js(.) scripts/vendor.js -->
@@ -103,6 +127,11 @@
 <script src="scripts/controllers/about.js"></script>
 <script src="scripts/controllers/sidebar.js"></script>
 <script src="scripts/controllers/common.js"></script>
+<script src="scripts/controllers/healthy-kindergarten.js"></script>
+<script src="scripts/controllers/daily-schedule.js"></script>
+<script src="scripts/controllers/gallery.js"></script>
+<script src="scripts/controllers/pricelist.js"></script>
+<script src="scripts/controllers/contact.js"></script>
 <!-- endbuild -->
 </body>
 </html>

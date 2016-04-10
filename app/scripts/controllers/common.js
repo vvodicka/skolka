@@ -10,7 +10,7 @@
 angular.module('skolkaApp')
     .controller('CommonCtrl', function ($scope, $mdMedia) {
         $scope.$watch(function () {
-            return $mdMedia('gt-xs');
+            return $mdMedia('gt-sm');
         }, function (big) {
             $scope.bigScreen = big;
         });
