@@ -71,6 +71,7 @@ var translationsSk = {
     GALLERY: 'Fotogaléria',
     PRICELIST: 'Cenník',
     CONTACT: 'Kontakt',
+    I_WANT_TO_APPLY_MY_CHILD: 'Chcem prihlásiť svoje dieťa',
     WHY_CHOOSE_FOURLEAF_HEADER: 'Prečo si vybrať štvorlístok',
     WHY_CHOOSE_FOURLEAF_TEXT: 'Naša materská škola a rozprávkové jasličky vznikli z dôvodu potreby zosúladenia rodinného a pracovného života zamestnaných rodičov',
     FOOTER: '&copy; Detské centrum štvorlístok'

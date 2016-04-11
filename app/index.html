@@ -8,8 +8,8 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+    <link rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap.css' />
+    <link rel='stylesheet' href='bower_components/angular-material/angular-material.css' />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -17,6 +17,8 @@
     <!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons"-->
     <!--rel="stylesheet">-->
     <!-- endbuild -->
+    <link href='https://fonts.googleapis.com/css?family=Yellowtail' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Englebert' rel='stylesheet' type='text/css'>
 </head>
 <body ng-app="skolkaApp">
 <!--[if lt IE 7]>
@@ -27,80 +29,116 @@
 <!-- Add your site or application content here -->
 <div ng-controller="CommonCtrl">
     <md-content>
-    <div class="header" ng-controller="SidebarCtrl">
-        <md-toolbar class="top-toolbar" layout-padding ng-class="{'main-content-padding' : bigScreen}">
-            <div layout="row">
-                <div flex="15" ng-show="!bigScreen">
+        <div class="header" ng-controller="SidebarCtrl">
+            <md-toolbar class="top-toolbar" layout-padding ng-class="{'main-content-padding' : bigScreen}">
+                <div layout="row">
+                    <div flex="15" ng-show="!bigScreen">
                     <span class="glyphicon glyphicon-menu-hamburger burger-icon"
                           ng-click="toggleSidebar('sidebar')"></span>
-                </div>
-                <div layout="column" flex>
-                    <div layout="row">
-                        <div layout="column">
-                            <a class="header-link" href="#/">
-                                <div class="main-header" translate="HEADER"></div>
-                                <div class="sub-header" translate="SUB_HEADER"></div>
-                            </a>
-                        </div>
-                        <div style="text-align: left; height: 85px">
-                            <img class="logo-img" src="images/leaf.png" alt="Leaf"/>
-                        </div>
-                        <div class="big-screen-menu" style="height: 85px; width: 100%"
-                             ng-show="bigScreen">
-                            <md-button class="md-raised big-menu-item" href="#/" aria-label="{{'ABOUT_US' | translate}}">
-                                <span translate="ABOUT_US"></span>
-                            </md-button>
-                            <md-button class="md-raised big-menu-item" href="#/healthy-kindergarten" aria-label="{{'HEALTHY_KINDEGARTEN' | translate}}">
-                                <span translate="HEALTHY_KINDEGARTEN"></span>
-                            </md-button>
-                            <md-button class="md-raised big-menu-item" href="#/daily-schedule" aria-label="{{'DAILY_SCHEDULE' | translate}}">
-                                <span translate="DAILY_SCHEDULE"></span>
-                            </md-button>
-                            <md-button class="md-raised big-menu-item" href="#/gallery" aria-label="{{'GALLERY' | translate}}">
-                                <span translate="GALLERY"></span>
-                            </md-button>
-                            <md-button class="md-raised big-menu-item" href="#/pricelist" aria-label="{{'PRICELIST' | translate}}">
-                                <span translate="PRICELIST"></span>
-                            </md-button>
-                            <md-button class="md-raised big-menu-item" href="#/contact" aria-label="{{'CONTACT' | translate}}">
-                                <span translate="CONTACT"></span>
-                            </md-button>
+                    </div>
+                    <div layout="column" flex>
+                        <div layout="row">
+                            <div layout="column">
+                                <a class="header-link" href="#/">
+                                    <div class="main-header" translate="HEADER"></div>
+                                    <div class="sub-header" translate="SUB_HEADER"></div>
+                                </a>
+                            </div>
+                            <div style="text-align: right; height: 85px">
+                                <img class="logo-img" src="images/leaf.png" alt="Leaf"/>
+                            </div>
+                            <div class="big-screen-menu" style="height: 85px; width: 100%"
+                                 ng-show="bigScreen">
+                                <md-button class="md-raised big-menu-item" href="#/"
+                                           aria-label="{{'ABOUT_US' | translate}}">
+                                    <span translate="ABOUT_US"></span>
+                                </md-button>
+                                <md-button class="md-raised big-menu-item" href="#/healthy-kindergarten"
+                                           aria-label="{{'HEALTHY_KINDEGARTEN' | translate}}">
+                                    <span translate="HEALTHY_KINDEGARTEN"></span>
+                                </md-button>
+                                <md-button class="md-raised big-menu-item" href="#/daily-schedule"
+                                           aria-label="{{'DAILY_SCHEDULE' | translate}}">
+                                    <span translate="DAILY_SCHEDULE"></span>
+                                </md-button>
+                                <md-button class="md-raised big-menu-item" href="#/gallery"
+                                           aria-label="{{'GALLERY' | translate}}">
+                                    <span translate="GALLERY"></span>
+                                </md-button>
+                                <md-button class="md-raised big-menu-item" href="#/pricelist"
+                                           aria-label="{{'PRICELIST' | translate}}">
+                                    <span translate="PRICELIST"></span>
+                                </md-button>
+                                <md-button class="md-raised big-menu-item" href="#/contact"
+                                           aria-label="{{'CONTACT' | translate}}">
+                                    <span translate="CONTACT"></span>
+                                </md-button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </md-toolbar>
+            </md-toolbar>
 
-        <section layout="row" flex>
-            <md-sidenav
-                    md-component-id="sidebar"
-                    md-is-open="isSidenavOpen"
-                    ng-show="!bigScreen">
-                <md-toolbar class="mobile-menu-header">
-                    <h2 layout-padding translate="NAV_HEADER" ng-click="toggleSidebar('sidebar')"></h2>
-                </md-toolbar>
-                <md-content>
-                    <ul class="mobile-menu-list">
-                        <li><a href="#/" translate="ABOUT_US"></a></li>
-                        <li><a href="#/healthy-kindergarten" translate="HEALTHY_KINDEGARTEN"></a></li>
-                        <li><a href="#/daily-schedule" translate="DAILY_SCHEDULE"></a></li>
-                        <li><a href="#/gallery" translate="GALLERY"></a></li>
-                        <li><a href="#/pricelist" translate="PRICELIST"></a></li>
-                        <li><a href="#/contact" translate="CONTACT"></a></li>
-                    </ul>
-                </md-content>
-            </md-sidenav>
+            <section layout="row" flex>
+                <md-sidenav
+                        md-component-id="sidebar"
+                        md-is-open="isSidenavOpen"
+                        ng-show="!bigScreen">
+                    <md-toolbar class="mobile-menu-header">
+                        <h2 layout-padding translate="NAV_HEADER" ng-click="toggleSidebar('sidebar')"></h2>
+                    </md-toolbar>
+                    <md-content>
+                        <ul class="mobile-menu-list">
+                            <li>
+                                <md-button class="md-raised big-menu-item" href="#/"
+                                           aria-label="{{'ABOUT_US' | translate}}">
+                                    <span translate="ABOUT_US"></span>
+                                </md-button>
+                            </li>
+                            <li>
+                                <md-button class="md-raised big-menu-item" href="#/healthy-kindergarten"
+                                           aria-label="{{'HEALTHY_KINDEGARTEN' | translate}}">
+                                    <span translate="HEALTHY_KINDEGARTEN"></span>
+                                </md-button>
+                            </li>
+                            <li>
+                                <md-button class="md-raised big-menu-item" href="#/daily-schedule"
+                                           aria-label="{{'DAILY_SCHEDULE' | translate}}">
+                                    <span translate="DAILY_SCHEDULE"></span>
+                                </md-button>
+                            </li>
+                            <li>
+                                <md-button class="md-raised big-menu-item" href="#/gallery"
+                                           aria-label="{{'GALLERY' | translate}}">
+                                    <span translate="GALLERY"></span>
+                                </md-button>
+                            </li>
+                            <li>
+                                <md-button class="md-raised big-menu-item" href="#/pricelist"
+                                           aria-label="{{'PRICELIST' | translate}}">
+                                    <span translate="PRICELIST"></span>
+                                </md-button>
+                            </li>
+                            <li>
+                                <md-button class="md-raised big-menu-item" href="#/contact"
+                                           aria-label="{{'CONTACT' | translate}}">
+                                    <span translate="CONTACT"></span>
+                                </md-button>
+                            </li>
+                        </ul>
+                    </md-content>
+                </md-sidenav>
 
-            <div layout-fill layout-padding layout-align="top center" class="main-container" ng-view=""></div>
-        </section>
-    </div>
-
-    <div class="footer">
-        <div class="container" style="text-align: center">
-            <p translate="FOOTER"></p>
+                <div layout-fill layout-padding layout-align="top center" class="main-container" ng-view=""></div>
+            </section>
         </div>
-    </div>
-        </md-content>
+
+        <div class="footer">
+            <div class="container" style="text-align: center">
+                <p translate="FOOTER"></p>
+            </div>
+        </div>
+    </md-content>
 </div>
 
 <!-- build:js(.) scripts/vendor.js -->

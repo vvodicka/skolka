@@ -1,3 +1,7 @@
+* {
+    font-family: 'Englebert', sans-serif;
+}
+
 .burger-icon {
     color: #90b702;
     font-size: 1.5em !important;
@@ -19,7 +23,10 @@
 
 .big-menu-item {
     color: #5c7b00 !important;
-    font-size: 0.5em;
+    font-size: 1em;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
 a.header-link:hover, a.header-link:active, a.header-link:visited, a.header-link:link {
@@ -36,15 +43,17 @@ md-toolbar.mobile-menu-header {
 }
 
 .mobile-menu-header {
+    text-align: center;
 }
 
 .big-screen-menu {
     color: black;
-    text-align: right ;
+    text-align: right;
 }
 
 .mobile-menu-list {
-    padding-left: 2vw;
+    padding-left: 0;
+    text-align: center;
 }
 
 .helper {
@@ -54,7 +63,7 @@ md-toolbar.mobile-menu-header {
 }
 
 .main-container {
-
+    min-height: 100vh;
 }
 
 md-toolbar.top-toolbar {
@@ -65,12 +74,12 @@ md-toolbar.top-toolbar {
 .main-header {
     font-size: 2em;
     color: #90b702;
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Yellowtail', cursive;
 }
 
 .sub-header {
     color: #e51189;
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Yellowtail', cursive;
     text-align: right;
     margin-top: -20px !important;
 }
@@ -95,6 +104,38 @@ md-toolbar.top-toolbar {
     font-weight: bold;
     font-size: 1.5em;
     margin-bottom: 1vw;
+}
+
+.stretchy-container {
+    background-image: url("../images/applyButton.jpg");
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    padding-bottom: 23%;
+    position: relative;
+}
+
+.stretchy-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.apply-button {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.4em;
 }
 
 .footer {

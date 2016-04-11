@@ -1,6 +1,6 @@
 <img src="./images/kidsMobile.png" style="width: 100%" ng-show="!bigScreen" alt="Kids Mobile"/>
 <div ng-show="bigScreen" class="big-screen-image-container">
-    <img src="./images/kidsDesktop.png" style="width: 100%" alt="Kids desktop"/>
+    <img src="./images/kidsDesktop.jpg" style="width: 100%" alt="Kids desktop"/>
     <div ng-class="{'main-content-padding' : bigScreen}" class="big-screen-motto" translate="MOTTO"></div>
 </div>
 <md-content ng-class="{'main-content-padding' : bigScreen}">
@@ -28,26 +28,32 @@
             ridens regione no, ad mei ipsum legimus blandit. Vix iudico elaboraret id, quando ceteros ea sea. Ei quo
             ancillae interesset, per ad noster diceret. Et mea alia cibo placerat, consul euripidis complectitur id usu.
         </div>
-        <div flex="30" flex-sm="100" flex-xs="100" flex-md="40">
-            <a href="#/contact">
-                <img class="apply-button-img" src="./images/applyButton.png"/>
-            </a>
+        <div flex="30" flex-sm="100" flex-xs="100" flex-md="40" layout-align="center top" layout>
+            <div style="width: 100%">
+                <div class="stretchy-container">
+                    <a href="#/contact">
+                        <div class="stretchy-content">
+                            <button class="apply-button"><span translate="I_WANT_TO_APPLY_MY_CHILD"></span></button>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
     <md-content ng-show="bigScreen" style="margin-top: 2vw">
         <div layout layout-align="center center" style="text-align: center">
             <div flex>
-                <img src="./images/baloons.png"/>
+                <img src="./images/baloons.jpg"/>
                 <div flex class="highlight-info-header" translate="WHY_CHOOSE_FOURLEAF_HEADER"></div>
                 <div flex class="highlight-info-text" translate="WHY_CHOOSE_FOURLEAF_TEXT"></div>
             </div>
             <div flex>
-                <img src="./images/clownHat.png"/>
+                <img src="./images/clownHat.jpg"/>
                 <div flex class="highlight-info-header" translate="WHY_CHOOSE_FOURLEAF_HEADER"></div>
                 <div flex class="highlight-info-text" translate="WHY_CHOOSE_FOURLEAF_TEXT"></div>
             </div>
             <div flex>
-                <img src="./images/fireworks.png"/>
+                <img src="./images/fireworks.jpg"/>
                 <div flex class="highlight-info-header" translate="WHY_CHOOSE_FOURLEAF_HEADER"></div>
                 <div flex class="highlight-info-text" translate="WHY_CHOOSE_FOURLEAF_TEXT"></div>
             </div>
