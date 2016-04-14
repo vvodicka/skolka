@@ -135,7 +135,11 @@ md-toolbar.top-toolbar {
     background: none;
     border: none;
     color: white;
-    font-size: 1.4em;
+    font-size: 1.4vw;
+}
+
+.apply-button-mobile {
+    font-size: 5.4vw;
 }
 
 .footer {
