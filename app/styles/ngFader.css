@@ -1,0 +1,43 @@
+/* =============================================
+    ngFader
+    Created by: Jason Voirin
+    http://www.jasonvoirin.com/ngfader
+================================================*/
+.ng-fader {
+    background-color: #000;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    z-index: 22
+}
+.ng-fader ul {
+    height: 100%;
+    margin: 0;
+    padding: 0
+}
+.ng-fader li {
+    height: 100%;
+    margin: 0;
+    position: relative;
+    list-style: none;
+    width: 100%
+}
+.ng-fader li img {
+    border: medium none;
+    margin: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    -webkit-transition: opacity 1s ease 0s;
+    -moz-transition: opacity 1s ease 0s;
+    -o-transition: opacity 1s ease 0s;
+    transition: opacity 1s ease 0s;
+}
+.ng-fader li img.show {
+    opacity: 1;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+

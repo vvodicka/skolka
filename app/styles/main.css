@@ -86,7 +86,7 @@ md-toolbar.top-toolbar {
 
 .big-screen-image-container {
     width: 100%;
-    margin-bottom: -45px;
+    margin-bottom: -9vw;
     padding: 0;
 }
 
@@ -98,6 +98,23 @@ md-toolbar.top-toolbar {
     height: 45px;
     color: white;
     font-size: 1.5vw;
+}
+
+.mobile-screen-motto {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 1vh;
+}
+
+.big-screen-header-images {
+    position: relative;
+    bottom: 15vw;
+    text-align: right;
+}
+.demo-image {
+    width: 10vw;
+    border: 0.2vw solid white;
+    margin-left: 1vw;
 }
 
 .highlight-info-header {
@@ -140,6 +157,15 @@ md-toolbar.top-toolbar {
 
 .apply-button-mobile {
     font-size: 5.4vw;
+}
+
+.apply-button-mobile-container {
+    margin-top: 1vh;
+}
+
+.highlight {
+    padding-left: 2vw;
+    padding-right: 2vw;
 }
 
 .footer {

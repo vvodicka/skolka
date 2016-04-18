@@ -1,10 +1,17 @@
-<img src="./images/kidsMobile.png" style="width: 100%" ng-show="!bigScreen" alt="Kids Mobile"/>
+<img src="./images/kidsMobile.png" style="width: 100%; padding: 0" ng-show="!bigScreen" alt="Kids Mobile"/>
 <div ng-show="bigScreen" class="big-screen-image-container">
     <img src="./images/kidsDesktop.jpg" style="width: 100%" alt="Kids desktop"/>
     <div ng-class="{'main-content-padding' : bigScreen}" class="big-screen-motto" translate="MOTTO"></div>
+    <div ng-class="{'main-content-padding' : bigScreen}" class="big-screen-header-images">
+        <img class="demo-image" src="./images/photos/36.jpg" alt="Demo image" />
+        <img class="demo-image" src="./images/photos/38.jpg" alt="Demo image" />
+        <img class="demo-image" src="./images/photos/39.jpg" alt="Demo image" />
+    </div>
 </div>
 <md-content ng-class="{'main-content-padding' : bigScreen}">
     <div flex layout layout-sm="column" layout-xs="column">
+        <div ng-if="!bigScreen" class="mobile-screen-motto" translate="MOTTO"></div>
+        <ng-fader ng-if="!bigScreen" style="width: 90%; margin-left: auto; margin-right: auto; margin-bottom: 2vh;"></ng-fader>
         <div flex>Lorem ipsum dolor sit amet, et eum zril evertitur philosophia. Ei qui duis insolens adolescens, ad
             legere voluptaria consequuntur qui, est assum definiebas et. Per eu dicta luptatum sadipscing. No sit
             oportere
@@ -29,7 +36,7 @@
             ancillae interesset, per ad noster diceret. Et mea alia cibo placerat, consul euripidis complectitur id usu.
         </div>
         <div flex="30" flex-sm="100" flex-xs="100" flex-md="40" layout-align="center top" layout>
-            <div style="width: 100%">
+            <div style="width: 100%" ng-class="{'apply-button-mobile-container' : !bigScreen}">
                 <div class="stretchy-container">
                     <a href="#/contact">
                         <div class="stretchy-content">
@@ -42,17 +49,17 @@
     </div>
     <md-content ng-show="bigScreen" style="margin-top: 2vw">
         <div layout layout-align="center center" style="text-align: center">
-            <div flex>
+            <div class="highlight">
                 <img src="./images/baloons.jpg"/>
                 <div flex class="highlight-info-header" translate="WHY_CHOOSE_FOURLEAF_HEADER"></div>
                 <div flex class="highlight-info-text" translate="WHY_CHOOSE_FOURLEAF_TEXT"></div>
             </div>
-            <div flex>
+            <div class="highlight">
                 <img src="./images/clownHat.jpg"/>
                 <div flex class="highlight-info-header" translate="WHY_CHOOSE_FOURLEAF_HEADER"></div>
                 <div flex class="highlight-info-text" translate="WHY_CHOOSE_FOURLEAF_TEXT"></div>
             </div>
-            <div flex>
+            <div class="highlight">
                 <img src="./images/fireworks.jpg"/>
                 <div flex class="highlight-info-header" translate="WHY_CHOOSE_FOURLEAF_HEADER"></div>
                 <div flex class="highlight-info-text" translate="WHY_CHOOSE_FOURLEAF_TEXT"></div>
