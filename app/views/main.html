@@ -3,15 +3,19 @@
     <img src="./images/kidsDesktop.jpg" style="width: 100%" alt="Kids desktop"/>
     <div ng-class="{'main-content-padding' : bigScreen}" class="big-screen-motto" translate="MOTTO"></div>
     <div ng-class="{'main-content-padding' : bigScreen}" class="big-screen-header-images">
-        <img class="demo-image" src="./images/photos/36.jpg" alt="Demo image" />
-        <img class="demo-image" src="./images/photos/38.jpg" alt="Demo image" />
-        <img class="demo-image" src="./images/photos/39.jpg" alt="Demo image" />
+        <img class="demo-image" src="./images/photos/36.jpg" alt="Demo image"/>
+        <img class="demo-image" src="./images/photos/38.jpg" alt="Demo image"/>
+        <img class="demo-image" src="./images/photos/39.jpg" alt="Demo image"/>
     </div>
 </div>
 <md-content ng-class="{'main-content-padding' : bigScreen}">
     <div flex layout layout-sm="column" layout-xs="column">
         <div ng-if="!bigScreen" class="mobile-screen-motto" translate="MOTTO"></div>
-        <ng-fader ng-if="!bigScreen" style="width: 90%; margin-left: auto; margin-right: auto; margin-bottom: 2vh;"></ng-fader>
+        <ng-fader ng-if="!bigScreen" style="width: 90%; margin-left: auto; margin-right: auto; margin-bottom: 2vh;"
+                  imgs="[
+        {alt : 'img1', src : './images/photos/36.jpg'},
+        {alt : 'img2', src : './images/photos/38.jpg'},
+        {alt : 'img3', src : './images/photos/39.jpg'}]"></ng-fader>
         <div flex>Lorem ipsum dolor sit amet, et eum zril evertitur philosophia. Ei qui duis insolens adolescens, ad
             legere voluptaria consequuntur qui, est assum definiebas et. Per eu dicta luptatum sadipscing. No sit
             oportere
@@ -33,14 +37,33 @@
 
             Ne affert everti adolescens qui. Iudicabit erroribus liberavisse an nam. Ei mei utamur delectus, nam velit
             ridens regione no, ad mei ipsum legimus blandit. Vix iudico elaboraret id, quando ceteros ea sea. Ei quo
-            ancillae interesset, per ad noster diceret. Et mea alia cibo placerat, consul euripidis complectitur id usu.kj
+            ancillae interesset, per ad noster diceret. Et mea alia cibo placerat, consul euripidis complectitur id
+            usu.kj
+        </div>
+        <div ng-show="!bigScreen" style="text-align: center; overflow: hidden; position: relative">
+            <div class="highlight-mobile swap-animation" ng-animate-swap="mobileHighlight === 0">
+                <img src="./images/baloons.jpg"/>
+                <div flex class="highlight-info-header" translate="WHY_CHOOSE_FOURLEAF_HEADER"></div>
+                <div flex class="highlight-info-text" translate="WHY_CHOOSE_FOURLEAF_TEXT"></div>
+            </div>
+            <div class="highlight-mobile swap-animation" ng-animate-swap="mobileHighlight === 1">
+                <img src="./images/clownHat.jpg"/>
+                <div flex class="highlight-info-header" translate="WHY_CHOOSE_FOURLEAF_HEADER"></div>
+                <div flex class="highlight-info-text" translate="WHY_CHOOSE_FOURLEAF_TEXT"></div>
+            </div>
+            <div class="highlight-mobile swap-animation" ng-animate-swap="mobileHighlight === 2">
+                <img src="./images/fireworks.jpg"/>
+                <div flex class="highlight-info-header" translate="WHY_CHOOSE_FOURLEAF_HEADER"></div>
+                <div flex class="highlight-info-text" translate="WHY_CHOOSE_FOURLEAF_TEXT"></div>
+            </div>
         </div>
         <div flex="30" flex-sm="100" flex-xs="100" flex-md="40" layout-align="center top" layout>
             <div style="width: 100%" ng-class="{'apply-button-mobile-container' : !bigScreen}">
                 <div class="stretchy-container">
                     <a href="#/contact">
                         <div class="stretchy-content">
-                            <button class="apply-button" ng-class="{'apply-button-mobile' : !bigScreen}"><span translate="I_WANT_TO_APPLY_MY_CHILD"></span></button>
+                            <button class="apply-button" ng-class="{'apply-button-mobile' : !bigScreen}"><span
+                                    translate="I_WANT_TO_APPLY_MY_CHILD"></span></button>
                         </div>
                     </a>
                 </div>

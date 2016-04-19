@@ -111,6 +111,7 @@ md-toolbar.top-toolbar {
     bottom: 15vw;
     text-align: right;
 }
+
 .demo-image {
     width: 10vw;
     border: 0.2vw solid white;
@@ -170,4 +171,24 @@ md-toolbar.top-toolbar {
 
 .footer {
     margin-top: 2vw;
+}
+
+.highlight-mobile {
+
+}
+
+.swap-animation.ng-enter, .swap-animation.ng-leave {
+    transition:0.5s linear all;
+}
+.swap-animation.ng-enter {
+    opacity:1;
+}
+.swap-animation.ng-enter-active {
+    opacity:0;
+}
+.swap-animation.ng-leave {
+    opacity:1;
+}
+.swap-animation.ng-leave-active {
+    opacity:0;
 }

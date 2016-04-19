@@ -33,8 +33,6 @@ module.exports = function(config) {
       'bower_components/angular-aria/angular-aria.js',
       'bower_components/angular-material/angular-material.js',
       'bower_components/angular-translate/angular-translate.js',
-      'bower_components/angular-simple-slideshow/angular-simple-slideshow.js',
-      'bower_components/ngtouch/src/ngTouch.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',

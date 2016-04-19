@@ -18,8 +18,7 @@ angular
         'ngSanitize',
         'ngMaterial',
         'pascalprecht.translate',
-        'ngFader',
-        'ngTouch'
+        'ngFader'
     ])
     .config(function ($routeProvider, $translateProvider) {
         $routeProvider
