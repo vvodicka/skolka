@@ -181,7 +181,6 @@ md-toolbar.top-toolbar {
     position: relative;
     overflow: hidden;
     margin-top: 1vw;
-    min-height: 500px;
 }
 
 .highlight-mobile {
@@ -190,18 +189,34 @@ md-toolbar.top-toolbar {
     position: absolute;
 }
 
+/*.swap-animation.ng-enter, .swap-animation.ng-leave {*/
+    /*transition: 2s linear all;*/
+/*}*/
+/*.swap-animation.ng-enter {*/
+    /*opacity: 0;*/
+/*}*/
+/*.swap-animation.ng-enter-active {*/
+    /*opacity: 1;*/
+/*}*/
+/*.swap-animation.ng-leave {*/
+    /*opacity: 1;*/
+/*}*/
+/*.swap-animation.ng-leave-active {*/
+    /*opacity: 0;*/
+/*}*/
+
 .swap-animation.ng-enter, .swap-animation.ng-leave {
-    transition: 2s linear all;
+    transition: 0.5s linear all;
 }
 .swap-animation.ng-enter {
-    opacity: 0;
+    left: 100%;
 }
 .swap-animation.ng-enter-active {
-    opacity: 1;
+    left: 0;
 }
 .swap-animation.ng-leave {
-    opacity: 1;
+    left: 0;
 }
 .swap-animation.ng-leave-active {
-    opacity: 0;
+    left: -100%;
 }

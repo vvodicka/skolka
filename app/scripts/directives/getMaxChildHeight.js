@@ -8,32 +8,24 @@
             return {
                 restrict: 'A',
                 scope: false,
-                link: function (scope, element, attrs) {
+                link: function (scope, element) {
+                    scope.element = element;
+                },
+                controller: function ($scope, $timeout) {
                     var largestHeight = 0;
-                    for(var child in element[0].childNodes) {
-                        console.log(element[0].childNodes[child]);
-
-                        if(element[0].childNodes[child].nodeType == 1) {
-                            GetHeight(element[0].childNodes[child]);
+                    $timeout(function () {
+                        for (var i in $scope.element[0].childNodes) {
+                            var child = $scope.element[0].childNodes[i];
+                            if(child.nodeType == 1) {
+                                if(child.offsetHeight > largestHeight) {
+                                    largestHeight = child.offsetHeight;
+                                }
+                            }
                         }
-                    }
 
-                    attrs.$set('style', 'height: '+largestHeight*5);
+                        $scope.element.height(largestHeight);
+                    }, 0);
                 }
             };
         });
-
-    function GetHeight(elem) {
-        var oDiv = elem;
-        var sOriginalOverflow = oDiv.style.overflow;
-        var sOriginalHeight = oDiv.style.height;
-        oDiv.style.overflow = "";
-        oDiv.style.height = "";
-        var height = oDiv.offsetHeight;
-        oDiv.style.height = sOriginalHeight;
-        oDiv.style.overflow = sOriginalOverflow;
-        console.log(elem);
-        console.log("Real height is " + height);
-    }
-
 }());

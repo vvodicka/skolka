@@ -8,17 +8,41 @@
  * Controller of the skolkaApp
  */
 angular.module('skolkaApp')
-    .controller('MainCtrl', function ($scope, $interval, $timeout) {
-        $scope.mobileHighlight = -1;
+    .controller('MainCtrl', function ($scope, $interval) {
+        $scope.mobileHighlight = 0;
+
+        var int;
 
         if (!$scope.bigScreen) {
-            $timeout(function () {
-                $scope.mobileHighlight = 0;
-                $interval(changeMobileHighlight, 3000);
-            }, 50000);
+            startSlideshow();
+        }
+
+        function startSlideshow() {
+            int = $interval(changeMobileHighlight, 5000);
         }
 
         function changeMobileHighlight() {
             $scope.mobileHighlight = ($scope.mobileHighlight + 1) % 3;
         }
+
+        function nextHighlight() {
+            $scope.mobileHighlight = ($scope.mobileHighlight + 1) % 3;
+        }
+
+        function previousHighlight() {
+            $scope.mobileHighlight = ($scope.mobileHighlight - 1) % 3;
+        }
+
+        $scope.nextHighlight = function () {
+            $interval.cancel(int);
+            nextHighlight();
+            startSlideshow()
+        };
+
+        $scope.previousHighlight = function () {
+            $interval.cancel(int);
+            previousHighlight();
+            startSlideshow()
+        }
+
     });
