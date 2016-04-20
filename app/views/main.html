@@ -16,7 +16,8 @@
         {alt : 'img1', src : './images/photos/36.jpg'},
         {alt : 'img2', src : './images/photos/38.jpg'},
         {alt : 'img3', src : './images/photos/39.jpg'}]"></ng-fader>
-        <div flex>Lorem ipsum dolor sit amet, et eum zril evertitur philosophia. Ei qui duis insolens adolescens, ad
+        <div flex>
+            Lorem ipsum dolor sit amet, et eum zril evertitur philosophia. Ei qui duis insolens adolescens, ad
             legere voluptaria consequuntur qui, est assum definiebas et. Per eu dicta luptatum sadipscing. No sit
             oportere
             maiestatis posidonium, brute principes conceptam eos ex. Vis movet homero gubergren ut.
@@ -40,7 +41,7 @@
             ancillae interesset, per ad noster diceret. Et mea alia cibo placerat, consul euripidis complectitur id
             usu.kj
         </div>
-        <div ng-show="!bigScreen" class="highlights-container-mobile" get-max-child-height>
+        <div ng-if="!bigScreen" class="highlights-container-mobile" get-max-child-height>
             <div class="highlight-mobile swap-animation" ng-animate-swap="mobileHighlight === 0">
                 <img src="./images/baloons.jpg"/>
                 <div flex class="highlight-info-header" translate="WHY_CHOOSE_FOURLEAF_HEADER"></div>
@@ -70,7 +71,7 @@
             </div>
         </div>
     </div>
-    <md-content ng-show="bigScreen" style="margin-top: 2vw">
+    <md-content ng-if="bigScreen" style="margin-top: 2vw">
         <div layout layout-align="center center" style="text-align: center">
             <div class="highlight">
                 <img src="./images/baloons.jpg"/>

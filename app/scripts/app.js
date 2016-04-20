@@ -19,7 +19,9 @@ angular
         'ngMaterial',
         'pascalprecht.translate',
         'ngFader',
-        'getMaxChildHeight'
+        'getMaxChildHeight',
+        'jkuri.gallery',
+        'ngFlag'
     ])
     .config(function ($routeProvider, $translateProvider) {
         $routeProvider
