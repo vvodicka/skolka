@@ -173,22 +173,35 @@ md-toolbar.top-toolbar {
     margin-top: 2vw;
 }
 
-.highlight-mobile {
+.highlights-container-mobile {
+    width: 100%;
+    display: block;
+    clear: both;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 1vw;
+    min-height: 500px;
+}
 
+.highlight-mobile {
+    text-align: center;
+    width: inherit;
+    position: absolute;
 }
 
 .swap-animation.ng-enter, .swap-animation.ng-leave {
-    transition:0.5s linear all;
+    transition: 2s linear all;
 }
 .swap-animation.ng-enter {
-    opacity:1;
+    opacity: 0;
 }
 .swap-animation.ng-enter-active {
-    opacity:0;
+    opacity: 1;
 }
 .swap-animation.ng-leave {
-    opacity:1;
+    opacity: 1;
 }
 .swap-animation.ng-leave-active {
-    opacity:0;
+    opacity: 0;
 }

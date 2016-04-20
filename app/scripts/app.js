@@ -18,7 +18,8 @@ angular
         'ngSanitize',
         'ngMaterial',
         'pascalprecht.translate',
-        'ngFader'
+        'ngFader',
+        'getMaxChildHeight'
     ])
     .config(function ($routeProvider, $translateProvider) {
         $routeProvider

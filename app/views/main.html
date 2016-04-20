@@ -40,21 +40,21 @@
             ancillae interesset, per ad noster diceret. Et mea alia cibo placerat, consul euripidis complectitur id
             usu.kj
         </div>
-        <div ng-show="!bigScreen" style="text-align: center; overflow: hidden; position: relative">
-            <div class="highlight-mobile swap-animation" ng-animate-swap="mobileHighlight === 0">
+        <div ng-show="!bigScreen" class="highlights-container-mobile" get-max-child-height>
+            <div class="highlight-mobile swap-animation" ng-animate-swap="mobileHighlight === 0 || mobileHighlight === -1">
                 <img src="./images/baloons.jpg"/>
                 <div flex class="highlight-info-header" translate="WHY_CHOOSE_FOURLEAF_HEADER"></div>
                 <div flex class="highlight-info-text" translate="WHY_CHOOSE_FOURLEAF_TEXT"></div>
             </div>
-            <div class="highlight-mobile swap-animation" ng-animate-swap="mobileHighlight === 1">
+            <div class="highlight-mobile swap-animation" ng-animate-swap="mobileHighlight === 1 || mobileHighlight === -1">
                 <img src="./images/clownHat.jpg"/>
-                <div flex class="highlight-info-header" translate="WHY_CHOOSE_FOURLEAF_HEADER"></div>
-                <div flex class="highlight-info-text" translate="WHY_CHOOSE_FOURLEAF_TEXT"></div>
+                <div flex class="highlight-info-header" translate="WHY_CHOOSE_FOURLEAF_HEADER1"></div>
+                <div flex class="highlight-info-text" translate="WHY_CHOOSE_FOURLEAF_TEXT1"></div>
             </div>
-            <div class="highlight-mobile swap-animation" ng-animate-swap="mobileHighlight === 2">
+            <div class="highlight-mobile swap-animation" ng-animate-swap="mobileHighlight === 2 || mobileHighlight === -1">
                 <img src="./images/fireworks.jpg"/>
-                <div flex class="highlight-info-header" translate="WHY_CHOOSE_FOURLEAF_HEADER"></div>
-                <div flex class="highlight-info-text" translate="WHY_CHOOSE_FOURLEAF_TEXT"></div>
+                <div flex class="highlight-info-header" translate="WHY_CHOOSE_FOURLEAF_HEADER2"></div>
+                <div flex class="highlight-info-text" translate="WHY_CHOOSE_FOURLEAF_TEXT2"></div>
             </div>
         </div>
         <div flex="30" flex-sm="100" flex-xs="100" flex-md="40" layout-align="center top" layout>
