@@ -12,6 +12,8 @@
     <link rel='stylesheet' href='bower_components/angular-material/angular-material.css' />
     <link rel='stylesheet' href='bower_components/ngGallery/src/css/ngGallery.css' />
     <link rel='stylesheet' href='bower_components/components-font-awesome/css/font-awesome.css' />
+    <link rel='stylesheet' href='bower_components/ui-select/dist/select.css' />
+    <link rel='stylesheet' href='bower_components/flag-icon-css/css/flag-icon.min.css' />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -49,37 +51,47 @@
                                     <div class="sub-header" translate="SUB_HEADER"></div>
                                 </a>
                             </div>
-                            <div style="text-align: right; height: 85px">
+                            <div style="text-align: left; height: 85px; padding-left: 1vw">
                                 <img class="logo-img" src="images/leaf.png" alt="Leaf"/>
                             </div>
                             <div class="big-screen-menu" style="height: 85px; width: 100%"
                                  ng-show="bigScreen">
-                                <md-button class="md-raised big-menu-item" href="#/"
+                                <md-button class="md-raised big-menu-item" ng-class="mediumScreenMenuItem" href="#/"
                                            aria-label="{{'ABOUT_US' | translate}}">
                                     <span translate="ABOUT_US"></span>
                                 </md-button>
-                                <md-button class="md-raised big-menu-item" href="#/healthy-kindergarten"
+                                <md-button class="md-raised big-menu-item" ng-class="mediumScreenMenuItem" href="#/healthy-kindergarten"
                                            aria-label="{{'HEALTHY_KINDEGARTEN' | translate}}">
                                     <span translate="HEALTHY_KINDEGARTEN"></span>
                                 </md-button>
-                                <md-button class="md-raised big-menu-item" href="#/daily-schedule"
+                                <md-button class="md-raised big-menu-item" ng-class="mediumScreenMenuItem" href="#/daily-schedule"
                                            aria-label="{{'DAILY_SCHEDULE' | translate}}">
                                     <span translate="DAILY_SCHEDULE"></span>
                                 </md-button>
-                                <md-button class="md-raised big-menu-item" href="#/gallery"
+                                <md-button class="md-raised big-menu-item" ng-class="mediumScreenMenuItem" href="#/gallery"
                                            aria-label="{{'GALLERY' | translate}}">
                                     <span translate="GALLERY"></span>
                                 </md-button>
-                                <md-button class="md-raised big-menu-item" href="#/pricelist"
+                                <md-button class="md-raised big-menu-item" ng-class="mediumScreenMenuItem" href="#/pricelist"
                                            aria-label="{{'PRICELIST' | translate}}">
                                     <span translate="PRICELIST"></span>
                                 </md-button>
-                                <md-button class="md-raised big-menu-item" href="#/contact"
+                                <md-button class="md-raised big-menu-item" ng-class="mediumScreenMenuItem" href="#/contact"
                                            aria-label="{{'CONTACT' | translate}}">
                                     <span translate="CONTACT"></span>
                                 </md-button>
                             </div>
                         </div>
+                    </div>
+                    <div ng-show="true">
+                        <ui-select ng-model="selectedLanguage" class="language-selector" ng-change="changeLanguage($select.selected)">
+                            <ui-select-match>
+                                <span class="flag-icon flag-icon-{{$select.selected.code}}"></span>
+                            </ui-select-match>
+                            <ui-select-choices repeat="item in languages">
+                                <span class="flag-icon flag-icon-{{item.code}}"></span>
+                            </ui-select-choices>
+                        </ui-select>
                     </div>
                 </div>
             </md-toolbar>
@@ -161,7 +173,7 @@
 <script src="bower_components/angular-material/angular-material.js"></script>
 <script src="bower_components/angular-translate/angular-translate.js"></script>
 <script src="bower_components/ngGallery/src/js/ngGallery.js"></script>
-<script src="bower_components/ng-flags/src/directives/ng-flags.js"></script>
+<script src="bower_components/ui-select/dist/select.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 

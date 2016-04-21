@@ -15,11 +15,21 @@ angular.module('skolkaApp')
             $scope.bigScreen = big;
         });
 
-        //$translate.use('en');
+        $scope.$watch(function () {
+            return $mdMedia('md');
+        }, function (medium) {
+            $scope.mediumScreenMenuItem = medium ? 'medium-screen-menu-item' : '';
+        });
+
+        $scope.selectedLanguage = {code : 'sk'};
 
         $scope.languages = [
-            {code : 'us'},
-            {code : 'sk'}
-        ]
+            {code : 'sk'},
+            {code : 'gb'}
+        ];
+
+        $scope.changeLanguage = function(selectedValue) {
+            $translate.use(selectedValue.code);
+        }
 
     });
