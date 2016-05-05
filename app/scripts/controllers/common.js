@@ -20,6 +20,18 @@ angular.module('skolkaApp')
         $scope.languages = [
             {code : 'us'},
             {code : 'sk'}
-        ]
+        ];
+
+        $scope.aboutOpen = false;
+
+        $scope.$watch('demo.isOpen', function(isOpen) {
+            if (isOpen) {
+                $timeout(function() {
+                    $scope.tooltipVisible = self.isOpen;
+                }, 600);
+            } else {
+                $scope.tooltipVisible = self.isOpen;
+            }
+        });
 
     });

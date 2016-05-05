@@ -43,6 +43,5 @@ angular.module('skolkaApp')
             $interval.cancel(int);
             previousHighlight();
             startSlideshow()
-        }
-
+        };
     });

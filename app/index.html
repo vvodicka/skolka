@@ -8,16 +8,17 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
-    <link rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap.css' />
-    <link rel='stylesheet' href='bower_components/angular-material/angular-material.css' />
-    <link rel='stylesheet' href='bower_components/ngGallery/src/css/ngGallery.css' />
-    <link rel='stylesheet' href='bower_components/components-font-awesome/css/font-awesome.css' />
+    <link rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap.css'/>
+    <link rel='stylesheet' href='bower_components/angular-material/angular-material.css'/>
+    <link rel='stylesheet' href='bower_components/ngGallery/src/css/ngGallery.css'/>
+    <link rel='stylesheet' href='bower_components/components-font-awesome/css/font-awesome.css'/>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/ngFader.css">
-    <link rel="stylesheet" type="text/css" href="http://cloud.github.com/downloads/lafeber/world-flags-sprite/flags32.css" />
+    <link rel="stylesheet" type="text/css"
+          href="http://cloud.github.com/downloads/lafeber/world-flags-sprite/flags32.css"/>
 
     <!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons"-->
     <!--rel="stylesheet">-->
@@ -54,30 +55,56 @@
                             </div>
                             <div class="big-screen-menu" style="height: 85px; width: 100%"
                                  ng-show="bigScreen">
-                                <md-button class="md-raised big-menu-item" href="#/"
-                                           aria-label="{{'ABOUT_US' | translate}}">
-                                    <span translate="ABOUT_US"></span>
-                                </md-button>
-                                <md-button class="md-raised big-menu-item" href="#/healthy-kindergarten"
-                                           aria-label="{{'HEALTHY_KINDEGARTEN' | translate}}">
-                                    <span translate="HEALTHY_KINDEGARTEN"></span>
-                                </md-button>
-                                <md-button class="md-raised big-menu-item" href="#/daily-schedule"
-                                           aria-label="{{'DAILY_SCHEDULE' | translate}}">
-                                    <span translate="DAILY_SCHEDULE"></span>
-                                </md-button>
-                                <md-button class="md-raised big-menu-item" href="#/gallery"
-                                           aria-label="{{'GALLERY' | translate}}">
-                                    <span translate="GALLERY"></span>
-                                </md-button>
-                                <md-button class="md-raised big-menu-item" href="#/pricelist"
-                                           aria-label="{{'PRICELIST' | translate}}">
-                                    <span translate="PRICELIST"></span>
-                                </md-button>
+                                <!--polozky nech su v opacnom smere ako ich chceme-->
                                 <md-button class="md-raised big-menu-item" href="#/contact"
                                            aria-label="{{'CONTACT' | translate}}">
                                     <span translate="CONTACT"></span>
                                 </md-button>
+                                <md-button class="md-raised big-menu-item" href="#/party"
+                                           aria-label="{{'PARTY' | translate}}">
+                                    <span translate="PARTY"></span>
+                                </md-button>
+                                <md-button class="md-raised big-menu-item" href="#/oz"
+                                           aria-label="{{'OZ' | translate}}">
+                                    <span translate="OZ"></span>
+                                </md-button>
+                                <md-button class="md-raised big-menu-item" href="#/dunajskaluzna"
+                                           aria-label="{{'DUNAJSKALUZNA' | translate}}">
+                                    <span translate="DUNAJSKALUZNA"></span>
+                                </md-button>
+                                <md-button class="md-raised big-menu-item" href="#/ruzinov"
+                                           aria-label="{{'RUZINOV' | translate}}">
+                                    <span translate="RUZINOV"></span>
+                                </md-button>
+                                <md-fab-speed-dial md-direction="down" md-open="aboutOpen"
+                                                   ng-mouseenter="aboutOpen=true" ng-mouseleave="aboutOpen=false"
+                                                   class="md-scale md-fab multilevel-menu">
+                                    <md-fab-trigger>
+                                        <md-button class="big-menu-item-in-fab" href="#/about"
+                                                   aria-label="{{'ABOUT_US' | translate}}"
+                                                   ng-mouseenter="$mdOpenMenu($event)">
+                                            <span translate="ABOUT_US"></span>
+                                        </md-button>
+                                    </md-fab-trigger>
+                                    <md-fab-actions>
+                                        <md-button class="sub-menu-item" href="#/hotel"
+                                                   aria-label="{{'HOTEL' | translate}}">
+                                            <span translate="HOTEL"></span>
+                                            <md-tooltip md-direction="left" md-visible="tooltipVisible"
+                                                        md-autohide="true">
+                                                Lorem ipsum dolor sit amet
+                                            </md-tooltip>
+                                        </md-button>
+                                        <md-button class="sub-menu-item" href="#/hotel"
+                                                   aria-label="{{'HOTEL' | translate}}">
+                                            nieco ine ale aj tak je to hotel
+                                            <md-tooltip md-direction="left" md-visible="tooltipVisible"
+                                                        md-autohide="true">
+                                                Lorem ipsum dolor sit amet
+                                            </md-tooltip>
+                                        </md-button>
+                                    </md-fab-actions>
+                                </md-fab-speed-dial>
                             </div>
                         </div>
                     </div>
@@ -96,32 +123,38 @@
                         <ul class="mobile-menu-list">
                             <li>
                                 <md-button class="md-raised big-menu-item" href="#/"
+                                           aria-label="{{'HOME' | translate}}">
+                                    <span translate="HOME"></span>
+                                </md-button>
+                            </li>
+                            <li>
+                                <md-button class="md-raised big-menu-item" href="#/about"
                                            aria-label="{{'ABOUT_US' | translate}}">
                                     <span translate="ABOUT_US"></span>
                                 </md-button>
                             </li>
                             <li>
-                                <md-button class="md-raised big-menu-item" href="#/healthy-kindergarten"
-                                           aria-label="{{'HEALTHY_KINDEGARTEN' | translate}}">
-                                    <span translate="HEALTHY_KINDEGARTEN"></span>
+                                <md-button class="md-raised big-menu-item" href="#/ruzinov"
+                                           aria-label="{{'RUZINOV' | translate}}">
+                                    <span translate="RUZINOV"></span>
                                 </md-button>
                             </li>
                             <li>
-                                <md-button class="md-raised big-menu-item" href="#/daily-schedule"
-                                           aria-label="{{'DAILY_SCHEDULE' | translate}}">
-                                    <span translate="DAILY_SCHEDULE"></span>
+                                <md-button class="md-raised big-menu-item" href="#/dunajskaluzna"
+                                           aria-label="{{'DUNAJSKALUZNA' | translate}}">
+                                    <span translate="DUNAJSKALUZNA"></span>
                                 </md-button>
                             </li>
                             <li>
-                                <md-button class="md-raised big-menu-item" href="#/gallery"
-                                           aria-label="{{'GALLERY' | translate}}">
-                                    <span translate="GALLERY"></span>
+                                <md-button class="md-raised big-menu-item" href="#/oz"
+                                           aria-label="{{'OZ' | translate}}">
+                                    <span translate="OZ"></span>
                                 </md-button>
                             </li>
                             <li>
-                                <md-button class="md-raised big-menu-item" href="#/pricelist"
-                                           aria-label="{{'PRICELIST' | translate}}">
-                                    <span translate="PRICELIST"></span>
+                                <md-button class="md-raised big-menu-item" href="#/party"
+                                           aria-label="{{'PARTY' | translate}}">
+                                    <span translate="PARTY"></span>
                                 </md-button>
                             </li>
                             <li>
@@ -179,6 +212,11 @@
 <!-- directives -->
 <script src="scripts/directives/ngFader.js"></script>
 <script src="scripts/directives/getMaxChildHeight.js"></script>
+<script src="scripts/controllers/ruzinov.js"></script>
+<script src="scripts/controllers/dunajskaluzna.js"></script>
+<script src="scripts/controllers/oz.js"></script>
+<script src="scripts/controllers/hotel.js"></script>
+<script src="scripts/controllers/party.js"></script>
 <!-- endbuild -->
 
 </body>

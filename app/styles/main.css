@@ -27,6 +27,31 @@
     background: none !important;
     border: none !important;
     box-shadow: none !important;
+    float: right;
+}
+
+.sub-menu-item {
+    color: white !important;
+    font-size: 1em;
+    background: orange !important;
+    float: left;
+}
+
+.big-menu-item-in-fab {
+    color: #5c7b00 !important;
+    font-size: 1em;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+md-fab-actions {
+    position: absolute;
+}
+
+.multilevel-menu {
+    float: right;
+    display: block;
 }
 
 a.header-link:hover, a.header-link:active, a.header-link:visited, a.header-link:link {
@@ -72,7 +97,7 @@ md-toolbar.top-toolbar {
 }
 
 .main-header {
-    font-size: 2em;
+    font-size: 2.3em;
     color: #90b702;
     font-family: 'Yellowtail', cursive;
 }
@@ -190,33 +215,37 @@ md-toolbar.top-toolbar {
 }
 
 /*.swap-animation.ng-enter, .swap-animation.ng-leave {*/
-    /*transition: 2s linear all;*/
+/*transition: 2s linear all;*/
 /*}*/
 /*.swap-animation.ng-enter {*/
-    /*opacity: 0;*/
+/*opacity: 0;*/
 /*}*/
 /*.swap-animation.ng-enter-active {*/
-    /*opacity: 1;*/
+/*opacity: 1;*/
 /*}*/
 /*.swap-animation.ng-leave {*/
-    /*opacity: 1;*/
+/*opacity: 1;*/
 /*}*/
 /*.swap-animation.ng-leave-active {*/
-    /*opacity: 0;*/
+/*opacity: 0;*/
 /*}*/
 
 .swap-animation.ng-enter, .swap-animation.ng-leave {
     transition: 0.5s linear all;
 }
+
 .swap-animation.ng-enter {
     left: 100%;
 }
+
 .swap-animation.ng-enter-active {
     left: 0;
 }
+
 .swap-animation.ng-leave {
     left: 0;
 }
+
 .swap-animation.ng-leave-active {
     left: -100%;
 }
