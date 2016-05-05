@@ -17,16 +17,28 @@ angular.module('skolkaApp')
 
         //$translate.use('en');
 
+        $scope.$watch(function () {
+            return $mdMedia('md');
+        }, function (medium) {
+            $scope.mediumScreenMenuItem = medium ? 'medium-screen-menu-item' : '';
+        });
+
+        $scope.selectedLanguage = {code : 'sk'};
+
         $scope.languages = [
-            {code : 'us'},
-            {code : 'sk'}
+            {code : 'sk'},
+            {code : 'gb'}
         ];
+
+        $scope.changeLanguage = function(selectedValue) {
+            $translate.use(selectedValue.code);
+        };
 
         $scope.aboutOpen = false;
 
-        $scope.$watch('demo.isOpen', function(isOpen) {
+        $scope.$watch('demo.isOpen', function (isOpen) {
             if (isOpen) {
-                $timeout(function() {
+                $timeout(function () {
                     $scope.tooltipVisible = self.isOpen;
                 }, 600);
             } else {

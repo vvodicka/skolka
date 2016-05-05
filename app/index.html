@@ -12,6 +12,8 @@
     <link rel='stylesheet' href='bower_components/angular-material/angular-material.css'/>
     <link rel='stylesheet' href='bower_components/ngGallery/src/css/ngGallery.css'/>
     <link rel='stylesheet' href='bower_components/components-font-awesome/css/font-awesome.css'/>
+    <link rel='stylesheet' href='bower_components/ui-select/dist/select.css'/>
+    <link rel='stylesheet' href='bower_components/flag-icon-css/css/flag-icon.min.css'/>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -56,27 +58,27 @@
                             <div class="big-screen-menu" style="height: 85px; width: 100%"
                                  ng-show="bigScreen">
                                 <!--polozky nech su v opacnom smere ako ich chceme-->
-                                <md-button class="md-raised big-menu-item" href="#/contact"
+                                <md-button class="md-raised big-menu-item" href="#/contact" ng-class="mediumScreenMenuItem"
                                            aria-label="{{'CONTACT' | translate}}">
                                     <span translate="CONTACT"></span>
                                 </md-button>
-                                <md-button class="md-raised big-menu-item" href="#/party"
+                                <md-button class="md-raised big-menu-item" href="#/party" ng-class="mediumScreenMenuItem"
                                            aria-label="{{'PARTY' | translate}}">
                                     <span translate="PARTY"></span>
                                 </md-button>
-                                <md-button class="md-raised big-menu-item" href="#/oz"
+                                <md-button class="md-raised big-menu-item" href="#/oz" ng-class="mediumScreenMenuItem"
                                            aria-label="{{'OZ' | translate}}">
                                     <span translate="OZ"></span>
                                 </md-button>
-                                <md-button class="md-raised big-menu-item" href="#/dunajskaluzna"
+                                <md-button class="md-raised big-menu-item" href="#/dunajskaluzna" ng-class="mediumScreenMenuItem"
                                            aria-label="{{'DUNAJSKALUZNA' | translate}}">
                                     <span translate="DUNAJSKALUZNA"></span>
                                 </md-button>
-                                <md-button class="md-raised big-menu-item" href="#/ruzinov"
+                                <md-button class="md-raised big-menu-item" href="#/ruzinov" ng-class="mediumScreenMenuItem"
                                            aria-label="{{'RUZINOV' | translate}}">
                                     <span translate="RUZINOV"></span>
                                 </md-button>
-                                <md-fab-speed-dial md-direction="down" md-open="aboutOpen"
+                                <md-fab-speed-dial md-direction="down" md-open="aboutOpen" ng-class="mediumScreenMenuItem"
                                                    ng-mouseenter="aboutOpen=true" ng-mouseleave="aboutOpen=false"
                                                    class="md-scale md-fab multilevel-menu">
                                     <md-fab-trigger>
@@ -108,6 +110,18 @@
                             </div>
                         </div>
                     </div>
+                    <div ng-show="true">
+                        <ui-select ng-model="selectedLanguage" class="language-selector"
+                                   ng-change="changeLanguage($select.selected)">
+                            <ui-select-match>
+                                <span class="flag-icon flag-icon-{{$select.selected.code}}"></span>
+                            </ui-select-match>
+                            <ui-select-choices repeat="item in languages">
+                                <span class="flag-icon flag-icon-{{item.code}}"></span>
+                            </ui-select-choices>
+                        </ui-select>
+                    </div>
+
                 </div>
             </md-toolbar>
 
@@ -194,7 +208,7 @@
 <script src="bower_components/angular-material/angular-material.js"></script>
 <script src="bower_components/angular-translate/angular-translate.js"></script>
 <script src="bower_components/ngGallery/src/js/ngGallery.js"></script>
-<script src="bower_components/ng-flags/src/directives/ng-flags.js"></script>
+<script src="bower_components/ui-select/dist/select.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 

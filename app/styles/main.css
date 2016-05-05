@@ -30,6 +30,10 @@
     float: right;
 }
 
+.medium-screen-menu-item {
+    font-size: 0.75em;
+}
+
 .sub-menu-item {
     color: white !important;
     font-size: 1em;
@@ -249,3 +253,34 @@ md-toolbar.top-toolbar {
 .swap-animation.ng-leave-active {
     left: -100%;
 }
+
+.language-selector {
+    margin-top: 6px;
+    text-align: center;
+    float: right;
+}
+
+.language-selector .ui-select-toggle {
+    border-color: #90b702;
+    width: 45px;
+    min-width: 45px;
+}
+
+.language-selector .ui-select-choices-row, .language-selector .ui-select-choices-group, .language-selector .ui-select-choices, .language-selector .ui-select-search {
+    width: 45px;
+    min-width: 45px;
+    text-align: center;
+}
+
+.language-selector .ui-select-choices-row.active>a {
+    background-color: #90b702;
+}
+
+.language-selector .ui-select-choices-row-inner {
+    padding: 0 !important;
+}
+
+.language-selector .ui-select-toggle > .caret {
+    display: none;
+}
+
