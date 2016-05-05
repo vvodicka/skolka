@@ -21,7 +21,7 @@ angular
         'ngFader',
         'getMaxChildHeight',
         'jkuri.gallery',
-        'ngFlag'
+        'ui.select'
     ])
     .config(function ($routeProvider, $translateProvider) {
         $routeProvider
@@ -63,7 +63,7 @@ angular
         // add translation table
         $translateProvider
             .useSanitizeValueStrategy('sanitize')
-            .translations('en', translationsEn)
+            .translations('gb', translationsEn)
             .translations('sk', translationsSk)
             .preferredLanguage('sk');
     });

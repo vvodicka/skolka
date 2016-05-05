@@ -24,9 +24,8 @@
                                     }
                                 }
                             }
-
                             $scope.element.height(largestHeight);
-                        }, 10);
+                        }, 100);
                     }
                 }
             };
