@@ -2,6 +2,10 @@
     font-family: 'Englebert', sans-serif;
 }
 
+body {
+    text-align: justify;
+}
+
 .burger-icon {
     color: #90b702;
     font-size: 1.5em !important;
@@ -22,16 +26,24 @@
 }
 
 .big-menu-item {
+     color: #5c7b00 !important;
+     font-size: 1em;
+     background: none !important;
+     border: none !important;
+     box-shadow: none !important;
+     float: right;
+ }
+
+.mobile-menu-item {
     color: #5c7b00 !important;
-    font-size: 1em;
-    background: none !important;
-    border: none !important;
-    box-shadow: none !important;
-    float: right;
+}
+
+.big-menu-item:hover, .big-menu-item-in-fab:hover, .sub-menu-item:hover {
+    text-decoration: underline;
 }
 
 .medium-screen-menu-item {
-    font-size: 0.75em;
+    font-size: 0.75em !important;
 }
 
 .sub-menu-item {
@@ -69,6 +81,10 @@ a.header-link:hover, a.header-link:active, a.header-link:visited, a.header-link:
 
 md-toolbar.mobile-menu-header {
     background: #90b702;
+}
+
+md-tooltip {
+    font-size: 1em;
 }
 
 .mobile-menu-header {
@@ -115,7 +131,7 @@ md-toolbar.top-toolbar {
 
 .big-screen-image-container {
     width: 100%;
-    margin-bottom: -9vw;
+    margin-bottom: -4vw;
     padding: 0;
 }
 
@@ -135,10 +151,23 @@ md-toolbar.top-toolbar {
     margin-bottom: 1vh;
 }
 
-.big-screen-header-images {
+.big-screen-header-montessori-link {
     position: relative;
-    bottom: 15vw;
+    bottom: 18vw;
     text-align: right;
+    font-size: 1.5vw;
+}
+
+.big-screen-header-montessori-link a {
+    color: #90b702;
+    text-shadow: -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
+}
+
+.montessori-highlight {
+    color: magenta;
 }
 
 .demo-image {
@@ -158,7 +187,6 @@ md-toolbar.top-toolbar {
     background-position: top;
     background-size: contain;
     background-repeat: no-repeat;
-
     width: 100%;
     padding-bottom: 23%;
     position: relative;
@@ -183,6 +211,12 @@ md-toolbar.top-toolbar {
     border: none;
     color: white;
     font-size: 1.4vw;
+}
+
+.homepage-content {
+    font-size: 1.3em;
+    text-align: justify;
+    margin-top: 4vw;
 }
 
 .apply-button-mobile {
@@ -272,7 +306,7 @@ md-toolbar.top-toolbar {
     text-align: center;
 }
 
-.language-selector .ui-select-choices-row.active>a {
+.language-selector .ui-select-choices-row.active > a {
     background-color: #90b702;
 }
 

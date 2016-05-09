@@ -12,7 +12,13 @@
                     scope.element = element;
                     scope.$watch(element, scope.updateHeight());
                 },
-                controller: function ($scope, $timeout) {
+                controller: function ($scope, $timeout, $translate) {
+                    $scope.$watch(function () {
+                        return $translate;
+                    }, function () {
+                        $scope.updateHeight();
+                    });
+
                     $scope.updateHeight = function () {
                         var largestHeight = 0;
                         $timeout(function () {
@@ -25,7 +31,7 @@
                                 }
                             }
                             $scope.element.height(largestHeight);
-                        }, 100);
+                        }, 300);
                     }
                 }
             };

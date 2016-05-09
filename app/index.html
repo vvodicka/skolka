@@ -58,11 +58,13 @@
                             <div class="big-screen-menu" style="height: 85px; width: 100%"
                                  ng-show="bigScreen">
                                 <!--polozky nech su v opacnom smere ako ich chceme-->
-                                <md-button class="md-raised big-menu-item" href="#/contact" ng-class="mediumScreenMenuItem"
+                                <md-button class="md-raised big-menu-item" href="#/contact"
+                                           ng-class="mediumScreenMenuItem"
                                            aria-label="{{'CONTACT' | translate}}">
                                     <span translate="CONTACT"></span>
                                 </md-button>
-                                <md-button class="md-raised big-menu-item" href="#/party" ng-class="mediumScreenMenuItem"
+                                <md-button class="md-raised big-menu-item" href="#/party"
+                                           ng-class="mediumScreenMenuItem"
                                            aria-label="{{'PARTY' | translate}}">
                                     <span translate="PARTY"></span>
                                 </md-button>
@@ -70,15 +72,18 @@
                                            aria-label="{{'OZ' | translate}}">
                                     <span translate="OZ"></span>
                                 </md-button>
-                                <md-button class="md-raised big-menu-item" href="#/dunajskaluzna" ng-class="mediumScreenMenuItem"
+                                <md-button class="md-raised big-menu-item" href="#/dunajskaluzna"
+                                           ng-class="mediumScreenMenuItem"
                                            aria-label="{{'DUNAJSKALUZNA' | translate}}">
                                     <span translate="DUNAJSKALUZNA"></span>
                                 </md-button>
-                                <md-button class="md-raised big-menu-item" href="#/ruzinov" ng-class="mediumScreenMenuItem"
+                                <md-button class="md-raised big-menu-item" href="#/ruzinov"
+                                           ng-class="mediumScreenMenuItem"
                                            aria-label="{{'RUZINOV' | translate}}">
                                     <span translate="RUZINOV"></span>
                                 </md-button>
-                                <md-fab-speed-dial md-direction="down" md-open="aboutOpen" ng-class="mediumScreenMenuItem"
+                                <md-fab-speed-dial md-direction="down" md-open="aboutOpen"
+                                                   ng-class="mediumScreenMenuItem"
                                                    ng-mouseenter="aboutOpen=true" ng-mouseleave="aboutOpen=false"
                                                    class="md-scale md-fab multilevel-menu">
                                     <md-fab-trigger>
@@ -89,20 +94,23 @@
                                         </md-button>
                                     </md-fab-trigger>
                                     <md-fab-actions>
-                                        <md-button class="sub-menu-item" href="#/hotel"
+                                        <md-button class="sub-menu-item" href="#/hotel" ng-class="mediumScreenMenuItem"
                                                    aria-label="{{'HOTEL' | translate}}">
                                             <span translate="HOTEL"></span>
                                             <md-tooltip md-direction="left" md-visible="tooltipVisible"
+                                                        ng-class="mediumScreenMenuItem"
                                                         md-autohide="true">
-                                                Lorem ipsum dolor sit amet
+                                                <span translate="HOTEL_TOOLTIP"></span>
                                             </md-tooltip>
                                         </md-button>
-                                        <md-button class="sub-menu-item" href="#/hotel"
-                                                   aria-label="{{'HOTEL' | translate}}">
-                                            nieco ine ale aj tak je to hotel
+                                        <md-button class="sub-menu-item" href="#/montessori"
+                                                   ng-class="mediumScreenMenuItem"
+                                                   aria-label="{{'MONTESSORI_LINK' | translate}}">
+                                            <span translate="MONTESSORI_LINK"></span>
                                             <md-tooltip md-direction="left" md-visible="tooltipVisible"
+                                                        ng-class="mediumScreenMenuItem"
                                                         md-autohide="true">
-                                                Lorem ipsum dolor sit amet
+                                                <span translate="MONTESSORI_TOOLTIP"></span>
                                             </md-tooltip>
                                         </md-button>
                                     </md-fab-actions>
@@ -110,7 +118,7 @@
                             </div>
                         </div>
                     </div>
-                    <div ng-show="true">
+                    <div ng-show="false">
                         <ui-select ng-model="selectedLanguage" class="language-selector"
                                    ng-change="changeLanguage($select.selected)">
                             <ui-select-match>
@@ -126,6 +134,7 @@
             </md-toolbar>
 
             <section layout="row" flex>
+                <!--mobile menu-->
                 <md-sidenav
                         md-component-id="sidebar"
                         md-is-open="isSidenavOpen"
@@ -134,53 +143,59 @@
                         <h2 layout-padding translate="NAV_HEADER" ng-click="toggleSidebar('sidebar')"></h2>
                     </md-toolbar>
                     <md-content>
-                        <ul class="mobile-menu-list">
-                            <li>
-                                <md-button class="md-raised big-menu-item" href="#/"
-                                           aria-label="{{'HOME' | translate}}">
-                                    <span translate="HOME"></span>
-                                </md-button>
-                            </li>
-                            <li>
-                                <md-button class="md-raised big-menu-item" href="#/about"
-                                           aria-label="{{'ABOUT_US' | translate}}">
-                                    <span translate="ABOUT_US"></span>
-                                </md-button>
-                            </li>
-                            <li>
-                                <md-button class="md-raised big-menu-item" href="#/ruzinov"
-                                           aria-label="{{'RUZINOV' | translate}}">
-                                    <span translate="RUZINOV"></span>
-                                </md-button>
-                            </li>
-                            <li>
-                                <md-button class="md-raised big-menu-item" href="#/dunajskaluzna"
-                                           aria-label="{{'DUNAJSKALUZNA' | translate}}">
-                                    <span translate="DUNAJSKALUZNA"></span>
-                                </md-button>
-                            </li>
-                            <li>
-                                <md-button class="md-raised big-menu-item" href="#/oz"
-                                           aria-label="{{'OZ' | translate}}">
-                                    <span translate="OZ"></span>
-                                </md-button>
-                            </li>
-                            <li>
-                                <md-button class="md-raised big-menu-item" href="#/party"
-                                           aria-label="{{'PARTY' | translate}}">
-                                    <span translate="PARTY"></span>
-                                </md-button>
-                            </li>
-                            <li>
-                                <md-button class="md-raised big-menu-item" href="#/contact"
-                                           aria-label="{{'CONTACT' | translate}}">
-                                    <span translate="CONTACT"></span>
-                                </md-button>
-                            </li>
-                        </ul>
+                        <uib-accordion close-others="true">
+                            <div class="panel panel-heading mobile-menu-item">asd</div>
+                            <uib-accordion-group is-open="status1.open" heading="asdf" template-url="group-template.html">
+                                    I can have markup, too!
+                            </uib-accordion-group>
+                        </uib-accordion>
+                        <!--<ul class="mobile-menu-list">-->
+                        <!--<li>-->
+                        <!--<md-button class="md-raised mobile-menu-item" href="#/"-->
+                        <!--aria-label="{{'HOME' | translate}}">-->
+                        <!--<span translate="HOME"></span>-->
+                        <!--</md-button>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                        <!--<md-button class="md-raised mobile-menu-item" href="#/about"-->
+                        <!--aria-label="{{'ABOUT_US' | translate}}">-->
+                        <!--<span translate="ABOUT_US"></span>-->
+                        <!--</md-button>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                        <!--<md-button class="md-raised mobile-menu-item" href="#/ruzinov"-->
+                        <!--aria-label="{{'RUZINOV' | translate}}">-->
+                        <!--<span translate="RUZINOV"></span>-->
+                        <!--</md-button>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                        <!--<md-button class="md-raised mobile-menu-item" href="#/dunajskaluzna"-->
+                        <!--aria-label="{{'DUNAJSKALUZNA' | translate}}">-->
+                        <!--<span translate="DUNAJSKALUZNA"></span>-->
+                        <!--</md-button>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                        <!--<md-button class="md-raised mobile-menu-item" href="#/oz"-->
+                        <!--aria-label="{{'OZ' | translate}}">-->
+                        <!--<span translate="OZ"></span>-->
+                        <!--</md-button>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                        <!--<md-button class="md-raised mobile-menu-item" href="#/party"-->
+                        <!--aria-label="{{'PARTY' | translate}}">-->
+                        <!--<span translate="PARTY"></span>-->
+                        <!--</md-button>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                        <!--<md-button class="md-raised mobile-menu-item" href="#/contact"-->
+                        <!--aria-label="{{'CONTACT' | translate}}">-->
+                        <!--<span translate="CONTACT"></span>-->
+                        <!--</md-button>-->
+                        <!--</li>-->
+                        <!--</ul>-->
                     </md-content>
                 </md-sidenav>
-
+                <!--mobile menu end-->
                 <div layout-fill layout-padding layout-align="top center" class="main-container" ng-view=""></div>
             </section>
         </div>
@@ -209,6 +224,7 @@
 <script src="bower_components/angular-translate/angular-translate.js"></script>
 <script src="bower_components/ngGallery/src/js/ngGallery.js"></script>
 <script src="bower_components/ui-select/dist/select.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
@@ -231,7 +247,20 @@
 <script src="scripts/controllers/oz.js"></script>
 <script src="scripts/controllers/hotel.js"></script>
 <script src="scripts/controllers/party.js"></script>
+<script src="scripts/controllers/montessori.js"></script>
 <!-- endbuild -->
 
-</body>
+</body><script type="text/ng-template" id="group-template.html">
+    <div class="panel {{panelClass || 'panel-default'}}">
+        <div class="panel-heading">
+            <h4 class="panel-title" style="color:#fa39c3">
+                <a href tabindex="0" class="accordion-toggle" ng-click="toggleOpen()" uib-accordion-transclude="heading"><span
+                        ng-class="{'text-muted': isDisabled}">{{heading}}<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isOpen, 'glyphicon-chevron-right': !isOpen}"></i></span></a>
+            </h4>
+        </div>
+        <div class="panel-collapse collapse" uib-collapse="!isOpen">
+            <div class="panel-body" style="text-align: right" ng-transclude></div>
+        </div>
+    </div>
+</script>
 </html>

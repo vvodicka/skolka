@@ -21,7 +21,8 @@ angular
         'ngFader',
         'getMaxChildHeight',
         'jkuri.gallery',
-        'ui.select'
+        'ui.select',
+        'ui.bootstrap'
     ])
     .config(function ($routeProvider, $translateProvider) {
         $routeProvider
@@ -57,6 +58,10 @@ angular
                 templateUrl: 'views/contact.html',
                 controller: 'ContactCtrl'
             })
+            .when('/montessori', {
+                templateUrl: 'views/montessori.html',
+                controller: 'MontessoriCtrl'
+            })
             .otherwise({
                 redirectTo: '/'
             });
@@ -69,6 +74,7 @@ angular
     });
 
 var translationsSk = {
+    //common
     HEADER: 'Štvorlístok',
     SUB_HEADER: 'Materská škôlka a jasle',
     NAV_HEADER: 'Skryť navigáciu',
@@ -79,6 +85,9 @@ var translationsSk = {
     DUNAJSKALUZNA: 'Dunajská Lužná',
     OZ: 'OZ štvorlístkovo',
     HOTEL: 'Zábavný detský hotel Štvorlístok',
+    HOTEL_TOOLTIP: 'Doprajte vašim deťom výnimočnú starostlivosť aj cez víkendy',
+    MONTESSORI_LINK: 'Maria Montessori',
+    MONTESSORI_TOOLTIP: 'Spoznajte výnimočnú Mariu Montessori',
     PARTY: 'Detská oslava',
     CONTACT: 'Kontakt',
     I_WANT_TO_APPLY_MY_CHILD: 'Chcem prihlásiť svoje dieťa',
@@ -91,11 +100,17 @@ var translationsSk = {
     FOOTER: '&copy; Štvorlístok',
     //homepage
     HOMEPAGE: {
+        WELCOME: 'Srdečne Vás vítame na stránke súkromnej materskej škôlky a jasličiek štvorlístok',
         P1: 'Ranné detstvo považujeme za rozhodujúce obdobie pre ďalší vývin a formovanie osobnosti dieťaťa, a práve preto sme sa rozhodli vytvoriť Vaším deťom podnetné a láskavé prostredie rodinného charakteru.',
         P2: 'Súkromná materská škôlka a detské jasle štvorlístok sú zariadením, ktoré ponúkajú vzdelávanie a výchovu podľa princípov pedagogiky Márie Montessori v súkromí rodinného domu s vlastnou priestrannou záhradou.',
         P3: 'Naším cieľom je rozvíjať celú osobnosť dieťaťa, a práve preto sme sa rozhodli intenzívnejšie venovať celospoločenskému problému súčasnosti, ktorým je ekológia životného prostredia. V našich zariadeniach štvorlístok sa aktívne podieľame na environmentálnych aktivitách a zapájame sa do projektu EKOLOGICKÁ STOPA, čím budujeme u detí pozitívny vzťah k životnému prostrediu a prírode.',
         P4: 'Našim detičkám je k dispozícií dvojjazyčné slovensko-anglické prostredie v ktorom sa učia anglický jazyk prirodzeným spôsobom, a osvojujú si ho ako druhý jazyk, a nie ako cudzí jazyk. Komunikácia vo viacerých jazykoch je pre deti v rannom veku jednoduchá a prirodzená, čoho názorným príkladom sú deti vyrastajúce v prostredí, v ktorom obaja rodičia rozprávajú iným jazykom.',
         P5: 'V našich zariadeniach štvorlístok si uplatňujeme zásady správneho životného štýlu, ktoré vkladáme do pozornosti deťom formou každodenného pohybu, každodenného cvičenia, športových krúžkov a prechádzok. Pohyb je pre deti samozrejmosťou a mal by ňou zostať aj v dospelosti. „Cvičenie im vo svojej podstate dáva možnosť objavovať niečo nové.”'
+    },
+    //montessori
+    MONTESSORI : {
+        LINK1 : 'spoznajte výnimočnú',
+        LINK2 : 'Mariu Montessori'
     }
 
 };

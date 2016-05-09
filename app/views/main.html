@@ -1,46 +1,46 @@
 <img src="./images/kidsMobile.png" style="width: 100%; padding: 0" ng-show="!bigScreen" alt="Kids Mobile"/>
 <div ng-show="bigScreen" class="big-screen-image-container">
-    <img src="./images/kidsDesktop.jpg" style="width: 100%" alt="Kids desktop"/>
+    <img src="./images/kidsDesktop.jpg" style="width: 100%;" alt="Kids desktop"/>
     <div ng-class="{'main-content-padding' : bigScreen}" class="big-screen-motto" translate="MOTTO"></div>
-    <div ng-class="{'main-content-padding' : bigScreen}" class="big-screen-header-images">
-        <img class="demo-image" src="./images/photos/36.jpg" alt="Demo image"/>
-        <img class="demo-image" src="./images/photos/38.jpg" alt="Demo image"/>
-        <img class="demo-image" src="./images/photos/39.jpg" alt="Demo image"/>
+    <div ng-class="{'main-content-padding' : bigScreen}" class="big-screen-header-montessori-link">
+        <a href="#/montessori"><span translate="MONTESSORI.LINK1"></span> <span class="montessori-highlight"
+                                                                                translate="MONTESSORI.LINK2"></span>
+        </a>
     </div>
 </div>
 <md-content ng-class="{'main-content-padding' : bigScreen}">
     <div flex layout layout-sm="column" layout-xs="column">
-        <div ng-if="!bigScreen" class="mobile-screen-motto" translate="MOTTO"></div>
-        <ng-fader ng-if="!bigScreen" style="width: 90%; margin-left: auto; margin-right: auto; margin-bottom: 2vh;"
-                  imgs="[
+        <!--mobile moto, images and montessori-->
+        <div ng-if="!bigScreen" style="margin-bottom: 2vw">
+            <div class="mobile-screen-motto" translate="MOTTO"></div>
+            <a href="#/montessori">
+                <span translate="MONTESSORI.LINK1"></span>
+                <span class="montessori-highlight" translate="MONTESSORI.LINK2"></span>
+            </a>
+            <ng-fader style="width: 90%; margin-left: auto; margin-right: auto; margin-bottom: 2vh;"
+                      imgs="[
         {alt : 'img1', src : './images/photos/36.jpg'},
         {alt : 'img2', src : './images/photos/38.jpg'},
         {alt : 'img3', src : './images/photos/39.jpg'}]"></ng-fader>
-        <div flex>
-            Lorem ipsum dolor sit amet, et eum zril evertitur philosophia. Ei qui duis insolens adolescens, ad
-            legere voluptaria consequuntur qui, est assum definiebas et. Per eu dicta luptatum sadipscing. No sit
-            oportere
-            maiestatis posidonium, brute principes conceptam eos ex. Vis movet homero gubergren ut.
-
-            Timeam scaevola duo ne. Prompta civibus evertitur ius ne, ut est mutat adhuc hendrerit, ipsum augue graece
-            eam
-            et. Sed tation soleat primis no, ex pri nulla vivendo evertitur, agam voluptaria philosophia eu his. Justo
-            ludus
-            fastidii sit eu. Quod vulputate ei vis, te qui errem ludus postea. Vim id fugit civibus forensibus, an
-            volutpat
-            temporibus eloquentiam pro.
-
-            Vel id quis possim maluisset, mea postea aliquando no. Eam ex assum aliquid, persius nostrud diceret qui eu.
-            Nihil expetendis ea mea, fabulas eloquentiam his cu. Quas mutat viderer vel ad.
-
-            An eum quidam dolorem vituperata, cu clita consectetuer sea. Doctus insolens interpretaris cu eos. Ne posse
-            dolorum temporibus est. Ut case accumsan ocurreret qui. Elit nonumy ignota te ius.
-
-            Ne affert everti adolescens qui. Iudicabit erroribus liberavisse an nam. Ei mei utamur delectus, nam velit
-            ridens regione no, ad mei ipsum legimus blandit. Vix iudico elaboraret id, quando ceteros ea sea. Ei quo
-            ancillae interesset, per ad noster diceret. Et mea alia cibo placerat, consul euripidis complectitur id
-            usu.kj
         </div>
+        <!--mobile moto, images and montessori end-->
+        <div flex>
+            <img src="./images/globe.png" alt="Welcome!" style="float: left; margin-right: 2vw"/>
+            <p style="font-size: 1.8em" translate="HOMEPAGE.WELCOME"></p>
+        </div>
+        <div flex="30" flex-sm="100" flex-xs="100" flex-md="40" layout-align="center top" layout>
+            <div style="width: 100%" ng-class="{'apply-button-mobile-container' : !bigScreen}">
+                <div class="stretchy-container">
+                    <a href="#/contact">
+                        <div class="stretchy-content">
+                            <button class="apply-button" ng-class="{'apply-button-mobile' : !bigScreen}"><span
+                                    translate="I_WANT_TO_APPLY_MY_CHILD"></span></button>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--mobile highlights-->
         <div ng-if="!bigScreen" class="highlights-container-mobile" get-max-child-height>
             <div class="highlight-mobile swap-animation" ng-animate-swap="mobileHighlight === 0">
                 <img src="./images/baloons.jpg"/>
@@ -58,18 +58,7 @@
                 <div flex class="highlight-info-text" translate="BENEFITS_TEXT"></div>
             </div>
         </div>
-        <div flex="30" flex-sm="100" flex-xs="100" flex-md="40" layout-align="center top" layout>
-            <div style="width: 100%" ng-class="{'apply-button-mobile-container' : !bigScreen}">
-                <div class="stretchy-container">
-                    <a href="#/contact">
-                        <div class="stretchy-content">
-                            <button class="apply-button" ng-class="{'apply-button-mobile' : !bigScreen}"><span
-                                    translate="I_WANT_TO_APPLY_MY_CHILD"></span></button>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
+        <!--mobile highlights end-->
     </div>
     <md-content ng-if="bigScreen" style="margin-top: 2vw">
         <div layout layout-align="center center" style="text-align: center">
@@ -90,4 +79,11 @@
             </div>
         </div>
     </md-content>
+    <div class="homepage-content">
+        <p translate="HOMEPAGE.P1"></p>
+        <p translate="HOMEPAGE.P2"></p>
+        <p translate="HOMEPAGE.P3"></p>
+        <p translate="HOMEPAGE.P4"></p>
+        <p translate="HOMEPAGE.P5"></p>
+    </div>
 </md-content>
