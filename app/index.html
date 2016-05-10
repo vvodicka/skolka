@@ -8,12 +8,12 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
-    <link rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap.css'/>
-    <link rel='stylesheet' href='bower_components/angular-material/angular-material.css'/>
-    <link rel='stylesheet' href='bower_components/ngGallery/src/css/ngGallery.css'/>
-    <link rel='stylesheet' href='bower_components/components-font-awesome/css/font-awesome.css'/>
-    <link rel='stylesheet' href='bower_components/ui-select/dist/select.css'/>
-    <link rel='stylesheet' href='bower_components/flag-icon-css/css/flag-icon.min.css'/>
+    <link rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap.css' />
+    <link rel='stylesheet' href='bower_components/angular-material/angular-material.css' />
+    <link rel='stylesheet' href='bower_components/ngGallery/src/css/ngGallery.css' />
+    <link rel='stylesheet' href='bower_components/components-font-awesome/css/font-awesome.css' />
+    <link rel='stylesheet' href='bower_components/ui-select/dist/select.css' />
+    <link rel='stylesheet' href='bower_components/flag-icon-css/css/flag-icon.min.css' />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -142,57 +142,68 @@
                     <md-toolbar class="mobile-menu-header">
                         <h2 layout-padding translate="NAV_HEADER" ng-click="toggleSidebar('sidebar')"></h2>
                     </md-toolbar>
-                    <md-content>
+                    <md-content style="margin-top: 2vh; padding-left: 1vw; padding-right: 1vw">
                         <uib-accordion close-others="true">
-                            <div class="panel panel-heading mobile-menu-item">asd</div>
-                            <uib-accordion-group is-open="status1.open" heading="asdf" template-url="group-template.html">
-                                    I can have markup, too!
+                            <div class="panel panel-default" ng-click="go('/')">
+                                <div class="panel-heading mobile-menu-item">
+                                    <h4 class="panel-title">
+                                        <span translate="HOME"></span>
+                                    </h4>
+                                </div>
+                            </div>
+                            <uib-accordion-group is-open="about.open" heading="ABOUT_US"
+                                                 template-url="group-template.html">
+                                <div class="panel panel-default" ng-click="go('/hotel')">
+                                    <div class="panel-heading mobile-menu-item">
+                                        <h4 class="panel-title">
+                                            <span translate="HOTEL"></span>
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default" ng-click="go('/montessori')">
+                                    <div class="panel-heading mobile-menu-item">
+                                        <h4 class="panel-title">
+                                            <span translate="MONTESSORI_LINK"></span>
+                                        </h4>
+                                    </div>
+                                </div>
                             </uib-accordion-group>
+                            <div class="panel panel-default" ng-click="go('/ruzinov')">
+                                <div class="panel-heading mobile-menu-item">
+                                    <h4 class="panel-title">
+                                        <span translate="RUZINOV"></span>
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="panel panel-default" ng-click="go('/dunajskaluzna')">
+                                <div class="panel-heading mobile-menu-item">
+                                    <h4 class="panel-title">
+                                        <span translate="DUNAJSKALUZNA"></span>
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="panel panel-default" ng-click="go('/oz')">
+                                <div class="panel-heading mobile-menu-item">
+                                    <h4 class="panel-title">
+                                        <span translate="OZ"></span>
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="panel panel-default" ng-click="go('/party')">
+                                <div class="panel-heading mobile-menu-item">
+                                    <h4 class="panel-title">
+                                        <span translate="PARTY"></span>
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="panel panel-default" ng-click="go('/contact')">
+                                <div class="panel-heading mobile-menu-item">
+                                    <h4 class="panel-title">
+                                        <span translate="CONTACT"></span>
+                                    </h4>
+                                </div>
+                            </div>
                         </uib-accordion>
-                        <!--<ul class="mobile-menu-list">-->
-                        <!--<li>-->
-                        <!--<md-button class="md-raised mobile-menu-item" href="#/"-->
-                        <!--aria-label="{{'HOME' | translate}}">-->
-                        <!--<span translate="HOME"></span>-->
-                        <!--</md-button>-->
-                        <!--</li>-->
-                        <!--<li>-->
-                        <!--<md-button class="md-raised mobile-menu-item" href="#/about"-->
-                        <!--aria-label="{{'ABOUT_US' | translate}}">-->
-                        <!--<span translate="ABOUT_US"></span>-->
-                        <!--</md-button>-->
-                        <!--</li>-->
-                        <!--<li>-->
-                        <!--<md-button class="md-raised mobile-menu-item" href="#/ruzinov"-->
-                        <!--aria-label="{{'RUZINOV' | translate}}">-->
-                        <!--<span translate="RUZINOV"></span>-->
-                        <!--</md-button>-->
-                        <!--</li>-->
-                        <!--<li>-->
-                        <!--<md-button class="md-raised mobile-menu-item" href="#/dunajskaluzna"-->
-                        <!--aria-label="{{'DUNAJSKALUZNA' | translate}}">-->
-                        <!--<span translate="DUNAJSKALUZNA"></span>-->
-                        <!--</md-button>-->
-                        <!--</li>-->
-                        <!--<li>-->
-                        <!--<md-button class="md-raised mobile-menu-item" href="#/oz"-->
-                        <!--aria-label="{{'OZ' | translate}}">-->
-                        <!--<span translate="OZ"></span>-->
-                        <!--</md-button>-->
-                        <!--</li>-->
-                        <!--<li>-->
-                        <!--<md-button class="md-raised mobile-menu-item" href="#/party"-->
-                        <!--aria-label="{{'PARTY' | translate}}">-->
-                        <!--<span translate="PARTY"></span>-->
-                        <!--</md-button>-->
-                        <!--</li>-->
-                        <!--<li>-->
-                        <!--<md-button class="md-raised mobile-menu-item" href="#/contact"-->
-                        <!--aria-label="{{'CONTACT' | translate}}">-->
-                        <!--<span translate="CONTACT"></span>-->
-                        <!--</md-button>-->
-                        <!--</li>-->
-                        <!--</ul>-->
                     </md-content>
                 </md-sidenav>
                 <!--mobile menu end-->
@@ -250,16 +261,20 @@
 <script src="scripts/controllers/montessori.js"></script>
 <!-- endbuild -->
 
-</body><script type="text/ng-template" id="group-template.html">
+</body>
+
+<script type="text/ng-template" id="group-template.html" charset="UTF-8">
     <div class="panel {{panelClass || 'panel-default'}}">
-        <div class="panel-heading">
-            <h4 class="panel-title" style="color:#fa39c3">
-                <a href tabindex="0" class="accordion-toggle" ng-click="toggleOpen()" uib-accordion-transclude="heading"><span
-                        ng-class="{'text-muted': isDisabled}">{{heading}}<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isOpen, 'glyphicon-chevron-right': !isOpen}"></i></span></a>
+        <div class="panel-heading mobile-menu-item" ng-click="toggleOpen()">
+            <h4 class="panel-title">
+                <a href tabindex="0" class="accordion-toggle" uib-accordion-transclude="heading"><span
+                        ng-class="{'text-muted': isDisabled}"><span translate="{{heading}}"></span> <i
+                        class="pull-right glyphicon"
+                        ng-class="{'glyphicon-chevron-down': isOpen, 'glyphicon-chevron-right': !isOpen}"></i></span></a>
             </h4>
         </div>
         <div class="panel-collapse collapse" uib-collapse="!isOpen">
-            <div class="panel-body" style="text-align: right" ng-transclude></div>
+            <div class="panel-body" ng-transclude></div>
         </div>
     </div>
 </script>

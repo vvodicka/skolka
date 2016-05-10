@@ -8,7 +8,7 @@
  * Controller of the skolkaApp
  */
 angular.module('skolkaApp')
-    .controller('CommonCtrl', function ($scope, $mdMedia, $translate) {
+    .controller('CommonCtrl', function ($scope, $mdMedia, $translate, $location) {
 
         $scope.accordionStatus = {
          
@@ -37,16 +37,8 @@ angular.module('skolkaApp')
             $translate.use(selectedValue.code);
         };
 
-        $scope.aboutOpen = false;
-
-        $scope.$watch('demo.isOpen', function (isOpen) {
-            if (isOpen) {
-                $timeout(function () {
-                    $scope.tooltipVisible = self.isOpen;
-                }, 600);
-            } else {
-                $scope.tooltipVisible = self.isOpen;
-            }
-        });
+        $scope.go = function ( path ) {
+            $location.path( path );
+        };
 
     });

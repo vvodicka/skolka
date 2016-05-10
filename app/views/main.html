@@ -24,20 +24,20 @@
         {alt : 'img3', src : './images/photos/39.jpg'}]"></ng-fader>
         </div>
         <!--mobile moto, images and montessori end-->
-        <div flex>
-            <img src="./images/globe.png" alt="Welcome!" style="float: left; margin-right: 2vw"/>
-            <p style="font-size: 1.8em" translate="HOMEPAGE.WELCOME"></p>
+        <div flex layout-padding layout>
+            <div flex="10" flex-xs="20">
+                <img src="./images/globe.png" alt="Welcome!" style="float: left; width: 100%" />
+            </div>
+            <p style="font-size: 1.8em" translate="HOMEPAGE.WELCOME" flex></p>
         </div>
-        <div flex="30" flex-sm="100" flex-xs="100" flex-md="40" layout-align="center top" layout>
-            <div style="width: 100%" ng-class="{'apply-button-mobile-container' : !bigScreen}">
-                <div class="stretchy-container">
-                    <a href="#/contact">
-                        <div class="stretchy-content">
-                            <button class="apply-button" ng-class="{'apply-button-mobile' : !bigScreen}"><span
-                                    translate="I_WANT_TO_APPLY_MY_CHILD"></span></button>
-                        </div>
-                    </a>
-                </div>
+        <div flex="30" flex-sm="100" flex-xs="100" flex-md="40" layout-align="center center" layout layout-padding>
+            <div flex="50" flex-xs="30" flex-sm="30">
+                <img class="hotel-img" src="./images/house.png" alt="house"/>
+            </div>
+            <div flex class="hotel-text" layout layout-align="left center">
+                <a class="hotel-highlight-link" href="#/hotel">
+                    <span translate="HOTEL"></span>
+                </a>
             </div>
         </div>
         <!--mobile highlights-->

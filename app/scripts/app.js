@@ -108,9 +108,9 @@ var translationsSk = {
         P5: 'V našich zariadeniach štvorlístok si uplatňujeme zásady správneho životného štýlu, ktoré vkladáme do pozornosti deťom formou každodenného pohybu, každodenného cvičenia, športových krúžkov a prechádzok. Pohyb je pre deti samozrejmosťou a mal by ňou zostať aj v dospelosti. „Cvičenie im vo svojej podstate dáva možnosť objavovať niečo nové.”'
     },
     //montessori
-    MONTESSORI : {
-        LINK1 : 'spoznajte výnimočnú',
-        LINK2 : 'Mariu Montessori'
+    MONTESSORI: {
+        LINK1: 'spoznajte výnimočnú',
+        LINK2: 'Mariu Montessori'
     }
 
 };
