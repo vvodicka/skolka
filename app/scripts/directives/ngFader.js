@@ -78,7 +78,7 @@
                 },
                 template: '<div class="ng-fader">' +
                 //images will render here
-                '<ul>' +
+                '<ul class="image-fader">' +
                 '<li ng-repeat="image in images track by $index" md-swipe-right="sliderBack()" md-swipe-left="sliderForward()"><img data-ng-src="{{image.src}}" data-ng-alt="{{image.alt}}" ng-class="show($index)"/></li>' +
                 '</ul>'
             };

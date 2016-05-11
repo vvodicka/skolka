@@ -120,6 +120,20 @@ md-tooltip {
     min-height: 100vh;
 }
 
+.custom-page-header {
+    text-align: center;
+}
+
+.custom-page-header-big-screen:before {
+    content: url('../images/wave.png');
+    margin-right: 4vw;
+}
+
+.custom-page-header-big-screen:after {
+    content: url('../images/wave.png');
+    margin-left: 4vw;
+}
+
 md-toolbar.top-toolbar {
     background: white;
     height: 105px;
@@ -191,6 +205,10 @@ md-toolbar.top-toolbar {
     margin-bottom: 1vw;
 }
 
+.highlight-info-text {
+    font-size: 1.3em;
+}
+
 .hotel-img {
     width: 100%
 }
@@ -200,12 +218,30 @@ md-toolbar.top-toolbar {
     font-size: 1.7em;
 }
 
+.mobile-montessori-link {
+    font-size: 1.7em;
+    width: 100%;
+    white-space: normal;
+    margin: 0;
+    background: orange !important;
+    color: white !important;
+}
+
 .hotel-highlight-link {
     color: #658202;
 }
 
 .hotel-highlight-link:hover {
     color: #658202;
+}
+
+.small-homepage-image {
+    width: 100%;
+    border: 0.2vw solid orange;
+}
+
+.image-fader {
+    border: 1vw solid orange !important;
 }
 
 .homepage-content {
