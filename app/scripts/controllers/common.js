@@ -10,14 +10,11 @@
 angular.module('skolkaApp')
     .controller('CommonCtrl', function ($scope, $mdMedia, $translate, $location) {
 
-        $scope.accordionStatus = {
-         
-        };
-
         $scope.$watch(function () {
             return $mdMedia('gt-sm');
         }, function (big) {
             $scope.bigScreen = big;
+            $scope.asd = 123;
         });
 
         $scope.$watch(function () {
