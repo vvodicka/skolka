@@ -1,1 +1,69 @@
-montessori
+<md-content ng-class="{'main-content-padding' : bigScreen}">
+    <div class="page-content">
+        <div style="text-align: center;">
+            <h2 class="custom-page-header"
+                translate="MONTESSORI.HEADER"></h2>
+        </div>
+        <div layout>
+            <uib-accordion flex close-others="true">
+                <uib-accordion-group is-open="cv.open" heading="MONTESSORI.CV"
+                                     template-url="montessori-accordion-template.html">
+                    <p translate="MONTESSORI.CV.P1"></p>
+                    <div class="panel panel-footer">
+                        <ul>
+                            <li><span translate="MONTESSORI.CV.BOOK1"></span></li>
+                            <li><span translate="MONTESSORI.CV.BOOK2"></span></li>
+                            <li><span translate="MONTESSORI.CV.BOOK3"></span></li>
+                            <li><span translate="MONTESSORI.CV.BOOK4"></span></li>
+                            <li><span translate="MONTESSORI.CV.BOOK5"></span></li>
+                            <li><span translate="MONTESSORI.CV.BOOK6"></span></li>
+                            <li><span translate="MONTESSORI.CV.BOOK7"></span></li>
+                            <li><span translate="MONTESSORI.CV.BOOK8"></span></li>
+                        </ul>
+                    </div>
+                </uib-accordion-group>
+                <uib-accordion-group is-open="whatis.open" heading="MONTESSORI.WHAT_IS"
+                                     template-url="montessori-accordion-template.html">
+                    asddf
+                </uib-accordion-group>
+                <uib-accordion-group is-open="principles.open" heading="MONTESSORI.PRINCIPLES"
+                                     template-url="montessori-accordion-template.html">
+                    asddf
+                </uib-accordion-group>
+                <uib-accordion-group is-open="practiceLife.open" heading="MONTESSORI.PRACTICE_LIFE"
+                                     template-url="montessori-accordion-template.html">
+                    asddf
+                </uib-accordion-group>
+                <uib-accordion-group is-open="senseEducation.open" heading="MONTESSORI.SENSE_EDUCATION"
+                                     template-url="montessori-accordion-template.html">
+                    asddf
+                </uib-accordion-group>
+                <uib-accordion-group is-open="languageEducation.open" heading="MONTESSORI.LANGUAGE_EDUCATION"
+                                     template-url="montessori-accordion-template.html">
+                    asddf
+                </uib-accordion-group>
+                <uib-accordion-group is-open="mathematics.open" heading="MONTESSORI.MATHEMATICS"
+                                     template-url="montessori-accordion-template.html">
+                    asddf
+                </uib-accordion-group>
+            </uib-accordion>
+        </div>
+    </div>
+</md-content>
+
+
+<script type="text/ng-template" id="montessori-accordion-template.html" charset="UTF-8">
+    <div class="panel {{panelClass || 'panel-default'}}">
+        <div class="panel-heading mobile-menu-item" ng-click="toggleOpen()">
+            <h4 class="panel-title">
+                <a href tabindex="0" class="accordion-toggle" uib-accordion-transclude="heading"><span
+                        ng-class="{'text-muted': isDisabled}"><span translate="{{heading}}"></span> <i
+                        class="pull-right glyphicon"
+                        ng-class="{'glyphicon-chevron-down': isOpen, 'glyphicon-chevron-right': !isOpen}"></i></span></a>
+            </h4>
+        </div>
+        <div class="panel-collapse collapse" uib-collapse="!isOpen">
+            <div class="panel-body" ng-transclude></div>
+        </div>
+    </div>
+</script>

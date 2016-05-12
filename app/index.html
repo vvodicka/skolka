@@ -8,12 +8,12 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
-    <link rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap.css'/>
-    <link rel='stylesheet' href='bower_components/angular-material/angular-material.css'/>
-    <link rel='stylesheet' href='bower_components/ngGallery/src/css/ngGallery.css'/>
-    <link rel='stylesheet' href='bower_components/components-font-awesome/css/font-awesome.css'/>
-    <link rel='stylesheet' href='bower_components/ui-select/dist/select.css'/>
-    <link rel='stylesheet' href='bower_components/flag-icon-css/css/flag-icon.min.css'/>
+    <link rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap.css' />
+    <link rel='stylesheet' href='bower_components/angular-material/angular-material.css' />
+    <link rel='stylesheet' href='bower_components/ngGallery/src/css/ngGallery.css' />
+    <link rel='stylesheet' href='bower_components/components-font-awesome/css/font-awesome.css' />
+    <link rel='stylesheet' href='bower_components/ui-select/dist/select.css' />
+    <link rel='stylesheet' href='bower_components/flag-icon-css/css/flag-icon.min.css' />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -135,7 +135,7 @@
 
             <section layout="row" flex>
                 <!--mobile menu-->
-                <div ng-if="!bigScreen && isDefined(bigScreen)">
+                <div ng-if="!bigScreen">
                     <md-sidenav
                             ng-if="!bigScreen"
                             md-component-id="sidebar"

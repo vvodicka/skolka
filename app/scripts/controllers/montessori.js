@@ -9,9 +9,7 @@
  */
 angular.module('skolkaApp')
   .controller('MontessoriCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+   $scope.cv = {
+       open :true
+   }
   });

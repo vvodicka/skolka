@@ -117,7 +117,7 @@ md-tooltip {
 }
 
 .main-container {
-    min-height: 100vh;
+    /*min-height: 100vh;*/
 }
 
 .custom-page-header {
@@ -244,7 +244,7 @@ md-toolbar.top-toolbar {
     border: 1vw solid orange !important;
 }
 
-.homepage-content {
+.page-content {
     font-size: 1.3em;
     text-align: justify;
     margin-top: 4vw;

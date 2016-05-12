@@ -59,29 +59,10 @@
         </div>
         <!--mobile highlights end-->
     </div>
-    <md-content ng-if="bigScreen" style="margin-top: 2vw">
-        <div layout layout-align="center center" style="text-align: center">
-            <div class="highlight">
-                <img src="./images/baloons.jpg"/>
-                <div flex class="highlight-info-header" translate="WHY_CHOOSE_FOURLEAF_HEADER"></div>
-                <div flex class="highlight-info-text" translate="WHY_CHOOSE_FOURLEAF_TEXT"></div>
-            </div>
-            <div class="highlight">
-                <img src="./images/clownHat.jpg"/>
-                <div flex class="highlight-info-header" translate="OUR_GOALS"></div>
-                <div flex class="highlight-info-text" translate="OUR_GOALS_TEXT"></div>
-            </div>
-            <div class="highlight">
-                <img src="./images/fireworks.jpg"/>
-                <div flex class="highlight-info-header" translate="BENEFITS"></div>
-                <div flex class="highlight-info-text" translate="BENEFITS_TEXT"></div>
-            </div>
-        </div>
-    </md-content>
-    <div class="homepage-content">
+    <div class="page-content">
         <div style="text-align: center;">
             <h2 class="custom-page-header" ng-class="{'custom-page-header-big-screen' : bigScreen}"
-                translate="ABOUT_US"></h2>
+                translate="HOMEPAGE.HEADER"></h2>
         </div>
         <div layout>
             <div flex="85" flex-md="75" flex-sm="100" flex-xs="100">
@@ -103,6 +84,25 @@
             <p translate="HOMEPAGE.P6"></p>
         </div>
     </div>
+    <md-content ng-if="bigScreen" style="margin-top: 2vw">
+        <div layout layout-align="center center" style="text-align: center">
+            <div flex="30" class="highlight">
+                <img src="./images/baloons.jpg"/>
+                <div flex class="highlight-info-header" translate="WHY_CHOOSE_FOURLEAF_HEADER"></div>
+                <div flex class="highlight-info-text" translate="WHY_CHOOSE_FOURLEAF_TEXT"></div>
+            </div>
+            <div flex="30" class="highlight">
+                <img src="./images/clownHat.jpg"/>
+                <div flex class="highlight-info-header" translate="OUR_GOALS"></div>
+                <div flex class="highlight-info-text" translate="OUR_GOALS_TEXT"></div>
+            </div>
+            <div flex="30" class="highlight">
+                <img src="./images/fireworks.jpg"/>
+                <div flex class="highlight-info-header" translate="BENEFITS"></div>
+                <div flex class="highlight-info-text" translate="BENEFITS_TEXT"></div>
+            </div>
+        </div>
+    </md-content>
     <ng-fader ng-if="!bigScreen" style="width: 90%; margin-left: auto; margin-right: auto; margin-bottom: 2vh;"
               imgs="[
         {alt : 'img1', src : './images/photos/36.jpg'},
