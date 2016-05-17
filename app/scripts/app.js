@@ -19,6 +19,7 @@ angular
         'ngMaterial',
         'pascalprecht.translate',
         'ngFader',
+        'unhideWhen',
         'getMaxChildHeight',
         'jkuri.gallery',
         'ui.select',
@@ -169,10 +170,38 @@ var translationsSk = {
             SUBHEADER7 : 'Práca s pochvalou',
             P7 : 'Každé dieťa potrebuje pocit istoty, bezpečia a úspechu, no neustále kladné či záporné hodnotenie zo strany dospelých ho obmedzuje. S pochvalou sa v Montessori pedagogike zachádza primerane tak, aby sa dieťa nestalo na pochvale závislé'
         },
-        PRACTICE_LIFE: 'Praktický život',
-        SENSE_EDUCATION: 'Zmyslová výchova',
-        LANGUAGE_EDUCATION: 'Jazyková výchova',
-        MATHEMATICS: 'Matematika'
+        PRACTICE_LIFE: {
+            PRACTICE_LIFE : 'Praktický život',
+            P1 : 'Od malička sa deti pozerajú na činnosti dospelých a snažia sa opakovať všetko to, čo vidia. Cvičenia praktického života sú veľmi dôležitým základom pre ďalší rozvoj dieťaťa. Do tých cvičení patrí všetko to, čo robia dospelý niekoľkokrát denne, napríklad: upratovanie, obliekanie. Deti milujú skutočné veci, preto ich baví presýpať, prelievať, nalievať, zametať, utierať prach, čistiť obuv, stolovať, skladať prádlo, zapínať gombíky, zips a zaväzovať šnúrky. Dieťa sa učí starať o vlastnú osobu, o svoje vlastné telo, ale i o okolie a spoločnosť. Pomocou cvičení praktického života sa rozvíja jemná motorika, hrubá motorika a koordinácia ruka-oko.',
+            P2 : 'Existujú štyri oblasti aktivít praktického života:',
+            LI1 : 'starostlivosť sám o seba - obliekanie sa, vyzliekanie sa, umývanie, česanie',
+            LI2 : 'starostlivosť o okolie - upratovanie, utieranie, leštenie, starostlivosť o rastliny, starostlivosť o zvieratá',
+            LI3 : 'kontrola pohybu - prelievanie, presýpanie, pohybové aktivity (vonku), umelecké aktivity',
+            LI4 : 'spoločenský život (správanie) - pozdravenie, ospravedlnenie, prijatie ospravedlnenia, poďakovanie, poprosenie...',
+            P3 : 'Je dôležité mať na pamäti, že aktivity praktického života majú pomôcť deťom pri ich orientácií vo svete, v každodenných činnostiach.',
+        },
+        SENSE_EDUCATION: {
+            SENSE_EDUCATION: 'Zmyslová výchova',
+            P1 : 'Cieľom zmyslovej výchovy je poskytnúť deťom možnosť získať vedomé informácie z prostredia pomocou zmyslov. Mária Montessori verila, že dieťa vníma všetkými svojimi zmyslami hneď od narodenia. Pomocou zmyslov sa dieťa zoznamuje so svojím okolitým svetom a študuje ho. Zmyslový materiál, ktorý Mária Montessori vyvinula rozvíja intelekt dieťaťa (zapája všetky jeho zmysly - hmat, čuch, sluch, zrak a chuť). Prostredníctvom zmyslov sa rozvíja mozog a vytvárajú sa nové nervové prepojenia. Pomocou tohto zmyslového materiálu sa dieťa učí pomenovávať, rozlišovať, porovnávať a triediť. Zmyslový materiál rozdeľujeme na materiál na:',
+            LI1 : 'rozlišovanie rozmerov',
+            LI2 : 'rozlišovanie farieb',
+            LI3 : 'rozlišovanie tvarov',
+            LI4 : 'rozlišovanie povrchov',
+            LI5 : 'rozlišovanie štruktúr',
+            LI6 : 'rozlišovanie váhy',
+            LI7 : 'rozlišovanie zvukov',
+            LI8 : 'rozlišovanie tónov',
+            LI9 : 'rozlišovanie chutí',
+            LI10 : 'rozlišovanie teplôt a schopnosti viesť teplo'
+        },
+        LANGUAGE_EDUCATION: {
+            LANGUAGE_EDUCATION : 'Jazyková výchova',
+            P1 : 'Jazyková výchova je oblasť, v ktorej si dieťa rozvíja reč. Využívajú sa materiály, ktoré zároveň slúžia k výučbe písania a čítania. S písaním a čítaním začína dieťa vo veku okolo 4 - 6 rokov. Je však veľmi dôležité vystihnúť senzitívne obdobie, kedy dieťa chce samo písať alebo čítať. Čítanie prebieha genetickou metódou čítania, t. j. čítaním po písmenkách a nie po slabikách. Podľa Márie Montessori používame na písanie písané písmo a na čítanie zasa tlačené písmo.'
+        },
+        MATHEMATICS: {
+            MATHEMATICS : 'Matematika',
+            P1 : 'Matematický rozvoj začína od narodenia. Podľa Márie Montessori je ľudský duch duchom matematickým. Má schopnosť abstrahovať, niečo si predstaviť a argumentovať. Matematický materiál učí rozlišovať seba od ostatného, vnímať dĺžku, šírku a výšku, vnímať dimenzie, porovnávať veľkosti a formy a experimentovať.'
+        }
     }
 
 };

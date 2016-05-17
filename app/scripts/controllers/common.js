@@ -8,13 +8,12 @@
  * Controller of the skolkaApp
  */
 angular.module('skolkaApp')
-    .controller('CommonCtrl', function ($scope, $mdMedia, $translate, $location) {
+    .controller('CommonCtrl', function ($scope, $mdMedia, $translate, $location, $timeout) {
 
         $scope.$watch(function () {
             return $mdMedia('gt-sm');
         }, function (big) {
             $scope.bigScreen = big;
-            $scope.asd = 123;
         });
 
         $scope.$watch(function () {

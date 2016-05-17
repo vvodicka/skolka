@@ -6,6 +6,10 @@ body {
     text-align: justify;
 }
 
+.hidden {
+    display: none;
+}
+
 .burger-icon {
     color: #90b702;
     font-size: 1.5em !important;
@@ -23,6 +27,10 @@ body {
 
 .apply-button-img {
     width: 100%;
+}
+
+.green-text {
+    color: #658202;
 }
 
 .big-menu-item {
