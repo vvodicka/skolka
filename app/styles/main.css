@@ -17,8 +17,8 @@ body {
 }
 
 .main-content-padding {
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 12%;
+    padding-right: 12%;
 }
 
 *:focus {
@@ -35,11 +35,30 @@ body {
 
 .big-menu-item {
     color: #658202 !important;
-    font-size: 1em;
+    font-size: 1.2vw;
     background: none !important;
     border: none !important;
     box-shadow: none !important;
     float: right;
+}
+
+.big-menu-item-in-fab {
+    color: #658202 !important;
+    font-size: 1.2vw;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.sub-menu-item {
+    color: white !important;
+    font-size: 1vw;
+    background: orange !important;
+    float: left;
+}
+
+.sub-menu-tooltip {
+    font-size: 0.8vw;
 }
 
 .big-menu-item:hover, .big-menu-item-in-fab:hover, .sub-menu-item:hover {
@@ -47,22 +66,7 @@ body {
 }
 
 .medium-screen-menu-item {
-    font-size: 0.75em !important;
-}
-
-.sub-menu-item {
-    color: white !important;
-    font-size: 1em;
-    background: orange !important;
-    float: left;
-}
-
-.big-menu-item-in-fab {
-    color: #658202 !important;
-    font-size: 1em;
-    background: none !important;
-    border: none !important;
-    box-shadow: none !important;
+    font-size: 1.1vw !important;
 }
 
 md-fab-actions {
@@ -109,7 +113,7 @@ md-tooltip {
 }
 
 .big-screen-menu {
-    color: black;
+    color: inherit;
     text-align: right;
 }
 
@@ -148,7 +152,7 @@ md-toolbar.top-toolbar {
 }
 
 .main-header {
-    font-size: 2.3em;
+    font-size: 2.5em;
     color: #90b702;
     font-family: 'Yellowtail', cursive;
 }
@@ -255,7 +259,6 @@ md-toolbar.top-toolbar {
 .page-content {
     font-size: 1.3em;
     text-align: justify;
-    margin-top: 4vw;
 }
 
 .apply-button-mobile {
@@ -269,6 +272,10 @@ md-toolbar.top-toolbar {
 .highlight {
     padding-left: 2vw;
     padding-right: 2vw;
+}
+
+.highlight a, .highlight-mobile a{
+   color: inherit;
 }
 
 .footer {

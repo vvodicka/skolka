@@ -20,6 +20,7 @@ angular.module('skolkaApp')
             return $mdMedia('md');
         }, function (medium) {
             $scope.mediumScreenMenuItem = medium ? 'medium-screen-menu-item' : '';
+            $scope.mediumScreen = medium;
         });
 
         $scope.selectedLanguage = {code : 'sk'};

@@ -63,6 +63,14 @@ angular
                 templateUrl: 'views/montessori.html',
                 controller: 'MontessoriCtrl'
             })
+            .when('/state-bonus', {
+                templateUrl: 'views/state-bonus.html',
+                controller: 'StateBonusCtrl'
+            })
+            .when('/healthy-kindergarten', {
+                templateUrl: 'views/healthy-kindergarten.html',
+                controller: 'HealthyKindergartenCtrl'
+            })
             .otherwise({
                 redirectTo: '/'
             });
@@ -82,6 +90,7 @@ var translationsSk = {
     MOTTO: '"DIEŤA JE ZVIDITEĽNENÁ LÁSKA", Novalis',
     HOME: 'Domov',
     ABOUT_US: 'O nás',
+    WHO_WE_ARE : 'Kto sme',
     RUZINOV: 'Ružinov',
     DUNAJSKALUZNA: 'Dunajská Lužná',
     OZ: 'OZ štvorlístkovo',
@@ -92,16 +101,16 @@ var translationsSk = {
     PARTY: 'Detská oslava',
     CONTACT: 'Kontakt',
     I_WANT_TO_APPLY_MY_CHILD: 'Chcem prihlásiť svoje dieťa',
-    WHY_CHOOSE_FOURLEAF_HEADER: 'Prečo si vybrať štvorlístok',
-    WHY_CHOOSE_FOURLEAF_TEXT: 'Naša materská škola a rozprávkové jasličky vznikli z dôvodu potreby zosúladenia rodinného a pracovného života zamestnaných rodičov',
-    OUR_GOALS: 'Naše ciele',
-    OUR_GOALS_TEXT: 'Ciele Naša materská škola a rozprávkové jasličky vznikli z dôvodu potreby zosúladenia rodinného a pracovného života zamestnaných rodičov',
-    BENEFITS: 'Špeciálne benefity',
-    BENEFITS_TEXT: 'Benefity Naša materská škola a rozprávkové jasličky vznikli z dôvodu potreby zosúladenia rodinného a pracovného života zamestnaných rodičov',
     FOOTER: '&copy; Štvorlístok',
+    //highlights
+    HIGHLIGHTS : {
+        HEALTHY_KINDERGARTEN_HEADER : 'Zdravá škôlka',
+        STATE_BONUS_HEADER : 'Štátny príspevok',
+        HOTEL_HEADER : 'Zábavný detský hotel Štvorlístok'
+    },
     //homepage
     HOMEPAGE: {
-        HEADER: 'Úvod',
+        HEADER: 'Vitajte',
         WELCOME: 'Srdečne Vás vítame na stránke súkromnej materskej škôlky a jasličiek štvorlístok',
         MOTTO_HEADER: 'Otvárame deťom svet poznania',
         P1: 'Ranné detstvo považujeme za rozhodujúce obdobie pre ďalší vývin a formovanie osobnosti dieťaťa, a práve preto sme sa rozhodli vytvoriť Vaším deťom podnetné a láskavé prostredie rodinného charakteru.',

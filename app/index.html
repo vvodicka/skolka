@@ -8,12 +8,12 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
-    <link rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap.css'/>
-    <link rel='stylesheet' href='bower_components/angular-material/angular-material.css'/>
-    <link rel='stylesheet' href='bower_components/ngGallery/src/css/ngGallery.css'/>
-    <link rel='stylesheet' href='bower_components/components-font-awesome/css/font-awesome.css'/>
-    <link rel='stylesheet' href='bower_components/ui-select/dist/select.css'/>
-    <link rel='stylesheet' href='bower_components/flag-icon-css/css/flag-icon.min.css'/>
+    <link rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap.css' />
+    <link rel='stylesheet' href='bower_components/angular-material/angular-material.css' />
+    <link rel='stylesheet' href='bower_components/ngGallery/src/css/ngGallery.css' />
+    <link rel='stylesheet' href='bower_components/components-font-awesome/css/font-awesome.css' />
+    <link rel='stylesheet' href='bower_components/ui-select/dist/select.css' />
+    <link rel='stylesheet' href='bower_components/flag-icon-css/css/flag-icon.min.css' />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -99,7 +99,7 @@
                                         <md-button class="sub-menu-item" href="#/hotel" ng-class="mediumScreenMenuItem"
                                                    aria-label="{{'HOTEL' | translate}}">
                                             <span translate="HOTEL"></span>
-                                            <md-tooltip md-direction="left" md-visible="tooltipVisible"
+                                            <md-tooltip class="sub-menu-tooltip" md-direction="left" md-visible="tooltipVisible"
                                                         ng-class="mediumScreenMenuItem"
                                                         md-autohide="true">
                                                 <span translate="HOTEL_TOOLTIP"></span>
@@ -109,7 +109,7 @@
                                                    ng-class="mediumScreenMenuItem"
                                                    aria-label="{{'MONTESSORI_LINK' | translate}}">
                                             <span translate="MONTESSORI_LINK"></span>
-                                            <md-tooltip md-direction="left" md-visible="tooltipVisible"
+                                            <md-tooltip class="sub-menu-tooltip" md-direction="left" md-visible="tooltipVisible"
                                                         ng-class="mediumScreenMenuItem"
                                                         md-autohide="true">
                                                 <span translate="MONTESSORI_TOOLTIP"></span>
@@ -145,7 +145,7 @@
                             <md-toolbar class="mobile-menu-header">
                                 <h2 layout-padding translate="NAV_HEADER" ng-click="toggleSidebar('sidebar')"></h2>
                             </md-toolbar>
-                            <md-content style="margin-top: 2vh; padding-left: 1vw; padding-right: 1vw">
+                            <md-content style="margin-top: 2vh; padding-left: 1vw; padding-right: 1vw; text-align: left">
                                 <uib-accordion close-others="true">
                                     <div class="panel panel-default" ng-click="go('/')">
                                         <div class="panel-heading mobile-menu-item">
@@ -157,6 +157,13 @@
 
                                     <uib-accordion-group is-open="about.open" heading="ABOUT_US"
                                                          template-url="group-template.html">
+                                        <div class="panel panel-default" ng-click="go('/about')">
+                                            <div class="panel-heading mobile-menu-item">
+                                                <h4 class="panel-title">
+                                                    <span translate="WHO_WE_ARE"></span>
+                                                </h4>
+                                            </div>
+                                        </div>
                                         <div class="panel panel-default" ng-click="go('/hotel')">
                                             <div class="panel-heading mobile-menu-item">
                                                 <h4 class="panel-title">
@@ -266,6 +273,8 @@
 <script src="scripts/controllers/hotel.js"></script>
 <script src="scripts/controllers/party.js"></script>
 <script src="scripts/controllers/montessori.js"></script>
+<script src="scripts/controllers/statebonus.js"></script>
+<script src="scripts/controllers/healthykindergarten.js"></script>
 <!-- endbuild -->
 
 </body>

@@ -21,40 +21,46 @@
             </md-button>
         </div>
         <!--mobile moto, images and montessori end-->
-        <div flex layout-padding layout>
-            <div flex="10" flex-xs="20" flex-md="20">
-                <img src="./images/globe.png" alt="Welcome!" style="float: left; width: 100%"/>
-            </div>
-            <p style="font-size: 1.8em" translate="HOMEPAGE.WELCOME" flex></p>
-        </div>
-        <div flex="45" flex-sm="100" flex-xs="100" flex-md="40" layout-align="center center" layout layout-padding>
-            <div flex layout layout-align="center center" flex-sm="60" layout-align-sm="right center">
-                <div flex="25" flex-xs="30" flex-md="50">
-                    <img class="hotel-img" src="./images/house.png" alt="house"/>
-                </div>
-                <div flex class="hotel-text" layout layout-align="left center" layout-padding>
-                    <a class="hotel-highlight-link" href="#/hotel" style="text-align: left !important">
-                        <span translate="HOTEL"></span>
-                    </a>
-                </div>
-            </div>
-        </div>
+        <!--<div flex layout-padding layout>-->
+        <!--<div flex="10" flex-xs="20" flex-md="20">-->
+        <!--<img src="./images/globe.png" alt="Welcome!" style="float: left; width: 100%"/>-->
+        <!--</div>-->
+        <!--<p style="font-size: 1.8em" translate="HOMEPAGE.WELCOME" flex></p>-->
+        <!--</div>-->
+        <!--<div flex="45" flex-sm="100" flex-xs="100" flex-md="40" layout-align="center center" layout layout-padding>-->
+        <!--<div flex layout layout-align="center center" flex-sm="60" layout-align-sm="right center">-->
+        <!--<div flex="25" flex-xs="30" flex-md="50">-->
+        <!--<img class="hotel-img" src="./images/house.png" alt="house"/>-->
+        <!--</div>-->
+        <!--<div flex class="hotel-text" layout layout-align="left center" layout-padding>-->
+        <!--<a class="hotel-highlight-link" href="#/hotel" style="text-align: left !important">-->
+        <!--<span translate="HOTEL"></span>-->
+        <!--</a>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
         <!--mobile highlights-->
         <div ng-if="!bigScreen" class="highlights-container-mobile" get-max-child-height>
             <div class="highlight-mobile swap-animation" ng-animate-swap="mobileHighlight === 0">
-                <img src="./images/baloons.jpg"/>
-                <div flex class="highlight-info-header" translate="WHY_CHOOSE_FOURLEAF_HEADER"></div>
-                <div flex class="highlight-info-text" translate="WHY_CHOOSE_FOURLEAF_TEXT"></div>
+                <a href="#/healthy-kindergarten">
+                    <img src="./images/baloons.jpg"/>
+                    <div flex class="highlight-info-header" translate="HIGHLIGHTS.HEALTHY_KINDERGARTEN_HEADER"></div>
+                    <div flex class="highlight-info-text" translate="HIGHLIGHTS.HEALTHY_KINDERGARTEN_TEXT"></div>
+                </a>
             </div>
             <div class="highlight-mobile swap-animation" ng-animate-swap="mobileHighlight === 1">
-                <img src="./images/clownHat.jpg"/>
-                <div flex class="highlight-info-header" translate="OUR_GOALS"></div>
-                <div flex class="highlight-info-text" translate="OUR_GOALS_TEXT"></div>
+                <a href="#/state-bonus">
+                    <img src="./images/clownHat.jpg"/>
+                    <div flex class="highlight-info-header" translate="HIGHLIGHTS.STATE_BONUS_HEADER"></div>
+                    <div flex class="highlight-info-text" translate="HIGHLIGHTS.STATE_BONUS_TEXT"></div>
+                </a>
             </div>
             <div class="highlight-mobile swap-animation" ng-animate-swap="mobileHighlight === 2">
-                <img src="./images/fireworks.jpg"/>
-                <div flex class="highlight-info-header" translate="BENEFITS"></div>
-                <div flex class="highlight-info-text" translate="BENEFITS_TEXT"></div>
+                <a href="#/hotel">
+                    <img src="./images/fireworks.jpg"/>
+                    <div flex class="highlight-info-header" translate="HIGHLIGHTS.HOTEL_HEADER"></div>
+                    <div flex class="highlight-info-text" translate="HIGHLIGHTS.HOTEL_TEXT"></div>
+                </a>
             </div>
         </div>
         <!--mobile highlights end-->
@@ -75,7 +81,7 @@
             <div flex layout-margin ng-if="bigScreen">
                 <img class="small-homepage-image" src="./images/photos/36.jpg" alt="img1"/>
                 <img class="small-homepage-image" src="./images/photos/38.jpg" alt="img2"/>
-                <img class="small-homepage-image" src="./images/photos/39.jpg" alt="img3"/>
+                <img ng-show="mediumScreen" class="small-homepage-image" src="./images/photos/39.jpg" alt="img3"/>
             </div>
         </div>
         <div style="text-align: center;">
@@ -87,19 +93,25 @@
     <md-content ng-if="bigScreen" style="margin-top: 2vw">
         <div layout layout-align="center center" style="text-align: center">
             <div flex="30" class="highlight">
-                <img src="./images/baloons.jpg"/>
-                <div flex class="highlight-info-header" translate="WHY_CHOOSE_FOURLEAF_HEADER"></div>
-                <div flex class="highlight-info-text" translate="WHY_CHOOSE_FOURLEAF_TEXT"></div>
+                <a href="#/healthy-kindergarten">
+                    <img src="./images/baloons.jpg"/>
+                    <div flex class="highlight-info-header" translate="HIGHLIGHTS.HEALTHY_KINDERGARTEN_HEADER"></div>
+                    <div flex class="highlight-info-text" translate="HIGHLIGHTS.HEALTHY_KINDERGARTEN_TEXT"></div>
+                </a>
             </div>
             <div flex="30" class="highlight">
-                <img src="./images/clownHat.jpg"/>
-                <div flex class="highlight-info-header" translate="OUR_GOALS"></div>
-                <div flex class="highlight-info-text" translate="OUR_GOALS_TEXT"></div>
+                <a href="#/state-bonus">
+                    <img src="./images/clownHat.jpg"/>
+                    <div flex class="highlight-info-header" translate="HIGHLIGHTS.STATE_BONUS_HEADER"></div>
+                    <div flex class="highlight-info-text" translate="HIGHLIGHTS.STATE_BONUS_TEXT"></div>
+                </a>
             </div>
             <div flex="30" class="highlight">
-                <img src="./images/fireworks.jpg"/>
-                <div flex class="highlight-info-header" translate="BENEFITS"></div>
-                <div flex class="highlight-info-text" translate="BENEFITS_TEXT"></div>
+                <a href="#/hotel">
+                    <img src="./images/fireworks.jpg"/>
+                    <div flex class="highlight-info-header" translate="HIGHLIGHTS.HOTEL_HEADER"></div>
+                    <div flex class="highlight-info-text" translate="HIGHLIGHTS.HOTEL_TEXT"></div>
+                </a>
             </div>
         </div>
     </md-content>
@@ -107,5 +119,7 @@
               imgs="[
         {alt : 'img1', src : './images/photos/36.jpg'},
         {alt : 'img2', src : './images/photos/38.jpg'},
-        {alt : 'img3', src : './images/photos/39.jpg'}]"></ng-fader>
+        {alt : 'img3', src : './images/photos/39.jpg'}]">
+
+    </ng-fader>
 </md-content>
