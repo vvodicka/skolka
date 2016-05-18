@@ -99,20 +99,30 @@
                                         <md-button class="sub-menu-item" href="#/hotel" ng-class="mediumScreenMenuItem"
                                                    aria-label="{{'HOTEL' | translate}}">
                                             <span translate="HOTEL"></span>
-                                            <md-tooltip class="sub-menu-tooltip" md-direction="left" md-visible="tooltipVisible"
+                                            <md-tooltip md-direction="left" md-visible="tooltipVisible"
                                                         ng-class="mediumScreenMenuItem"
                                                         md-autohide="true">
-                                                <span translate="HOTEL_TOOLTIP"></span>
+                                                <span class="sub-menu-tooltip" translate="HOTEL_TOOLTIP"></span>
                                             </md-tooltip>
                                         </md-button>
                                         <md-button class="sub-menu-item" href="#/montessori"
                                                    ng-class="mediumScreenMenuItem"
                                                    aria-label="{{'MONTESSORI_LINK' | translate}}">
                                             <span translate="MONTESSORI_LINK"></span>
-                                            <md-tooltip class="sub-menu-tooltip" md-direction="left" md-visible="tooltipVisible"
+                                            <md-tooltip md-direction="left" md-visible="tooltipVisible"
                                                         ng-class="mediumScreenMenuItem"
                                                         md-autohide="true">
-                                                <span translate="MONTESSORI_TOOLTIP"></span>
+                                                <span class="sub-menu-tooltip" translate="MONTESSORI_TOOLTIP"></span>
+                                            </md-tooltip>
+                                        </md-button>
+                                        <md-button class="sub-menu-item" href="#/healthy-kindergarten"
+                                                   ng-class="mediumScreenMenuItem"
+                                                   aria-label="{{'HEALTHY_KINDERGARTEN' | translate}}">
+                                            <span translate="HEALTHY_KINDERGARTEN"></span>
+                                            <md-tooltip md-direction="left" md-visible="tooltipVisible"
+                                                        ng-class="mediumScreenMenuItem"
+                                                        md-autohide="true">
+                                                <span class="sub-menu-tooltip" translate="HEALTHY_KINDERGARTEN_TOOLTIP"></span>
                                             </md-tooltip>
                                         </md-button>
                                     </md-fab-actions>
@@ -175,6 +185,20 @@
                                             <div class="panel-heading mobile-menu-item">
                                                 <h4 class="panel-title">
                                                     <span translate="MONTESSORI_LINK"></span>
+                                                </h4>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default" ng-click="go('/healthy-kindergarten')">
+                                            <div class="panel-heading mobile-menu-item">
+                                                <h4 class="panel-title">
+                                                    <span translate="HEALTHY_KINDERGARTEN"></span>
+                                                </h4>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default" ng-click="go('/state-bonus')">
+                                            <div class="panel-heading mobile-menu-item">
+                                                <h4 class="panel-title">
+                                                    <span translate="STATE_BONUS"></span>
                                                 </h4>
                                             </div>
                                         </div>

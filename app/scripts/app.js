@@ -65,7 +65,7 @@ angular
             })
             .when('/state-bonus', {
                 templateUrl: 'views/state-bonus.html',
-                controller: 'StateBonusCtrl'
+                controller: 'StatebonusCtrl'
             })
             .when('/healthy-kindergarten', {
                 templateUrl: 'views/healthy-kindergarten.html',
@@ -91,6 +91,9 @@ var translationsSk = {
     HOME: 'Domov',
     ABOUT_US: 'O nás',
     WHO_WE_ARE : 'Kto sme',
+    HEALTHY_KINDERGARTEN : 'Zdravá škôlka',
+    HEALTHY_KINDERGARTEN_TOOLTIP : 'Základom zdravého vývoja dieťaťa je vyvážená kombinácia zdravej stravy a pohybu.',
+    STATE_BONUS : 'Štátny príspevok',
     RUZINOV: 'Ružinov',
     DUNAJSKALUZNA: 'Dunajská Lužná',
     OZ: 'OZ štvorlístkovo',

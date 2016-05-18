@@ -58,7 +58,7 @@ body {
 }
 
 .sub-menu-tooltip {
-    font-size: 0.8vw;
+    font-size: 0.8vw !important;
 }
 
 .big-menu-item:hover, .big-menu-item-in-fab:hover, .sub-menu-item:hover {
