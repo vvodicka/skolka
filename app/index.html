@@ -36,7 +36,7 @@
 
 <!-- Add your site or application content here -->
 <div ng-controller="CommonCtrl">
-    <md-content>
+    <md-content style="min-height: 100vh">
         <div class="header" ng-controller="SidebarCtrl">
             <md-toolbar class="top-toolbar" layout-padding ng-class="{'main-content-padding' : bigScreen}">
                 <div layout="row">
@@ -125,6 +125,11 @@
                                                 <span class="sub-menu-tooltip" translate="HEALTHY_KINDERGARTEN_TOOLTIP"></span>
                                             </md-tooltip>
                                         </md-button>
+                                        <md-button class="sub-menu-item" href="#/state-bonus"
+                                                   ng-class="mediumScreenMenuItem"
+                                                   aria-label="{{'STATE_BONUS' | translate}}">
+                                            <span translate="STATE_BONUS"></span>
+                                        </md-button>
                                     </md-fab-actions>
                                 </md-fab-speed-dial>
                             </div>
@@ -151,13 +156,14 @@
                     <div ng-if="!bigScreen">
                         <md-sidenav ng-if="!bigScreen"
                                     md-component-id="sidebar"
-                                    md-is-open="isSidenavOpen">
+                                    md-is-open="isSidenavOpen"
+                        layout="column" flex>
                             <md-toolbar class="mobile-menu-header">
                                 <h2 layout-padding translate="NAV_HEADER" ng-click="toggleSidebar('sidebar')"></h2>
                             </md-toolbar>
                             <md-content style="margin-top: 2vh; padding-left: 1vw; padding-right: 1vw; text-align: left">
                                 <uib-accordion close-others="true">
-                                    <div class="panel panel-default" ng-click="go('/')">
+                                    <div class="panel panel-default" ng-click="toggleSidebar('sidebar');go('/')">
                                         <div class="panel-heading mobile-menu-item">
                                             <h4 class="panel-title">
                                                 <span translate="HOME"></span>
@@ -167,35 +173,35 @@
 
                                     <uib-accordion-group is-open="about.open" heading="ABOUT_US"
                                                          template-url="group-template.html">
-                                        <div class="panel panel-default" ng-click="go('/about')">
+                                        <div class="panel panel-default" ng-click="toggleSidebar('sidebar');go('/about')">
                                             <div class="panel-heading mobile-menu-item">
                                                 <h4 class="panel-title">
                                                     <span translate="WHO_WE_ARE"></span>
                                                 </h4>
                                             </div>
                                         </div>
-                                        <div class="panel panel-default" ng-click="go('/hotel')">
+                                        <div class="panel panel-default" ng-click="toggleSidebar('sidebar');go('/hotel')">
                                             <div class="panel-heading mobile-menu-item">
                                                 <h4 class="panel-title">
                                                     <span translate="HOTEL"></span>
                                                 </h4>
                                             </div>
                                         </div>
-                                        <div class="panel panel-default" ng-click="go('/montessori')">
+                                        <div class="panel panel-default" ng-click="toggleSidebar('sidebar');go('/montessori')">
                                             <div class="panel-heading mobile-menu-item">
                                                 <h4 class="panel-title">
                                                     <span translate="MONTESSORI_LINK"></span>
                                                 </h4>
                                             </div>
                                         </div>
-                                        <div class="panel panel-default" ng-click="go('/healthy-kindergarten')">
+                                        <div class="panel panel-default" ng-click="toggleSidebar('sidebar');go('/healthy-kindergarten')">
                                             <div class="panel-heading mobile-menu-item">
                                                 <h4 class="panel-title">
                                                     <span translate="HEALTHY_KINDERGARTEN"></span>
                                                 </h4>
                                             </div>
                                         </div>
-                                        <div class="panel panel-default" ng-click="go('/state-bonus')">
+                                        <div class="panel panel-default" ng-click="toggleSidebar('sidebar');go('/state-bonus')">
                                             <div class="panel-heading mobile-menu-item">
                                                 <h4 class="panel-title">
                                                     <span translate="STATE_BONUS"></span>
@@ -203,35 +209,35 @@
                                             </div>
                                         </div>
                                     </uib-accordion-group>
-                                    <div class="panel panel-default" ng-click="go('/ruzinov')">
+                                    <div class="panel panel-default" ng-click="toggleSidebar('sidebar');go('/ruzinov')">
                                         <div class="panel-heading mobile-menu-item">
                                             <h4 class="panel-title">
                                                 <span translate="RUZINOV"></span>
                                             </h4>
                                         </div>
                                     </div>
-                                    <div class="panel panel-default" ng-click="go('/dunajskaluzna')">
+                                    <div class="panel panel-default" ng-click="toggleSidebar('sidebar');go('/dunajskaluzna')">
                                         <div class="panel-heading mobile-menu-item">
                                             <h4 class="panel-title">
                                                 <span translate="DUNAJSKALUZNA"></span>
                                             </h4>
                                         </div>
                                     </div>
-                                    <div class="panel panel-default" ng-click="go('/oz')">
+                                    <div class="panel panel-default" ng-click="toggleSidebar('sidebar');go('/oz')">
                                         <div class="panel-heading mobile-menu-item">
                                             <h4 class="panel-title">
                                                 <span translate="OZ"></span>
                                             </h4>
                                         </div>
                                     </div>
-                                    <div class="panel panel-default" ng-click="go('/party')">
+                                    <div class="panel panel-default" ng-click="toggleSidebar('sidebar');go('/party')">
                                         <div class="panel-heading mobile-menu-item">
                                             <h4 class="panel-title">
                                                 <span translate="PARTY"></span>
                                             </h4>
                                         </div>
                                     </div>
-                                    <div class="panel panel-default" ng-click="go('/contact')">
+                                    <div class="panel panel-default" ng-click="toggleSidebar('sidebar');go('/contact')">
                                         <div class="panel-heading mobile-menu-item">
                                             <h4 class="panel-title">
                                                 <span translate="CONTACT"></span>
