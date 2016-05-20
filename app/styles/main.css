@@ -138,12 +138,16 @@ md-tooltip {
 
 .custom-page-header-big-screen:before {
     content: url('../images/wave.png');
-    margin-right: 4vw;
+    transform: scale(.6);
+    display: inline-block;
+    -moz-transform: scale(0.7)
 }
 
 .custom-page-header-big-screen:after {
     content: url('../images/wave.png');
-    margin-left: 4vw;
+    transform: scale(.6);
+    display: inline-block;
+    -moz-transform: scale(0.7)
 }
 
 md-toolbar.top-toolbar {
@@ -360,8 +364,11 @@ md-toolbar.top-toolbar {
 
 .price-table td {
     text-align: left;
-    padding-right: 1vw;
     padding-bottom: 2vh;
+}
+
+.price-table td:last-child {
+    padding-left: 3vh;
 }
 
 .price-table tr {

@@ -1,87 +1,101 @@
-<div class="page-content">
-    <div style="text-align: center;">
-        <h2 class="custom-page-header" ng-class="{'custom-page-header-big-screen' : bigScreen}"
-            translate="HOTEL"></h2>
-    </div>
-    <div>
-        <p translate="HOTEL.P1"></p>
-        <div class="panel panel-footer">
-            <ul>
-                <li><span translate="HOTEL.LI1"></span></li>
-                <li><span translate="HOTEL.LI2"></span></li>
-                <li><span translate="HOTEL.LI3"></span></li>
-                <li><span translate="HOTEL.LI4"></span></li>
-                <li><span translate="HOTEL.LI5"></span></li>
-            </ul>
+<md-content ng-class="{'main-content-padding' : bigScreen}">
+    <div class="page-content">
+        <div style="text-align: center;">
+            <h2 class="custom-page-header" ng-class="{'custom-page-header-big-screen' : bigScreen}"
+                translate="HOTEL"></h2>
+        </div>
+        <div>
+            <p translate="HOTEL.P1"></p>
+            <div class="panel panel-footer">
+                <ul>
+                    <li><span translate="HOTEL.LI1"></span></li>
+                    <li><span translate="HOTEL.LI2"></span></li>
+                    <li><span translate="HOTEL.LI3"></span></li>
+                    <li><span translate="HOTEL.LI4"></span></li>
+                    <li><span translate="HOTEL.LI5"></span></li>
+                </ul>
+            </div>
+        </div>
+        <div layout-gt-sm layout-align="space-between top">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <span class="center-text margin-bottom-4vh" translate="HOTEL.P2"></span>
+                </div>
+                <div class="panel-body">
+                    <table class="price-table">
+                        <tr>
+                            <th colspan="2"><span class="green-text" translate="HOTEL.TH1"></span></th>
+                        </tr>
+                        <tr>
+                            <td><span class="bold-text" translate="HOTEL.TD1"></span></td>
+                            <td><span translate="HOTEL.TD2"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="bold-text" translate="HOTEL.TD3"></span></td>
+                            <td><span translate="HOTEL.TD4"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="bold-text" translate="HOTEL.TD5"></span></td>
+                            <td><span translate="HOTEL.TD6"></span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div layout-gt-sm="1" layout-padding></div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <span class="center-text margin-bottom-4vh" translate="HOTEL.P3"></span>
+                </div>
+                <div class="panel-body">
+                    <table class="price-table">
+                        <tr>
+                            <th colspan="2"><span class="green-text" translate="HOTEL.TH2"></span></th>
+                        </tr>
+                        <tr>
+                            <td><span class="bold-text" translate="HOTEL.TD7"></span></td>
+                            <td><span translate="HOTEL.TD8"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="bold-text" translate="HOTEL.TD9"></span></td>
+                            <td><span translate="HOTEL.TD10"></span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div layout-gt-sm layout-align="center top">
+            <div flex-gt-sm="50" class="panel panel-default">
+                <div class="panel-heading">
+                    <span class="center-text margin-bottom-4vh" translate="HOTEL.P4"></span>
+                </div>
+                <div class="panel-body">
+                    <table class="price-table">
+                        <tr>
+                            <td><span class="bold-text" translate="HOTEL.TD11"></span></td>
+                            <td><span translate="HOTEL.TD12"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="bold-text" translate="HOTEL.TD13"></span></td>
+                            <td><span translate="HOTEL.TD14"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="bold-text" translate="HOTEL.TD15"></span></td>
+                            <td><span translate="HOTEL.TD16"></span></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div class="panel panel-footer">
+                                    <ul>
+                                        <li><span translate="HOTEL.TD17"></span></li>
+                                        <li><span translate="HOTEL.TD18"></span></li>
+                                        <li><span translate="HOTEL.TD19"></span></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
-    <div layout-gt-sm layout-align="space-between top">
-        <div flex-md="50" class="panel panel-default" layout-padding>
-            <h3 class="center-text margin-bottom-4vh" translate="HOTEL.P2"></h3>
-            <table class="price-table">
-                <tr>
-                    <th colspan="2"><span class="green-text" translate="HOTEL.TH1"></span></th>
-                </tr>
-                <tr>
-                    <td><span class="bold-text" translate="HOTEL.TD1"></span></td>
-                    <td><span translate="HOTEL.TD2"></span></td>
-                </tr>
-                <tr>
-                    <td><span class="bold-text" translate="HOTEL.TD3"></span></td>
-                    <td><span translate="HOTEL.TD4"></span></td>
-                </tr>
-                <tr>
-                    <td><span class="bold-text" translate="HOTEL.TD5"></span></td>
-                    <td><span translate="HOTEL.TD6"></span></td>
-                </tr>
-            </table>
-        </div>
-        <div flex-md="50" class="panel panel-default" layout-padding>
-            <h3 class="center-text margin-bottom-4vh" translate="HOTEL.P3"></h3>
-            <table class="price-table">
-                <tr>
-                    <th colspan="2"><span class="green-text" translate="HOTEL.TH2"></span></th>
-                </tr>
-                <tr>
-                    <td><span class="bold-text" translate="HOTEL.TD7"></span></td>
-                    <td><span translate="HOTEL.TD8"></span></td>
-                </tr>
-                <tr>
-                    <td><span class="bold-text" translate="HOTEL.TD9"></span></td>
-                    <td><span translate="HOTEL.TD10"></span></td>
-                </tr>
-            </table>
-        </div>
-    </div>
-    <div layout-gt-sm layout-align="center top">
-        <div flex-md="50"  class="panel panel-default" layout-padding>
-            <h3 class="center-text margin-bottom-4vh" translate="HOTEL.P4"></h3>
-            <table class="price-table">
-                <tr>
-                    <td><span class="bold-text" translate="HOTEL.TD11"></span></td>
-                    <td><span translate="HOTEL.TD12"></span></td>
-                </tr>
-                <tr>
-                    <td><span class="bold-text" translate="HOTEL.TD13"></span></td>
-                    <td><span translate="HOTEL.TD14"></span></td>
-                </tr>
-                <tr>
-                    <td><span class="bold-text" translate="HOTEL.TD15"></span></td>
-                    <td><span translate="HOTEL.TD16"></span></td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <div class="panel panel-footer">
-                            <ul>
-                                <li><span translate="HOTEL.TD17"></span></li>
-                                <li><span translate="HOTEL.TD18"></span></li>
-                                <li><span translate="HOTEL.TD19"></span></li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </div>
-    </div>
-</div>
-</div>
+</md-content>
