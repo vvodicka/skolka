@@ -158,12 +158,12 @@ md-toolbar.top-toolbar {
 .main-header {
     font-size: 2.5em;
     color: #90b702;
-    font-family: 'Yellowtail', cursive;
+    font-family: 'Caveat', cursive;
 }
 
 .sub-header {
     color: #e51189;
-    font-family: 'Yellowtail', cursive;
+    font-family: 'Caveat', cursive;
     text-align: right;
     margin-top: -20px !important;
 }
