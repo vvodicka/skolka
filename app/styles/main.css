@@ -386,3 +386,19 @@ md-toolbar.top-toolbar {
     margin-bottom: 4vh;
 }
 
+a.external-link {
+    color: #658202;
+}
+
+a.external-link:hover {
+    color: #658202;
+}
+
+.bonus-highlight {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 3vh;
+    margin-top: 3vh;
+}
+
+.angular-google-map-container { height: 400px; }

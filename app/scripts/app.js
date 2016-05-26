@@ -23,7 +23,8 @@ angular
         'getMaxChildHeight',
         'jkuri.gallery',
         'ui.select',
-        'ui.bootstrap'
+        'ui.bootstrap',
+        'uiGmapgoogle-maps'
     ])
     .config(function ($routeProvider, $translateProvider) {
         $routeProvider
@@ -36,8 +37,36 @@ angular
                 controller: 'AboutCtrl'
             })
             .when('/ruzinov', {
-                templateUrl: 'views/ruzinov.html',
+                templateUrl: 'views/ruzinov/ruzinov.html',
                 controller: 'RuzinovCtrl'
+            })
+            .when('/ruzinov/spaces', {
+                templateUrl: 'views/ruzinov/spaces.html',
+                controller: 'RuzinovspacesCtrl'
+            })
+            .when('/ruzinov/information', {
+                templateUrl: 'views/ruzinov/information.html',
+                controller: 'RuzinovinformationCtrl'
+            })
+            .when('/ruzinov/daily-schedule', {
+                templateUrl: 'views/ruzinov/daily-schedule.html',
+                controller: 'RuzinovdailyscheduleCtrl'
+            })
+            .when('/ruzinov/activities', {
+                templateUrl: 'views/ruzinov/activities.html',
+                controller: 'RuzinovactivitiesCtrl'
+            })
+            .when('/ruzinov/registration', {
+                templateUrl: 'views/ruzinov/registration.html',
+                controller: 'RuzinovregistrationCtrl'
+            })
+            .when('/ruzinov/pricelist', {
+                templateUrl: 'views/ruzinov/pricelist.html',
+                controller: 'RuzinovpricelistCtrl'
+            })
+            .when('/ruzinov/gallery', {
+                templateUrl: 'views/ruzinov/gallery.html',
+                controller: 'RuzinovgalleryCtrl'
             })
             .when('/dunajskaluzna', {
                 templateUrl: 'views/dunajskaluzna.html',
@@ -80,10 +109,11 @@ angular
             .translations('gb', translationsEn)
             .translations('sk', translationsSk)
             .preferredLanguage('sk');
+
     });
 
+
 var translationsSk = {
-    //common
     HEADER: 'Štvorlístok',
     SUB_HEADER: 'Materská škôlka a jasle',
     NAV_HEADER: 'Skryť navigáciu',
@@ -91,10 +121,7 @@ var translationsSk = {
     HOME: 'Domov',
     ABOUT_US: 'O nás',
     WHO_WE_ARE: 'Kto sme',
-    HEALTHY_KINDERGARTEN: 'Zdravá škôlka',
     HEALTHY_KINDERGARTEN_TOOLTIP: 'Základom zdravého vývoja dieťaťa je vyvážená kombinácia zdravej stravy a pohybu.',
-    STATE_BONUS: 'Štátny príspevok',
-    RUZINOV: 'Ružinov',
     DUNAJSKALUZNA: 'Dunajská Lužná',
     OZ: 'OZ štvorlístkovo',
     HOTEL_TOOLTIP: 'Doprajte vašim deťom výnimočnú starostlivosť aj cez víkendy',
@@ -104,7 +131,6 @@ var translationsSk = {
     CONTACT: 'Kontakt',
     I_WANT_TO_APPLY_MY_CHILD: 'Chcem prihlásiť svoje dieťa',
     FOOTER: '&copy; Štvorlístok',
-    //highlights
     HIGHLIGHTS: {
         HEALTHY_KINDERGARTEN_HEADER: 'Zdravá škôlka',
         HEALTHY_KINDERGARTEN_TEXT: 'Základom zdravého vývoja dieťaťa je vyvážená kombinácia zdravej stravy a pohybu',
@@ -113,7 +139,6 @@ var translationsSk = {
         HOTEL_HEADER: 'Zábavný detský hotel Štvorlístok',
         HOTEL_TEXT: 'Zábavný detský hotel Štvorlístok sa teší na detičky počas víkendových dní a nocí'
     },
-    //homepage
     HOMEPAGE: {
         HEADER: 'Vitajte',
         WELCOME: 'Srdečne Vás vítame na stránke súkromnej materskej škôlky a jasličiek štvorlístok',
@@ -125,16 +150,14 @@ var translationsSk = {
         P5: 'V našich zariadeniach štvorlístok si uplatňujeme zásady správneho životného štýlu, ktoré vkladáme do pozornosti deťom formou každodenného pohybu, každodenného cvičenia, športových krúžkov a prechádzok. Pohyb je pre deti samozrejmosťou a mal by ňou zostať aj v dospelosti. „Cvičenie im vo svojej podstate dáva možnosť objavovať niečo nové.”',
         P6: ''
     },
-    //o nas
     ABOUT: {
         HEADER: 'Dovoľte nám, aby sme sa Vám predstavili...',
         P1: 'Dovoľte nám, aby sme sa Vám predstavili...',
-        P2: 'Škôlka a jasle štvorlístok plné deti sú miestom, ktoré nás robí naozaj šťastnými a naplnenými. Našou prácou sa snažíme deťom odovzdať praktické skúsenosti a poznania na ktorých môžu v budúcnosti stavať. Sme tím mladých ľudí, ktorí usmerňujú Vaše detí, a vedú ich k správnym postojom do života. Máme deti, milujeme ich, chceme im dať to najlepšie, a to znamená okrem iného aj maximálnu starostlivosť, rozumné postoje a dobré vzdelanie. ',
+        P2: 'Škôlka a jasle Štvorlístok plné detí sú miestom, ktoré nás robí naozaj šťastnými a naplnenými. Našou prácou sa snažíme deťom odovzdať praktické skúsenosti a poznania na ktorých môžu v budúcnosti stavať. Sme tím mladých ľudí, ktorí usmerňujú Vaše detí, a vedú ich k správnym postojom do života. Máme deti, milujeme ich, chceme im dať to najlepšie, a to znamená okrem iného aj maximálnu starostlivosť, rozumné postoje a dobré vzdelanie. ',
         P3: 'Naša materská škôlka a jasličky štvorlístok vznikli z dôvodu potreby zosúladenia rodinného a pracovného života zamestnaných rodičov. Ranné detstvo považujeme za kľúčové a centrálne obdobie pre ich životnú cestu a formovanie osobnosti, a práve preto si myslíme, že je veľmi dôležité aby toto obdobie dieťa prežilo v podnetnom a láskavom prostredí. V spolupráci s rodičmi napomáhame deťom formovať si zdravé korene, ktoré z deti vytvoria fyzicky, emocionálne, mentálne, citovo rozvinuté a charakterové osobnosti. ',
         P4: 'Filozofia, ktorou sa riadime je pomôcť rodine vychovávať a rozvíjať samostatné, tvoriace a zdravo sebavedomé deti. Charakterizuje nás rodinná atmosféra v rodinnom prostredí (deti sa u nás cítia ako doma) kde je pre dieťa radosť byť. Naším cieľom je vytvárať inšpiratívne a láskyplné prostredie pre prirodzený a radostný rozvoj detskej osobnosti, podporovať ich prirodzený vývoj opierajúci sa o vlastnú skúsenosť, sebestačnosť, sebadôveru, vzájomný rešpekt a lásku. Zároveň však vedieme deti k samostatnosti a zodpovednosti. Pripravujeme ich na dôležité životné chvíle (napr. vstup do materskej škôlky, vstup do základnej školy) a nenásilnou formou sa učia nadväzovať sociálne vzťahy, spoznávať okolitý svet a učia sa rešpektovať seba samých ako aj druhých. Rešpektujeme senzitívne obdobia a potreby detí, poskytujeme im individuálny prístup a napomáhame im k spoznaniu pozitívnej formy vlastného sebavyjadrenia. ',
         MOTTO_HEADER: 'OTVÁRAME DEŤOM SVET POZNÁVANIA A ŠÍRIME LÁSKU'
     },
-    //montessori
     MONTESSORI: {
         LINK1: 'spoznajte výnimočnú',
         LINK2: 'Mariu Montessori',
@@ -249,6 +272,62 @@ var translationsSk = {
         TD17: 'min. 4 hodiny',
         TD18: 'počas víkendového a nočného babysittingu stravu pre dieťa zabezpečuje rodič (resp. na základe vzájomnej dohody je možné stravu zabezpečiť)',
         TD19: 'nočný babysitting pre deti navštevujúce jasle, alebo škôlku štvorlístok je v sume 30,-/noc (od 18:00 do 08:00)',
+    },
+    HEALTHY_KINDERGARTEN: {
+        HEALTHY_KINDERGARTEN: 'Zdravá škôlka',
+        P1: 'Základom zdravého vývoja dieťaťa je vyvážená kombinácia zdravej stravy a pohybu.',
+        H1: 'Strava',
+        LI1: 'strava, ktorú poskytujeme spĺňa predpísané normy v predškolských zariadeniach',
+        LI2: 'je pripravovaná každodenne z čerstvých surovín',
+        LI3: 'je pestrá a podľa zásad zdravej výživy',
+        LI4: 'je bohatá na ovocie a zeleninu (v letných mesiacoch je obohatená o produkty z vlastnej záhradky detí)',
+        LI5: 'pitný režim, ktorý sa dodržuje starostlivo a priebežne počas celého dňa pozostáva z čerstvých vôd, čajov, smoothie a čerstvých ovocných štiav odšťavených priamo v zariadení',
+        LI6: 'v našich zariadeniach sa nachádza pekárnička chleba, v ktorej si počas týždňa pripravujeme vlastný chlebík',
+        P2: 'Strava, ktorú detičkám v našej škôlke a jasličkách poskytujeme pozostáva z desiaty, obedu a olovrantu, vrátane každodenného prísunu ovocia a zeleniny. Pitný režim je dodržiavaný počas celého dňa.',
+        P3: 'Obedy zabezpečuje firma zameriavajúca sa na dovoz stravy pre predškolské zariadenia a spĺňa všetky predpísané normy.',
+        H2: 'Pohyb',
+        P4: 'V našich jasliach a súkromnej škôlky je deťom poskytnutý dostatočný pohyb prostredníctvom každodenných pohybových aktivít a prácou v záhrade detí.',
+        H3: 'Pohybové aktivity:',
+        LI7: 'ranná rozcvička',
+        LI8: 'detská joga',
+        LI9: 'zumba',
+        LI10: 'prechádzky na čerstvom vzduchu',
+        LI11: 'každodenný pobyt vonku na vlastnom dvore',
+        LI12: 'pobyty v prírode (napr. ZOO, múzeu včelárstva, Bio farma)',
+        H4: 'Krúžky',
+        LI13: 'minifit',
+        LI14: 'minigym',
+        LI15: 'tanec',
+        LI16: 'muzikoterapia',
+        LI17: 'plavecký výcvik',
+        LI18: 'korčuľovanie',
+        PANEL_FOOTER1: 'Krúžky nám zabezpečuje OZ krúžkovo:',
+        H5: 'Záhradka detí',
+        LI19: 'v našich zariadeniach máme ovocnú, zeleninovú a bylinkovú záhradku, ktorej plody sú výsledkom práce detí',
+        LI20: 'deti sa učia ako si z malinkého semienka dokážeme vypestovať zeleninu a rôzne bylinky',
+        LI21: 'deti sa učia starať o záhradku, čo vzbudzuje u nich záujem o vytvorenie si dobrého vzťahu s prírodu'
+    },
+    STATE_BONUS: {
+        STATE_BONUS: 'Štátny príspevok',
+        P1: 'Dňom 01.01.2011 nadobudol účinnosť zákon č. 513/2010 Z .z., ktorým sa mení a dopĺňa zákon č. 571/2009 Z .z o rodičovskom príspevku a zákon č. 561/2008 Z .z o príspevku na starostlivosť o dieťa. Rodič alebo zákonný zástupca dieťaťa (je osoba, ktorej je dieťa zverené do náhradnej starostlivosti na základe právoplatného rozhodnutia príslušného orgánu ďalej len zákonný zástupca) si môže uplatniť nárok na poberanie príspevku na starostlivosť o dieťa do 3 rokov dieťaťa.',
+        H1: 'Od 01. 01. 2016 sa tento príspevok zvýšil na',
+        NUM: '280,- EUR/mesiac',
+        P2: 'Štát poskytuje príspevok rodičom alebo zákonnému zástupcovi dieťaťa na úhradu za starostlivosť o dieťa. Nárok si môže uplatniť rodič alebo zákonný zástupca dieťaťa, ktorý má trvalý pobyt na území SR, vykonáva zárobkovú činnosť, alebo študuje a zabezpečuje starostlivosť o dieťa do veku 3 rokov pomocou poskytovateľa (fyzickej alebo právnickej osoby na túto činnosť určenej) na území SR.',
+        LI1: 'Príspevok poskytuje Úrad práce, sociálnych vecí a rodiny SR',
+        LI2: 'Rodič alebo zákonný zástupca podá žiadosť o príspevok na starostlivosť o dieťa v mieste trvalého bydliska',
+        LI3: 'Rodič na úrad dokladá občiansky preukaz a rodný list dieťaťa',
+        LI4: 'Zmluvu o poskytovaní starostlivosti o dieťa uzatvorenú s poskytovateľom starostlivosti'
+    },
+    RUZINOV: {
+        INDEX: 'Prehľad',
+        RUZINOV: 'Ružinov',
+        SPACES: 'Priestory',
+        INFORMATION: 'Informácie',
+        DAILY_SCHEDULE: 'Denný režim',
+        ACTIVITIES: 'Krúžky',
+        REGISTRATION: 'Zápis',
+        PRICELIST: 'Cenník',
+        GALLERY: 'Fotogaléria'
     }
 
 };

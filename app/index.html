@@ -25,6 +25,7 @@
     <!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons"-->
     <!--rel="stylesheet">-->
     <!-- endbuild -->
+    <script src="https://maps.google.com/maps/api/js"></script>
     <link href='https://fonts.googleapis.com/css?family=Englebert&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Caveat:700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 </head>
@@ -79,11 +80,49 @@
                                            aria-label="{{'DUNAJSKALUZNA' | translate}}">
                                     <span translate="DUNAJSKALUZNA"></span>
                                 </md-button>
-                                <md-button class="md-raised big-menu-item" href="#/ruzinov"
-                                           ng-class="mediumScreenMenuItem"
-                                           aria-label="{{'RUZINOV' | translate}}">
-                                    <span translate="RUZINOV"></span>
-                                </md-button>
+                                <md-fab-speed-dial md-direction="down" md-open="ruzinovOpen"
+                                                   ng-class="mediumScreenMenuItem"
+                                                   ng-mouseenter="ruzinovOpen=true" ng-mouseleave="ruzinovOpen=false"
+                                                   class="md-scale md-fab multilevel-menu">
+                                    <md-fab-trigger>
+                                        <md-button class="big-menu-item-in-fab" href="#/ruzinov"
+                                                   aria-label="{{'RUZINOV' | translate}}"
+                                                   ng-mouseenter="$mdOpenMenu($event)">
+                                            <span translate="RUZINOV"></span>
+                                        </md-button>
+                                    </md-fab-trigger>
+                                    <md-fab-actions>
+                                        <md-button class="sub-menu-item" href="#/ruzinov/spaces" ng-class="mediumScreenMenuItem"
+                                                   aria-label="{{'RUZINOV.SPACES' | translate}}">
+                                            <span translate="RUZINOV.SPACES"></span>
+                                        </md-button>
+                                        <md-button class="sub-menu-item" href="#/ruzinov/information" ng-class="mediumScreenMenuItem"
+                                                   aria-label="{{'RUZINOV.INFORMATION' | translate}}">
+                                            <span translate="RUZINOV.INFORMATION"></span>
+                                        </md-button>
+                                        <md-button class="sub-menu-item" href="#/ruzinov/daily-schedule" ng-class="mediumScreenMenuItem"
+                                                   aria-label="{{'RUZINOV.DAILY_SCHEDULE' | translate}}">
+                                            <span translate="RUZINOV.DAILY_SCHEDULE"></span>
+                                        </md-button>
+                                        <md-button class="sub-menu-item" href="#/ruzinov/activities" ng-class="mediumScreenMenuItem"
+                                                   aria-label="{{'RUZINOV.ACTIVITIES' | translate}}">
+                                            <span translate="RUZINOV.ACTIVITIES"></span>
+                                        </md-button>
+                                        <md-button class="sub-menu-item" href="#/ruzinov/registration" ng-class="mediumScreenMenuItem"
+                                                   aria-label="{{'RUZINOV.REGISTRATION' | translate}}">
+                                            <span translate="RUZINOV.REGISTRATION"></span>
+                                        </md-button>
+                                        <md-button class="sub-menu-item" href="#/ruzinov/pricelist" ng-class="mediumScreenMenuItem"
+                                                   aria-label="{{'RUZINOV.PRICELIST' | translate}}">
+                                            <span translate="RUZINOV.PRICELIST"></span>
+                                        </md-button>
+                                        <md-button class="sub-menu-item" href="#/ruzinov/gallery" ng-class="mediumScreenMenuItem"
+                                                   aria-label="{{'RUZINOV.GALLERY' | translate}}">
+                                            <span translate="RUZINOV.GALLERY"></span>
+                                        </md-button>
+
+                                    </md-fab-actions>
+                                </md-fab-speed-dial>
                                 <md-fab-speed-dial md-direction="down" md-open="aboutOpen"
                                                    ng-class="mediumScreenMenuItem"
                                                    ng-mouseenter="aboutOpen=true" ng-mouseleave="aboutOpen=false"
@@ -209,13 +248,65 @@
                                             </div>
                                         </div>
                                     </uib-accordion-group>
-                                    <div class="panel panel-default" ng-click="toggleSidebar('sidebar');go('/ruzinov')">
-                                        <div class="panel-heading mobile-menu-item">
-                                            <h4 class="panel-title">
-                                                <span translate="RUZINOV"></span>
-                                            </h4>
+                                    <uib-accordion-group is-open="ruzinov.open" heading="RUZINOV"
+                                                         template-url="group-template.html">
+                                        <div class="panel panel-default" ng-click="toggleSidebar('sidebar');go('/ruzinov')">
+                                            <div class="panel-heading mobile-menu-item">
+                                                <h4 class="panel-title">
+                                                    <span translate="RUZINOV.INDEX"></span>
+                                                </h4>
+                                            </div>
                                         </div>
-                                    </div>
+                                        <div class="panel panel-default" ng-click="toggleSidebar('sidebar');go('/ruzinov/spaces')">
+                                            <div class="panel-heading mobile-menu-item">
+                                                <h4 class="panel-title">
+                                                    <span translate="RUZINOV.SPACES"></span>
+                                                </h4>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default" ng-click="toggleSidebar('sidebar');go('/ruzinov/information')">
+                                            <div class="panel-heading mobile-menu-item">
+                                                <h4 class="panel-title">
+                                                    <span translate="RUZINOV.INFORMATION"></span>
+                                                </h4>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default" ng-click="toggleSidebar('sidebar');go('/ruzinov/daily-schedule')">
+                                            <div class="panel-heading mobile-menu-item">
+                                                <h4 class="panel-title">
+                                                    <span translate="RUZINOV.DAILY_SCHEDULE"></span>
+                                                </h4>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default" ng-click="toggleSidebar('sidebar');go('/ruzinov/activities')">
+                                            <div class="panel-heading mobile-menu-item">
+                                                <h4 class="panel-title">
+                                                    <span translate="RUZINOV.ACTIVITIES"></span>
+                                                </h4>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default" ng-click="toggleSidebar('sidebar');go('/ruzinov/registration')">
+                                            <div class="panel-heading mobile-menu-item">
+                                                <h4 class="panel-title">
+                                                    <span translate="RUZINOV.REGISTRATION"></span>
+                                                </h4>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default" ng-click="toggleSidebar('sidebar');go('/ruzinov/pricelist')">
+                                            <div class="panel-heading mobile-menu-item">
+                                                <h4 class="panel-title">
+                                                    <span translate="RUZINOV.PRICELIST"></span>
+                                                </h4>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default" ng-click="toggleSidebar('sidebar');go('/ruzinov/gallery')">
+                                            <div class="panel-heading mobile-menu-item">
+                                                <h4 class="panel-title">
+                                                    <span translate="RUZINOV.GALLERY"></span>
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </uib-accordion-group>
                                     <div class="panel panel-default" ng-click="toggleSidebar('sidebar');go('/dunajskaluzna')">
                                         <div class="panel-heading mobile-menu-item">
                                             <h4 class="panel-title">
@@ -279,6 +370,14 @@
 <script src="bower_components/ngGallery/src/js/ngGallery.js"></script>
 <script src="bower_components/ui-select/dist/select.js"></script>
 <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="bower_components/angular-simple-logger/dist/angular-simple-logger.js"></script>
+<script src="bower_components/lodash/lodash.js"></script>
+<script src="bower_components/markerclustererplus/src/markerclusterer.js"></script>
+<script src="bower_components/google-maps-utility-library-v3-markerwithlabel/dist/markerwithlabel.js"></script>
+<script src="bower_components/google-maps-utility-library-v3-infobox/dist/infobox.js"></script>
+<script src="bower_components/google-maps-utility-library-v3-keydragzoom/dist/keydragzoom.js"></script>
+<script src="bower_components/js-rich-marker/src/richmarker.js"></script>
+<script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
@@ -305,6 +404,13 @@
 <script src="scripts/controllers/montessori.js"></script>
 <script src="scripts/controllers/statebonus.js"></script>
 <script src="scripts/controllers/healthykindergarten.js"></script>
+<script src="scripts/controllers/ruzinovspaces.js"></script>
+<script src="scripts/controllers/ruzinovinformation.js"></script>
+<script src="scripts/controllers/ruzinovdailyschedule.js"></script>
+<script src="scripts/controllers/ruzinovactivities.js"></script>
+<script src="scripts/controllers/ruzinovregistration.js"></script>
+<script src="scripts/controllers/ruzinovpricelist.js"></script>
+<script src="scripts/controllers/ruzinovgallery.js"></script>
 <!-- endbuild -->
 
 </body>
