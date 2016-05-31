@@ -1,12 +1,23 @@
+<div ng-show="bigScreen" class="big-screen-short-image-container">
+    <img src="./images/kidsShort.jpg" style="width: 100%;" alt="Kids desktop"/>
+</div>
 <md-content ng-class="{'main-content-padding' : bigScreen}">
     <div class="page-content">
         <div style="text-align: center;">
             <h2 class="custom-page-header" ng-class="{'custom-page-header-big-screen' : bigScreen}"
                 translate="RUZINOV"></h2>
         </div>
-        <div flex layout>
+        <div flex layout layout-padding>
             <div flex>
-                asd
+                <div class="kids-distribution-list">
+                    <p translate="RUZINOV.INFORMATION.P1"></p>
+                    <ul>
+                        <li><img class="kids-distribution-img" src="./images/ant.png" alt="Ant"> <span translate="RUZINOV.INFORMATION.LI1"></span> </li>
+                        <li><img class="kids-distribution-img" src="./images/sun.png" alt="Ant"> <span translate="RUZINOV.INFORMATION.LI2"></span> </li>
+                        <li><img class="kids-distribution-img" src="./images/frog.png" alt="Ant"> <span translate="RUZINOV.INFORMATION.LI3"></span> </li>
+                    </ul>
+                </div>
+                <div ng-include src="'./views/ruzinov/table-of-contents.htm'">a</div>
             </div>
             <div flex>
                 <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>

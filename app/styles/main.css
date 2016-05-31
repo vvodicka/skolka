@@ -394,6 +394,14 @@ a.external-link:hover {
     color: #658202;
 }
 
+a.green-link {
+    color: #658202;
+}
+
+a.green-link:hover {
+    color: #658202;
+}
+
 .bonus-highlight {
     font-size: 2em;
     text-align: center;
@@ -402,3 +410,23 @@ a.external-link:hover {
 }
 
 .angular-google-map-container { height: 400px; }
+
+.big-screen-short-image-container {
+
+}
+
+.kids-distribution-list {
+    text-align: center;
+}
+
+.kids-distribution-list ul {
+    padding: 0;
+}
+
+.kids-distribution-list li{
+    list-style: none;
+}
+
+.kids-distribution-img {
+    margin-right: .5vw;
+}

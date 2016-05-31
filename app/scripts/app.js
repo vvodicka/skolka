@@ -320,9 +320,16 @@ var translationsSk = {
     },
     RUZINOV: {
         INDEX: 'Prehľad',
+        TABLE_OF_CONTENTS : 'Obsah',
         RUZINOV: 'Ružinov',
         SPACES: 'Priestory',
-        INFORMATION: 'Informácie',
+        INFORMATION: {
+            INFORMATION: 'Informácie',
+            P1 : 'V našom štvorlístku máme tri skupinky, ktoré nazývame:',
+            LI1 : 'mravčeky (najmladšia skupinka)',
+            LI2 : 'slniečka (stredná skupinka)',
+            LI3 : 'žabky (najstaršia skupinka)'
+        },
         DAILY_SCHEDULE: 'Denný režim',
         ACTIVITIES: 'Krúžky',
         REGISTRATION: 'Zápis',
