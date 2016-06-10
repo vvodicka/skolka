@@ -1,1 +1,16 @@
-spaces
+<div ng-show="bigScreen" class="big-screen-short-image-container">
+    <img src="./images/kidsShort.jpg" style="width: 100%;" alt="Kids desktop"/>
+</div>
+<md-content ng-class="{'main-content-padding' : bigScreen}">
+    <div class="page-content">
+        <div style="text-align: center;">
+            <h2 class="custom-page-header" ng-class="{'custom-page-header-big-screen' : bigScreen}"
+                translate="RUZINOV.SPACES"></h2>
+        </div>
+        <div layout>
+            <div flex>
+                <p translate="RUZINOV.SPACES.P1"></p>
+            </div>
+        </div>
+    </div>
+</md-content>

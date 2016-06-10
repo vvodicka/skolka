@@ -1,1 +1,231 @@
-daily schedule
+<div ng-show="bigScreen" class="big-screen-short-image-container">
+    <img src="./images/kidsShort.jpg" style="width: 100%;" alt="Kids desktop"/>
+</div>
+<md-content ng-class="{'main-content-padding' : bigScreen}">
+    <div class="page-content">
+        <div style="text-align: center;">
+            <h2 class="custom-page-header" ng-class="{'custom-page-header-big-screen' : bigScreen}"
+                translate="RUZINOV.DAILY_SCHEDULE"></h2>
+        </div>
+        <div layout>
+            <div flex>
+                <div flex class="kids-distribution-list">
+                    <h3 class="green-text" translate="RUZINOV.INFORMATION.P1"></h3>
+                    <table style="margin-left: auto; margin-right: auto; text-align: left">
+                        <tr>
+                            <td class="text-center"><img class="kids-distribution-img" src="./images/ant.png" alt="Ant">
+                            </td>
+                            <td><span translate="RUZINOV.INFORMATION.LI1"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center"><img class="kids-distribution-img" src="./images/sun.png" alt="Sun">
+                            </td>
+                            <td><span translate="RUZINOV.INFORMATION.LI2"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center"><img class="kids-distribution-img" src="./images/frog.png"
+                                                         alt="Frog"></td>
+                            <td><span translate="RUZINOV.INFORMATION.LI3"></span></td>
+                        </tr>
+                    </table>
+                </div>
+                <div flex layout-padding>
+                    <h3 class="green-text" translate="RUZINOV.DAILY_SCHEDULE.H3"></h3>
+                    <p translate="RUZINOV.DAILY_SCHEDULE.P2"></p>
+                </div>
+                <div layout="row" layout-xs="column" layout-padding same-height-setter>
+                    <div flex>
+                        <h3 class="green-text" translate="RUZINOV.DAILY_SCHEDULE.H4"></h3>
+                        <uib-accordion flex close-others="true">
+                            <uib-accordion-group is-open="suns1.open" heading="RUZINOV.DAILY_SCHEDULE.SUNS.TH1"
+                                                 template-url="schedule-table-template.html">
+                                <ul>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.SUNS.TD1_1"></span></li>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.SUNS.TD1_2"></span></li>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.SUNS.TD1_3"></span></li>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.SUNS.TD1_4"></span></li>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.SUNS.TD1_5"></span></li>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.SUNS.TD1_6"></span></li>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.SUNS.TD1_7"></span></li>
+                                </ul>
+                            </uib-accordion-group>
+                            <uib-accordion-group is-open="suns2.open" heading="RUZINOV.DAILY_SCHEDULE.SUNS.TH2"
+                                                 template-url="schedule-table-template.html">
+                                <ul>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.SUNS.TD2_1"></span></li>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.SUNS.TD2_2"></span></li>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.SUNS.TD2_3"></span></li>
+                                </ul>
+                            </uib-accordion-group>
+                            <uib-accordion-group is-open="suns3.open" heading="RUZINOV.DAILY_SCHEDULE.SUNS.TH3"
+                                                 template-url="schedule-table-template.html">
+                                <ul>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.SUNS.TD3_1"></span></li>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.SUNS.TD3_2"></span></li>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.SUNS.TD3_3"></span></li>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.SUNS.TD3_4"></span></li>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.SUNS.TD3_5"></span></li>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.SUNS.TD3_6"></span></li>
+                                </ul>
+                            </uib-accordion-group>
+                            <uib-accordion-group is-open="suns4.open" heading="RUZINOV.DAILY_SCHEDULE.SUNS.TH4"
+                                                 template-url="schedule-table-template.html">
+                                <ul>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.SUNS.TD4_1"></span></li>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.SUNS.TD4_2"></span></li>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.SUNS.TD4_3"></span></li>
+                                </ul>
+                            </uib-accordion-group>
+                            <uib-accordion-group is-open="suns5.open" heading="RUZINOV.DAILY_SCHEDULE.SUNS.TH5"
+                                                 template-url="schedule-table-template.html">
+                                <ul>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.SUNS.TD5_1"></span></li>
+                                </ul>
+                            </uib-accordion-group>
+                            <uib-accordion-group is-open="suns6.open" heading="RUZINOV.DAILY_SCHEDULE.SUNS.TH6"
+                                                 template-url="schedule-table-template.html">
+                                <ul>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.SUNS.TD6_1"></span></li>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.SUNS.TD6_2"></span></li>
+                                </ul>
+                            </uib-accordion-group>
+                            <uib-accordion-group is-open="suns7.open" heading="RUZINOV.DAILY_SCHEDULE.SUNS.TH7"
+                                                 template-url="schedule-table-template.html">
+                                <ul>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.SUNS.TD7_1"></span></li>
+                                </ul>
+                            </uib-accordion-group>
+                            <uib-accordion-group is-open="suns8.open" heading="RUZINOV.DAILY_SCHEDULE.SUNS.TH8"
+                                                 template-url="schedule-table-template.html">
+                                <ul>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.SUNS.TD8_1"></span></li>
+                                </ul>
+                            </uib-accordion-group>
+                            <uib-accordion-group is-open="suns9.open" heading="RUZINOV.DAILY_SCHEDULE.SUNS.TH9"
+                                                 template-url="schedule-table-template.html">
+                                <ul>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.SUNS.TD9_1"></span></li>
+                                </ul>
+                            </uib-accordion-group>
+                            <uib-accordion-group is-open="suns10.open" heading="RUZINOV.DAILY_SCHEDULE.SUNS.TH10"
+                                                 template-url="schedule-table-template.html">
+                                <ul>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.SUNS.TD10_1"></span></li>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.SUNS.TD10_2"></span></li>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.SUNS.TD10_3"></span></li>
+                                </ul>
+                            </uib-accordion-group>
+                        </uib-accordion>
+
+                        <p translate="RUZINOV.DAILY_SCHEDULE.P3"></p>
+                        <div class="pad2vh"></div>
+                    </div>
+                    <div flex>
+                        <h3 class="green-text" translate="RUZINOV.DAILY_SCHEDULE.H5"></h3>
+                        <uib-accordion flex close-others="true">
+                            <uib-accordion-group is-open="FROGS1.open" heading="RUZINOV.DAILY_SCHEDULE.FROGS.TH1"
+                                                 template-url="schedule-table-template.html">
+                                <ul>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.FROGS.TD1_1"></span></li>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.FROGS.TD1_2"></span></li>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.FROGS.TD1_3"></span></li>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.FROGS.TD1_4"></span></li>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.FROGS.TD1_5"></span></li>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.FROGS.TD1_6"></span></li>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.FROGS.TD1_7"></span></li>
+                                </ul>
+                            </uib-accordion-group>
+                            <uib-accordion-group is-open="FROGS2.open" heading="RUZINOV.DAILY_SCHEDULE.FROGS.TH2"
+                                                 template-url="schedule-table-template.html">
+                                <ul>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.FROGS.TD2_1"></span></li>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.FROGS.TD2_2"></span></li>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.FROGS.TD2_3"></span></li>
+                                </ul>
+                            </uib-accordion-group>
+                            <uib-accordion-group is-open="FROGS3.open" heading="RUZINOV.DAILY_SCHEDULE.FROGS.TH3"
+                                                 template-url="schedule-table-template.html">
+                                <ul>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.FROGS.TD3_1"></span></li>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.FROGS.TD3_2"></span></li>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.FROGS.TD3_3"></span></li>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.FROGS.TD3_4"></span></li>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.FROGS.TD3_5"></span></li>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.FROGS.TD3_6"></span></li>
+                                </ul>
+                            </uib-accordion-group>
+                            <uib-accordion-group is-open="FROGS4.open" heading="RUZINOV.DAILY_SCHEDULE.FROGS.TH4"
+                                                 template-url="schedule-table-template.html">
+                                <ul>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.FROGS.TD4_1"></span></li>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.FROGS.TD4_2"></span></li>
+                                </ul>
+                            </uib-accordion-group>
+                            <uib-accordion-group is-open="FROGS5.open" heading="RUZINOV.DAILY_SCHEDULE.FROGS.TH5"
+                                                 template-url="schedule-table-template.html">
+                                <ul>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.FROGS.TD5_1"></span></li>
+                                </ul>
+                            </uib-accordion-group>
+                            <uib-accordion-group is-open="FROGS6.open" heading="RUZINOV.DAILY_SCHEDULE.FROGS.TH6"
+                                                 template-url="schedule-table-template.html">
+                                <ul>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.FROGS.TD6_1"></span></li>
+                                </ul>
+                            </uib-accordion-group>
+                            <uib-accordion-group is-open="FROGS7.open" heading="RUZINOV.DAILY_SCHEDULE.FROGS.TH7"
+                                                 template-url="schedule-table-template.html">
+                                <ul>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.FROGS.TD7_1"></span></li>
+                                </ul>
+                            </uib-accordion-group>
+                            <uib-accordion-group is-open="FROGS8.open" heading="RUZINOV.DAILY_SCHEDULE.FROGS.TH8"
+                                                 template-url="schedule-table-template.html">
+                                <ul>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.FROGS.TD8_1"></span></li>
+                                </ul>
+                            </uib-accordion-group>
+                            <uib-accordion-group is-open="FROGS9.open" heading="RUZINOV.DAILY_SCHEDULE.FROGS.TH9"
+                                                 template-url="schedule-table-template.html">
+                                <ul>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.FROGS.TD9_1"></span></li>
+                                </ul>
+                            </uib-accordion-group>
+                            <uib-accordion-group is-open="FROGS10.open" heading="RUZINOV.DAILY_SCHEDULE.FROGS.TH10"
+                                                 template-url="schedule-table-template.html">
+                                <ul>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.FROGS.TD10_1"></span></li>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.FROGS.TD10_2"></span></li>
+                                    <li><span translate="RUZINOV.DAILY_SCHEDULE.FROGS.TD10_3"></span></li>
+                                </ul>
+                            </uib-accordion-group>
+                        </uib-accordion>
+
+                        <p translate="RUZINOV.DAILY_SCHEDULE.P4"></p>
+                        <div class="pad2vh"></div>
+                    </div>
+                </div>
+                <div flex>
+                    <p class="green-text" translate="RUZINOV.DAILY_SCHEDULE.P_LAST"></p>
+                    <p translate="RUZINOV.DAILY_SCHEDULE.P1"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</md-content>
+
+<script type="text/ng-template" id="schedule-table-template.html" charset="UTF-8">
+    <div class="panel {{panelClass || 'panel-default'}}">
+        <div class="panel-heading mobile-menu-item" ng-click="toggleOpen()">
+            <h4 class="panel-title">
+                <a href tabindex="0" class="accordion-toggle" uib-accordion-transclude="heading"><span
+                        ng-class="{'text-muted': isDisabled}"><span translate="{{heading}}"></span> <i
+                        class="pull-right glyphicon"
+                        ng-class="{'glyphicon-chevron-down': isOpen, 'glyphicon-chevron-right': !isOpen}"></i></span></a>
+            </h4>
+        </div>
+        <div class="panel-collapse collapse" uib-collapse="!isOpen">
+            <div class="panel-body" ng-transclude></div>
+        </div>
+    </div>
+</script>
