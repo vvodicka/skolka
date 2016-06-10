@@ -1,15 +1,79 @@
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <span class="center-text margin-bottom-4vh" translate="RUZINOV.TABLE_OF_CONTENTS"></span>
+<div ng-controller="tableOfContents">
+    <div layout layout-align="center top" style="text-align: center" class="table-of-contents" ng-if="bigScreen">
+        <div flex class="highlight">
+            <a href="#/ruzinov/spaces">
+                <img class="highlight-img" class="highlight-img" src="./images/baloons.jpg"/>
+                <div flex class="highlight-info-header" translate="RUZINOV.SPACES"></div>
+            </a>
+        </div>
+        <div flex class="highlight">
+            <a href="#/ruzinov/daily-schedule">
+                <img class="highlight-img" src="./images/clownHat.jpg"/>
+                <div flex class="highlight-info-header" translate="RUZINOV.DAILY_SCHEDULE"></div>
+            </a>
+        </div>
+        <div flex class="highlight">
+            <a href="#/ruzinov/activities">
+                <img class="highlight-img" src="./images/fireworks.jpg"/>
+                <div flex class="highlight-info-header" translate="RUZINOV.ACTIVITIES"></div>
+            </a>
+        </div>
+        <div flex class="highlight">
+            <a href="#/ruzinov/registration">
+                <img class="highlight-img" src="./images/fireworks.jpg"/>
+                <div flex class="highlight-info-header" translate="RUZINOV.REGISTRATION"></div>
+            </a>
+        </div>
+        <div flex class="highlight">
+            <a href="#/ruzinov/pricelist">
+                <img class="highlight-img" src="./images/fireworks.jpg"/>
+                <div flex class="highlight-info-header" translate="RUZINOV.PRICELIST"></div>
+            </a>
+        </div>
+        <div flex class="highlight">
+            <a href="#/ruzinov/gallery">
+                <img class="highlight-img" src="./images/fireworks.jpg"/>
+                <div flex class="highlight-info-header" translate="RUZINOV.GALLERY"></div>
+            </a>
+        </div>
     </div>
-    <div class="panel-body">
-        <ul class="green-text">
-            <li><a class="green-link" href="#/ruzinov/spaces"><span translate="RUZINOV.SPACES"></span> </a></li>
-            <li><a class="green-link" href="#/ruzinov/daily-schedule"><span translate="RUZINOV.DAILY_SCHEDULE"></span> </a></li>
-            <li><a class="green-link" href="#/ruzinov/activities"><span translate="RUZINOV.ACTIVITIES"></span> </a></li>
-            <li><a class="green-link" href="#/ruzinov/registration"><span translate="RUZINOV.REGISTRATION"></span> </a></li>
-            <li><a class="green-link" href="#/ruzinov/pricelist"><span translate="RUZINOV.PRICELIST"></span> </a></li>
-            <li><a class="green-link" href="#/ruzinov/gallery"><span translate="RUZINOV.GALLERY"></span> </a></li>
-        </ul>
+
+    <div class="highlights-container-mobile table-of-contents-mobile" get-max-child-height  ng-if="!bigScreen">
+        <div class="highlight-mobile swap-animation" ng-animate-swap="mobileHighlight === 0">
+            <a href="#/ruzinov/spaces">
+                <img class="highlight-img" class="highlight-img" src="./images/baloons.jpg"/>
+                <div flex class="highlight-info-header" translate="RUZINOV.SPACES"></div>
+            </a>
+        </div>
+        <div class="highlight-mobile swap-animation" ng-animate-swap="mobileHighlight === 1">
+            <a href="#/ruzinov/daily-schedule">
+                <img class="highlight-img" src="./images/clownHat.jpg"/>
+                <div flex class="highlight-info-header" translate="RUZINOV.DAILY_SCHEDULE"></div>
+            </a>
+        </div>
+        <div class="highlight-mobile swap-animation" ng-animate-swap="mobileHighlight === 2">
+            <a href="#/ruzinov/activities">
+                <img class="highlight-img" src="./images/fireworks.jpg"/>
+                <div flex class="highlight-info-header" translate="RUZINOV.ACTIVITIES"></div>
+            </a>
+        </div>
+        <div class="highlight-mobile swap-animation" ng-animate-swap="mobileHighlight === 3">
+            <a href="#/ruzinov/registration">
+                <img class="highlight-img" src="./images/fireworks.jpg"/>
+                <div flex class="highlight-info-header" translate="RUZINOV.REGISTRATION"></div>
+            </a>
+        </div>
+        <div class="highlight-mobile swap-animation" ng-animate-swap="mobileHighlight === 4">
+            <a href="#/ruzinov/pricelist">
+                <img class="highlight-img" src="./images/fireworks.jpg"/>
+                <div flex class="highlight-info-header" translate="RUZINOV.PRICELIST"></div>
+            </a>
+        </div>
+        <div class="highlight-mobile swap-animation" ng-animate-swap="mobileHighlight === 5">
+            <a href="#/ruzinov/gallery">
+                <img class="highlight-img" src="./images/fireworks.jpg"/>
+                <div flex class="highlight-info-header" translate="RUZINOV.GALLERY"></div>
+            </a>
+        </div>
     </div>
 </div>

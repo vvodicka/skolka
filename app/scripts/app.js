@@ -438,7 +438,21 @@ var translationsSk = {
             },
             P_LAST: 'Súčasťou ponúkaného programu je výučba v anglickom jazyku, environmentálna výchova, hudobno-pohybová výchova, detská joga, minifit, fitgym, tanec, muzikoterapia, drumben bubnovačka, výtvarné aktivity, tvorivé dielne, pečenie, výlety a oslavy narodenín.'
         },
-        ACTIVITIES: 'Krúžky',
+        ACTIVITIES: {
+            ACTIVITIES:'Krúžky',
+            P1: 'Štvorlístkáči sa v rámci denného režimu zúčastňujú rôznych krúžkov, ktoré sú pravidelné zaradené do denného režimu.',
+            H1: 'Mravčekovia, slniečka a žabky',
+            LI1: 'Anglický jazyk - denná komunikácia',
+            LI2: 'Hudobno-pohybová výchova + rozcvička - každý deň',
+            LI3: 'Detská joga - 2x týždenne',
+            H2 : 'Slniečka a žabky',
+            LI4: 'Tvorivé dielne - 2x mesačne',
+            LI5: 'Minifit, fitgym, tanec, drumben bubnovačka s prvkami muzikoterapie - 1x týždenne (od septembra do júna v pravidelnom striedaní)',
+            H3: 'Tieto krúžky sú zahrnuté v cene školného',
+            LI6: 'Korčuľovanie - týždenný intenzívny kurz v trvaní 5 dní - 1x do roka',
+            LI7: 'Plávanie - týždenný intenzívny kurz v trvaní 5 dní - 1x do roka',
+            P2 : 'Tieto krúžky nie sú zahrnuté v cene školného (dobrovoľné). V prípade záujmu rodičov je možné zorganizovať krúžky aj častejšie.'
+        },
         REGISTRATION: 'Zápis',
         PRICELIST: 'Cenník',
         GALLERY: 'Fotogaléria'

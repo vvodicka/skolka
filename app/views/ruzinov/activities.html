@@ -1,1 +1,45 @@
-activities
+<div ng-show="bigScreen" class="big-screen-short-image-container">
+    <img src="./images/kidsShort.jpg" style="width: 100%;" alt="Kids desktop"/>
+</div>
+<md-content ng-class="{'main-content-padding' : bigScreen}">
+    <div class="page-content">
+        <div style="text-align: center;">
+            <h2 class="custom-page-header" ng-class="{'custom-page-header-big-screen' : bigScreen}"
+                translate="RUZINOV.ACTIVITIES"></h2>
+        </div>
+        <div layout>
+            <div flex>
+                <p translate="RUZINOV.ACTIVITIES.P1"></p>
+                <h3 class="green-text" translate="RUZINOV.ACTIVITIES.H1"></h3>
+                <div class="panel panel-default">
+                    <div class="panel-body panel-footer">
+                        <ul class="custom-ul">
+                            <li><span translate="RUZINOV.ACTIVITIES.LI1"></span></li>
+                            <li><span translate="RUZINOV.ACTIVITIES.LI2"></span></li>
+                            <li><span translate="RUZINOV.ACTIVITIES.LI3"></span></li>
+                        </ul>
+                    </div>
+                </div>
+                <h3 class="green-text" translate="RUZINOV.ACTIVITIES.H2"></h3>
+                <div class="panel panel-default">
+                    <div class="panel-body panel-footer">
+                        <ul class="custom-ul">
+                            <li><span translate="RUZINOV.ACTIVITIES.LI4"></span></li>
+                            <li><span translate="RUZINOV.ACTIVITIES.LI5"></span></li>
+                        </ul>
+                    </div>
+                </div>
+                <h3 class="green-text" translate="RUZINOV.ACTIVITIES.H3"></h3>
+                <div class="panel panel-default">
+                    <div class="panel-body panel-footer">
+                        <ul class="custom-ul">
+                            <li><span translate="RUZINOV.ACTIVITIES.LI6"></span></li>
+                            <li><span translate="RUZINOV.ACTIVITIES.LI7"></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ng-include src="'./views/ruzinov/table-of-contents.htm'"></div>
+</md-content>
