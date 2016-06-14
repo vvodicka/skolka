@@ -440,7 +440,7 @@ var translationsSk = {
         },
         ACTIVITIES: {
             ACTIVITIES:'Krúžky',
-            P1: 'Štvorlístkáči sa v rámci denného režimu zúčastňujú rôznych krúžkov, ktoré sú pravidelné zaradené do denného režimu.',
+            P1: 'Štvorlístkáči sa v rámci denného režimu zúčastňujú rôznych krúžkov, ktoré sú pravidelne zaradené do denného režimu.',
             H1: 'Mravčekovia, slniečka a žabky',
             LI1: 'Anglický jazyk - denná komunikácia',
             LI2: 'Hudobno-pohybová výchova + rozcvička - každý deň',

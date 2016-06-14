@@ -1,3 +1,6 @@
+<div ng-show="bigScreen" class="big-screen-short-image-container">
+    <img src="./images/kidsShort.jpg" style="width: 100%;" alt="Kids desktop"/>
+</div>
 <md-content ng-class="{'main-content-padding' : bigScreen}">
     <div class="page-content">
         <div style="text-align: center;">
@@ -23,6 +26,25 @@
                         <p translate="HEALTHY_KINDERGARTEN.P2"></p>
                         <p translate="HEALTHY_KINDERGARTEN.P3"></p>
                     </div>
+                </div>
+
+                <div layout layout-align="center center" style="text-align: center" layout-padding>
+                    <div flex ng-show="bigScreen" flex>
+                        <img class="padding-image" src="./images/photos/36.jpg" alt="Photo" />
+                    </div>
+                    <div ng-show="bigScreen" flex>
+                        <img class="padding-image"  src="./images/photos/36.jpg" alt="Photo" />
+                    </div>
+                    <div ng-show="bigScreen" flex>
+                        <img class="padding-image"  src="./images/photos/36.jpg" alt="Photo" />
+                    </div>
+                    <ng-fader ng-if="!bigScreen" style="width: 100%; margin-left: auto; margin-right: auto; margin-bottom: 2vh;"
+                              imgs="[
+        {alt : 'img1', src : './images/photos/36.jpg'},
+        {alt : 'img2', src : './images/photos/38.jpg'},
+        {alt : 'img3', src : './images/photos/39.jpg'}]">
+
+                    </ng-fader>
                 </div>
 
                 <div class="panel panel-default">
@@ -54,6 +76,25 @@
                         <span translate="HEALTHY_KINDERGARTEN.PANEL_FOOTER1"></span> <a href="http://www.kruzkovo.sk"
                                                                                         class="external-link">www.kruzkovo.sk</a>
                     </div>
+                </div>
+
+                <div layout layout-align="center center" style="text-align: center" layout-padding>
+                    <div flex ng-show="bigScreen">
+                        <img class="padding-image" src="./images/photos/36.jpg" alt="Photo" />
+                    </div>
+                    <div ng-show="bigScreen" flex>
+                        <img class="padding-image"  src="./images/photos/36.jpg" alt="Photo" />
+                    </div>
+                    <div ng-show="bigScreen" flex>
+                        <img class="padding-image"  src="./images/photos/36.jpg" alt="Photo" />
+                    </div>
+                    <ng-fader ng-if="!bigScreen" style="width: 100%; margin-left: auto; margin-right: auto; margin-bottom: 2vh;"
+                              imgs="[
+        {alt : 'img1', src : './images/photos/36.jpg'},
+        {alt : 'img2', src : './images/photos/38.jpg'},
+        {alt : 'img3', src : './images/photos/39.jpg'}]">
+
+                    </ng-fader>
                 </div>
 
                 <div class="panel panel-default">
