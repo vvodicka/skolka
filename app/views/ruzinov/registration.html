@@ -1,1 +1,41 @@
-registration
+<div ng-show="bigScreen" class="big-screen-short-image-container">
+    <img src="./images/kidsShort.jpg" style="width: 100%;" alt="Kids desktop"/>
+</div>
+<md-content ng-class="{'main-content-padding' : bigScreen}">
+    <div class="page-content">
+        <div style="text-align: center;">
+            <h2 class="custom-page-header" ng-class="{'custom-page-header-big-screen' : bigScreen}"
+                translate="RUZINOV.REGISTRATION"></h2>
+        </div>
+        <div layout>
+            <div flex>
+                <p translate="RUZINOV.REGISTRATION.P1"></p>
+                <p translate="RUZINOV.REGISTRATION.P2"></p>
+                <p translate="RUZINOV.REGISTRATION.P3"></p>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading center-text">
+                        <h2 class="green-text" translate="RUZINOV.REGISTRATION.H1"></h2>
+                    </div>
+
+                    <div class="panel-body">
+                        <h4 class="green-text" translate="RUZINOV.REGISTRATION.H2"></h4>
+                        <div class="panel panel-default">
+                            <div class="panel-body panel-footer">
+                                <p translate="RUZINOV.REGISTRATION.P4"></p>
+                            </div>
+                        </div>
+
+                        <h4 class="green-text" translate="RUZINOV.REGISTRATION.H3"></h4>
+                        <div class="panel panel-default">
+                            <div class="panel-body panel-footer">
+                                <p translate="RUZINOV.REGISTRATION.P5"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ng-include src="'./views/ruzinov/table-of-contents.html'"></div>
+</md-content>

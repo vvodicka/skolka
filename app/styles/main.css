@@ -453,7 +453,7 @@ a.green-link:hover {
 }
 
 .highlight-img {
-    width: 80%;
+    width: 60%;
 }
 
 .table-of-contents .highlight-info-header {
@@ -482,9 +482,20 @@ a.green-link:hover {
     float: none !important;
 }
 
-
 .text-image {
     width: 20%;
     float: left;
     border: .3vw solid orange;
+}
+
+.price-table2 {
+    width: 100%;
+}
+.price-table2 tr {
+    padding-top: 1vh;
+}
+
+.price-table2 td:not(:first-child) {
+    white-space: nowrap;
+    padding-left: 2vw;
 }
