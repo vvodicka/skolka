@@ -478,14 +478,25 @@ a.green-link:hover {
 
 .full-width-img {
     width: 90% !important;
-    border: 1vw solid orange !important;
     float: none !important;
+}
+
+.thick-border {
+    border: 1vw solid orange !important;
 }
 
 .text-image {
     width: 20%;
     float: left;
     border: .3vw solid orange;
+}
+
+.orange-text {
+    color: orange;
+}
+
+.no-border {
+    border: none !important;
 }
 
 .price-table2 {
@@ -498,4 +509,13 @@ a.green-link:hover {
 .price-table2 td:not(:first-child) {
     white-space: nowrap;
     padding-left: 2vw;
+}
+
+
+.party-table tr:not(:last-child) td{
+    padding-bottom: 1vh;
+}
+
+.party-table tr:not(:first-child) td{
+    padding-top: 1vh;
 }

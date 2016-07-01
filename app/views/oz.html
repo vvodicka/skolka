@@ -1,1 +1,85 @@
-oz
+<div ng-show="bigScreen" class="big-screen-short-image-container">
+    <img src="./images/kidsShort.jpg" style="width: 100%;" alt="Kids desktop"/>
+</div>
+<img src="./images/kidsShortMobile.png" style="width: 100%; padding: 0" ng-show="!bigScreen" alt="Kids short Mobile"/>
+<md-content ng-class="{'main-content-padding' : bigScreen}">
+    <div class="page-content">
+        <div style="text-align: center;">
+            <h2 class="custom-page-header" ng-class="{'custom-page-header-big-screen' : bigScreen}"
+                translate="OZ"></h2>
+        </div>
+        <div layout>
+            <div flex>
+                <div style="text-align: center">
+                    <img class="text-image no-border" ng-class="{'full-width-img' : !bigScreen}" layout-margin
+                         ng-class="{'full-width' : !bigScreen}" src="./images/oz.png" alt="Photo"/>
+                </div>
+                <h3 class="green-text" translate="OZ.H1"></h3>
+                <p translate="OZ.P1"></p>
+                <p translate="OZ.P2"></p>
+                <p translate="OZ.P3"></p>
+            </div>
+        </div>
+        <div layout layout-padding>
+            <div flex class="panel panel-default" style="padding: 0">
+                <div class="panel-heading">
+                    <span class="green-text" translate="OZ.H2"></span>
+                </div>
+                <div class="panel-body">
+                    <div flex>
+                        <div layout="row" layout-sm="column" layout-xs="column">
+                            <div flex layout layout-align="center top">
+                                <table style="font-size: 1.5em; width: 80%; text-align: center;">
+                                    <tr>
+                                        <th style="text-align: right; font-size: 3em; padding-right: 1vw" class="green-text"><span translate="OZ.TH2"></span></th>
+                                        <td style="text-align: left;  padding-left: 1vw"><span class="orange-text" translate="OZ.TD7"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <span translate="OZ.TD8"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" class="green-text"><span translate="OZ.TD9"></span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div style="height: 3vh" ng-show="!bigScreen"></div>
+                            <div flex layout layout-align="center top" >
+                                <table style="text-align: center">
+                                    <tr>
+                                        <th style="text-align: center"><span translate="OZ.TH1"></span></th>
+                                    </tr>
+                                    <tr>
+                                        <td><span translate="OZ.TD1"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span translate="OZ.TD2"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span translate="OZ.TD3"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span translate="OZ.TD4"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span translate="OZ.TD5"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span translate="OZ.TD6"></span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div layout>
+            <div flex>
+                <span translate="OZ.P4"></span> <a class="external-link" href="./files/rules.pdf" translate="OZ.A1"></a>
+            </div>
+        </div>
+    </div>
+
+</md-content>

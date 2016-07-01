@@ -1,1 +1,82 @@
-party
+<div ng-show="bigScreen" class="big-screen-short-image-container">
+    <img src="./images/kidsShort.jpg" style="width: 100%;" alt="Kids desktop"/>
+</div>
+<img src="./images/kidsShortMobile.png" style="width: 100%; padding: 0" ng-show="!bigScreen" alt="Kids short Mobile"/>
+
+<md-content ng-class="{'main-content-padding' : bigScreen}">
+    <div class="page-content">
+        <div style="text-align: center;">
+            <h2 class="custom-page-header" ng-class="{'custom-page-header-big-screen' : bigScreen}"
+                translate="PARTY"></h2>
+        </div>
+        <div layout>
+            <div flex>
+                <div>
+                    <img class="text-image" ng-class="{'full-width-img thick-border' : !bigScreen}" layout-margin
+                         ng-class="{'full-width' : !bigScreen}" src="./images/photos/45.jpg" alt="Photo"/>
+                </div>
+                <h3 class="green-text" translate="PARTY.H1"></h3>
+                <div style="float: left">
+                    <span class="green-text" translate="PARTY.H3"></span>
+                    <ul>
+                        <li><span translate="PARTY.LI1"></span></li>
+                        <li><span translate="PARTY.LI2"></span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div layout layout-padding layout-align="center top">
+            <div flex-gt-sm="60" class="panel panel-default" style="padding: 0">
+                <div class="panel-heading">
+                    <h3 class="green-text" translate="PARTY.H3"></h3>
+                    <span translate="PARTY.H4"></span>
+                </div>
+                <div class="panel-body">
+                    <table class="party-table">
+                        <tr>
+                            <td class="green-text" style="width: 30%"><span translate="PARTY.TD1"></span></td>
+                            <td><span translate="PARTY.TD2"></span></td>
+                        </tr>
+                        <tr style="background: #f5f5f5">
+                            <td class="green-text"><span translate="PARTY.TD3"></span></td>
+                            <td><span translate="PARTY.TD4"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="green-text"><span translate="PARTY.TD5"></span></td>
+                            <td>
+                                <ul>
+                                    <li><span translate="PARTY.TD5LI1"></span></li>
+                                    <li><span translate="PARTY.TD5LI2"></span></li>
+                                    <li><span translate="PARTY.TD5LI3"></span></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr style="background: #f5f5f5">
+                            <td class="green-text"><span translate="PARTY.TD6"></span></td>
+                            <td>
+                                <ul>
+                                    <li><span translate="PARTY.TD6LI1"></span></li>
+                                    <li><span translate="PARTY.TD6LI2"></span></li>
+                                    <li><span translate="PARTY.TD6LI3"></span></li>
+                                    <li><span translate="PARTY.TD6LI4"></span></li>
+                                    <li><span translate="PARTY.TD6LI5"></span></li>
+                                    <li><span translate="PARTY.TD6LI6"></span></li>
+                                    <li><span translate="PARTY.TD6LI7"></span></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="green-text"><span translate="PARTY.TD7"></span></td>
+                            <td>
+                                <ul>
+                                    <li><span translate="PARTY.TD7LI1"></span></li>
+                                    <li><span translate="PARTY.TD7LI2"></span></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</md-content>

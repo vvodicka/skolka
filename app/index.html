@@ -75,11 +75,44 @@
                                            aria-label="{{'OZ' | translate}}">
                                     <span translate="OZ"></span>
                                 </md-button>
-                                <md-button class="md-raised big-menu-item" href="#/dunajskaluzna"
-                                           ng-class="mediumScreenMenuItem"
-                                           aria-label="{{'DUNAJSKALUZNA' | translate}}">
-                                    <span translate="DUNAJSKALUZNA"></span>
-                                </md-button>
+                                <md-fab-speed-dial md-direction="down" md-open="dunajskaLuznaOpen"
+                                                   ng-class="mediumScreenMenuItem"
+                                                   ng-mouseenter="dunajskaLuznaOpen=true" ng-mouseleave="dunajskaLuznaOpen=false"
+                                                   class="md-scale md-fab multilevel-menu">
+                                    <md-fab-trigger>
+                                        <md-button class="big-menu-item-in-fab" href="#/dunajska-luzna"
+                                                   aria-label="{{'DUNAJSKALUZNA' | translate}}"
+                                                   ng-mouseenter="$mdOpenMenu($event)">
+                                            <span translate="DUNAJSKALUZNA"></span>
+                                        </md-button>
+                                    </md-fab-trigger>
+                                    <md-fab-actions>
+                                        <md-button class="sub-menu-item" href="#/dunajska-luzna/spaces" ng-class="mediumScreenMenuItem"
+                                                   aria-label="{{'DUNAJSKALUZNA.SPACES' | translate}}">
+                                            <span translate="DUNAJSKALUZNA.SPACES"></span>
+                                        </md-button>
+                                        <md-button class="sub-menu-item" href="#/dunajska-luzna/daily-schedule" ng-class="mediumScreenMenuItem"
+                                                   aria-label="{{'DUNAJSKALUZNA.DAILY_SCHEDULE' | translate}}">
+                                            <span translate="DUNAJSKALUZNA.DAILY_SCHEDULE"></span>
+                                        </md-button>
+                                        <md-button class="sub-menu-item" href="#/dunajska-luzna/activities" ng-class="mediumScreenMenuItem"
+                                                   aria-label="{{'DUNAJSKALUZNA.ACTIVITIES' | translate}}">
+                                            <span translate="DUNAJSKALUZNA.ACTIVITIES"></span>
+                                        </md-button>
+                                        <md-button class="sub-menu-item" href="#/dunajska-luzna/registration" ng-class="mediumScreenMenuItem"
+                                                   aria-label="{{'DUNAJSKALUZNA.REGISTRATION' | translate}}">
+                                            <span translate="DUNAJSKALUZNA.REGISTRATION"></span>
+                                        </md-button>
+                                        <md-button class="sub-menu-item" href="#/dunajska-luzna/pricelist" ng-class="mediumScreenMenuItem"
+                                                   aria-label="{{'DUNAJSKALUZNA.PRICELIST' | translate}}">
+                                            <span translate="DUNAJSKALUZNA.PRICELIST"></span>
+                                        </md-button>
+                                        <md-button class="sub-menu-item" href="#/dunajska-luzna/gallery" ng-class="mediumScreenMenuItem"
+                                                   aria-label="{{'DUNAJSKALUZNA.GALLERY' | translate}}">
+                                            <span translate="DUNAJSKALUZNA.GALLERY"></span>
+                                        </md-button>
+                                    </md-fab-actions>
+                                </md-fab-speed-dial>
                                 <md-fab-speed-dial md-direction="down" md-open="ruzinovOpen"
                                                    ng-class="mediumScreenMenuItem"
                                                    ng-mouseenter="ruzinovOpen=true" ng-mouseleave="ruzinovOpen=false"
@@ -116,7 +149,6 @@
                                                    aria-label="{{'RUZINOV.GALLERY' | translate}}">
                                             <span translate="RUZINOV.GALLERY"></span>
                                         </md-button>
-
                                     </md-fab-actions>
                                 </md-fab-speed-dial>
                                 <md-fab-speed-dial md-direction="down" md-open="aboutOpen"
@@ -296,13 +328,58 @@
                                             </div>
                                         </div>
                                     </uib-accordion-group>
-                                    <div class="panel panel-default" ng-click="toggleSidebar('sidebar');go('/dunajskaluzna')">
-                                        <div class="panel-heading mobile-menu-item">
-                                            <h4 class="panel-title">
-                                                <span translate="DUNAJSKALUZNA"></span>
-                                            </h4>
+                                    <uib-accordion-group is-open="dunajskaLuzna.open" heading="DUNAJSKALUZNA"
+                                                         template-url="group-template.html">
+                                        <div class="panel panel-default" ng-click="toggleSidebar('sidebar');go('/dunajska-luzna')">
+                                            <div class="panel-heading mobile-menu-item">
+                                                <h4 class="panel-title">
+                                                    <span translate="DUNAJSKALUZNA.INFORMATION"></span>
+                                                </h4>
+                                            </div>
                                         </div>
-                                    </div>
+                                        <div class="panel panel-default" ng-click="toggleSidebar('sidebar');go('/dunajska-luzna/spaces')">
+                                            <div class="panel-heading mobile-menu-item">
+                                                <h4 class="panel-title">
+                                                    <span translate="DUNAJSKALUZNA.SPACES"></span>
+                                                </h4>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default" ng-click="toggleSidebar('sidebar');go('/dunajska-luzna/daily-schedule')">
+                                            <div class="panel-heading mobile-menu-item">
+                                                <h4 class="panel-title">
+                                                    <span translate="DUNAJSKALUZNA.DAILY_SCHEDULE"></span>
+                                                </h4>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default" ng-click="toggleSidebar('sidebar');go('/dunajska-luzna/activities')">
+                                            <div class="panel-heading mobile-menu-item">
+                                                <h4 class="panel-title">
+                                                    <span translate="DUNAJSKALUZNA.ACTIVITIES"></span>
+                                                </h4>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default" ng-click="toggleSidebar('sidebar');go('/dunajska-luzna/registration')">
+                                            <div class="panel-heading mobile-menu-item">
+                                                <h4 class="panel-title">
+                                                    <span translate="DUNAJSKALUZNA.REGISTRATION"></span>
+                                                </h4>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default" ng-click="toggleSidebar('sidebar');go('/dunajska-luzna/pricelist')">
+                                            <div class="panel-heading mobile-menu-item">
+                                                <h4 class="panel-title">
+                                                    <span translate="DUNAJSKALUZNA.PRICELIST"></span>
+                                                </h4>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default" ng-click="toggleSidebar('sidebar');go('/dunajska-luzna/gallery')">
+                                            <div class="panel-heading mobile-menu-item">
+                                                <h4 class="panel-title">
+                                                    <span translate="DUNAJSKALUZNA.GALLERY"></span>
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </uib-accordion-group>
                                     <div class="panel panel-default" ng-click="toggleSidebar('sidebar');go('/oz')">
                                         <div class="panel-heading mobile-menu-item">
                                             <h4 class="panel-title">
@@ -402,6 +479,13 @@
 <script src="scripts/controllers/ruzinovgallery.js"></script>
 
 <script src="scripts/controllers/table-of-contents.js"></script>
+<script src="scripts/controllers/dunajskaluznaspaces.js"></script>
+<script src="scripts/controllers/dunajskaluznainformation.js"></script>
+<script src="scripts/controllers/dunajskaluznadailyschedule.js"></script>
+<script src="scripts/controllers/dunajskaluznaactivities.js"></script>
+<script src="scripts/controllers/dunajskaluznaregistration.js"></script>
+<script src="scripts/controllers/dunajskaluznapricelist.js"></script>
+<script src="scripts/controllers/dunajskaluznagallery.js"></script>
 <!-- endbuild -->
 
 </body>
