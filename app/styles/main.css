@@ -456,6 +456,10 @@ a.green-link:hover {
     width: 60%;
 }
 
+.table-of-contents {
+    margin-top: 2vh;
+}
+
 .table-of-contents .highlight-info-header {
     font-size: 1.5vw;
     font-weight: normal;
