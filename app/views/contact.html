@@ -1,1 +1,117 @@
-kontakt
+<div ng-show="bigScreen" class="big-screen-short-image-container">
+    <img src="./images/kidsShort.jpg" style="width: 100%;" alt="Kids desktop"/>
+</div>
+<img src="./images/kidsShortMobile.png" style="width: 100%; padding: 0" ng-show="!bigScreen" alt="Kids short Mobile"/>
+<md-content ng-class="{'main-content-padding' : bigScreen}">
+    <div class="page-content">
+        <div style="text-align: center;">
+            <h2 class="custom-page-header" ng-class="{'custom-page-header-big-screen' : bigScreen}"
+                translate="CONTACT"></h2>
+        </div>
+        <div layout="row" layout-sm="column" layout-xs="column" layout-padding>
+            <div flex>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="green-text" translate="CONTACT.H1"></h3>
+                    </div>
+                    <div class="panel-body">
+                        <p style="font-weight: bold" translate="CONTACT.P1"></p>
+                        <p translate="CONTACT.P2"></p>
+                        <p translate="CONTACT.P3"></p>
+                    </div>
+                    <div class="panel-footer" style="text-align: center">
+                        <button class="btn btn-success" ng-click="zoomToRuzinov()"><span translate="CONTACT.P7"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="green-text" translate="CONTACT.H2"></h3>
+                    </div>
+                    <div class="panel-body">
+                        <p style="font-weight: bold" translate="CONTACT.P4"></p>
+                        <p translate="CONTACT.P5"></p>
+                        <p translate="CONTACT.P6"></p>
+                    </div>
+                    <div class="panel-footer" style="text-align: center">
+                        <button class="btn btn-success" ng-click="zoomToDunajskaLuzna()"><span
+                                translate="CONTACT.P7"></span></button>
+                    </div>
+                </div>
+            </div>
+            <div id="map" flex>
+                <ui-gmap-google-map center='map.center' zoom='map.zoom' options='map.options'>
+                    <ui-gmap-marker
+                            idKey='1'
+                            coords='{ latitude: 48.140011, longitude: 17.171488 }'>
+                        <ui-gmap-window show="true">
+                            <div>
+                                <p translate="CONTACT.H1"></p>
+                            </div>
+                        </ui-gmap-window>
+                    </ui-gmap-marker>
+                    <ui-gmap-marker
+                            idKey='2'
+                            coords='{ latitude: 48.074811, longitude: 17.275818 }'>
+                        <ui-gmap-window show="true">
+                            <div>
+                                <p translate="CONTACT.H2"></p>
+                            </div>
+                        </ui-gmap-window>
+                    </ui-gmap-marker>
+                </ui-gmap-google-map>
+            </div>
+        </div>
+        <div layout="column" layout-padding>
+            <div flex>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="green-text" translate="CONTACT.H3"></h3>
+                    </div>
+                    <div class="panel-body">
+                        <div layout="row" layout-sm="column" layout-xs="column">
+                            <div flex>
+                                <p style="font-weight: bold" translate="CONTACT.P8"></p>
+                                <p translate="CONTACT.P9"></p>
+                                <p translate="CONTACT.P10"></p>
+                                <p translate="CONTACT.P11"></p>
+                                <p translate="CONTACT.P12"></p>
+                                <p translate="CONTACT.P13"></p>
+                                <p translate="CONTACT.P14"></p>
+                                <p translate="CONTACT.P15"></p>
+                                <p translate="CONTACT.P16"></p>
+                            </div>
+                            <div class="pad2vh"></div>
+                            <div flex>
+                                <p class="green-text bold-text" translate="CONTACT.P17"></p>
+                                <p translate="CONTACT.P18"></p>
+                                <p class="green-text bold-text" translate="CONTACT.P19"></p>
+                                <p translate="CONTACT.P20"></p>
+                                <p class="green-text" translate="CONTACT.P21"></p>
+                                <p><span translate="CONTACT.P22"></span> <a class="bold-text" href="mailto:{{'CONTACT.MAIL1' | translate}}" ><span translate="CONTACT.MAIL1"></span></a></p>
+                                <p class="green-text" translate="CONTACT.P23"></p>
+                                <p><span translate="CONTACT.P22"></span> <a class="bold-text" href="mailto:{{'CONTACT.MAIL2' | translate}}" ><span translate="CONTACT.MAIL2"></span></a></p>
+                                <p class="green-text" translate="CONTACT.P25"></p>
+                                <p><span translate="CONTACT.P22"></span> <a class="bold-text" href="mailto:{{'CONTACT.MAIL3' | translate}}" ><span translate="CONTACT.MAIL3"></span></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--<div flex>-->
+                <!--<div class="panel panel-default">-->
+                    <!--<div class="panel-heading">-->
+                        <!--<h3 class="green-text" translate="CONTACT.H4"></h3>-->
+                    <!--</div>-->
+                    <!--<div class="panel-body">-->
+                        <!--<form action="MAILTO:vladislav.vodicka@gmail.com">-->
+                            <!--<p><label for="subject"><span translate="CONTACT.YOUR_EMAIL"></span></label> <input id="subject" type="email"/></p>-->
+                            <!--<p><label for="message"><span translate="CONTACT.MESSAGE"></span></label> <textarea style="width: 100%" id="message" rows="10"></textarea></p>-->
+                            <!--<input type="submit" class="btn btn-success" />-->
+                        <!--</form>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+    </div>
+</md-content>

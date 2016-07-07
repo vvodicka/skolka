@@ -203,7 +203,6 @@ var translationsSk = {
         TD7LI1: 'zameranie oslavy na konkrétnu tému (napríklad macko Pú, ...), facelifting, tvorivé dielne, divadelné predstavenie, šaša, kúzelníka a mnoho iných atrakcii podľa Vašich predstáv',
         TD7LI2: 'pri doobjednaní akejkoľvek atrakcie sa doba oslavy predlžuje bez akýchkoľvek príplatkov za hodiny navyše'
     },
-    CONTACT: 'Kontakt',
     I_WANT_TO_APPLY_MY_CHILD: 'Chcem prihlásiť svoje dieťa',
     FOOTER: '&copy; Štvorlístok',
     HIGHLIGHTS: {
@@ -812,8 +811,44 @@ var translationsSk = {
             LI5: 'úrazové poistenie dieťaťa počas pobytu v zariadení'
         },
         GALLERY: 'Fotogaléria'
+    },
+    CONTACT: {
+        CONTACT :'Kontakt',
+        H1: 'Ružinov',
+        H2: 'Dunajská Lužná',
+        P1 : 'Škôlka a jasle štvorlístok Bratislava - Ružinov (Prievoz)',
+        P2 : 'Domové role 61',
+        P3 : '821 05  Bratislava',
+        P4: 'Škôlka a jasle štvorlístok Dunajská Lužná časť Nová Lipnica',
+        P5: 'Višňová ulica',
+        P6: '900 42 Dunajská Lužná',
+        P7: 'Priblížiť na mape',
+        H3: 'Fakturačné údaje a kontakty',
+        P8 : 'Detské centrum štvorlístok s. r. o.',
+        P9 : 'Domové role 61',
+        P10 : '821 05  Bratislava',
+        P11 : 'IČO: 46296255',
+        P12 : 'DIČ: 2023321696',
+        P13 : 'Obchodný register:	Bratislava I',
+        P14 : 'Vložka č.: 75052/B',
+        P15 : 'Oddiel: Sro',
+        P16 : 'Obvodný úrad: Bratislava',
+        P17 : 'Zuzana Polláková - konateľka/riaditeľka',
+        P18 : 't.č.: +421 903 154 156',
+        P19 : 'Radoslav Filač - konateľ/riaditeľ',
+        P20 : 't.č.: +421 902 832 430',
+        P21 : 'Máte záujem u nás umiestniť svoje dieťa?',
+        P22 : 'napíšte nám na',
+        P23 : 'Máte záujem u nás pracovať?',
+        P25 : 'Chcete nám niečo ponúknuť?',
+        MAIL1 : 'info@detske-centrum.sk',
+        MAIL2 : 'pollakova@detske-centrum.sk',
+        MAIL3 : 'radoslav.filac@gmail.com',
+        H4: 'Alebo nás kontaktujte pomocou tohto formuláru...',
+        YOUR_EMAIL: 'Vaša e-mailová adresa',
+        MESSAGE: 'Správa'
+        
     }
-
 };
 
 var translationsEn = {
