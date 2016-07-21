@@ -36,6 +36,10 @@ angular
                 templateUrl: 'views/about.html',
                 controller: 'AboutCtrl'
             })
+            .when('/others', {
+                templateUrl: 'views/others.html',
+                controller: 'OthersCtrl'
+            })
             .when('/ruzinov', {
                 templateUrl: 'views/ruzinov/ruzinov.html',
                 controller: 'RuzinovCtrl'
@@ -145,11 +149,14 @@ var translationsSk = {
     HEADER: 'Štvorlístok',
     SUB_HEADER: 'Materská škôlka a jasle',
     NAV_HEADER: 'Skryť navigáciu',
-    MOTTO: '"DIEŤA JE ZVIDITEĽNENÁ LÁSKA", Novalis',
+    MOTTO: '"DIEŤA JE ZVIDITEĽNENÁ LÁSKA" Novalis',
     HOME: 'Domov',
     ABOUT_US: 'O nás',
+    OTHERS : 'Čo ešte ponúkame',
+    OTHERS_INDEX : 'Zoznam našich aktivít',
     WHO_WE_ARE: 'Kto sme',
     HEALTHY_KINDERGARTEN_TOOLTIP: 'Základom zdravého vývoja dieťaťa je vyvážená kombinácia zdravej stravy a pohybu.',
+    OZ_TOOLTIP : 'Naše súkromné zariadenie štvorlístok vykonáva aj činnosť OZ Štvorlístkovo',
     OZ: {
         OZ: 'OZ štvorlístkovo',
         H1: 'Milí rodičia, priatelia a známi,',
@@ -174,6 +181,7 @@ var translationsSk = {
     HOTEL_TOOLTIP: 'Doprajte vašim deťom výnimočnú starostlivosť aj cez víkendy',
     MONTESSORI_LINK: 'Maria Montessori',
     MONTESSORI_TOOLTIP: 'Spoznajte výnimočnú Mariu Montessori',
+    PARTY_TOOLTIP: 'Máte záujem o rozprávkovú oslavu pre Vaše dieťa?',
     PARTY: {
         PARTY: 'Detská oslava',
         H1: 'Máte záujem o rozprávkovú oslavu pre Vaše dieťa?',
@@ -181,7 +189,7 @@ var translationsSk = {
         LI1: 'zorganizovať oslavu počas víkendov u nás v zariadeniach',
         LI2: 'zorganizovať program pre Vás tam, kde budete potrebovať ',
         P1: 'Kontaktujte nás ohľadne cenovej ponuky',
-        H3: 'Detská oslava v našich zariadenia',
+        H3: 'Detská oslava v našich zariadeniach',
         H4: '(podľa výberu Bratislava, alebo Dunajská Lužná)',
         TD1: 'Počet detí',
         TD2: '5detí + oslávenec',
@@ -227,7 +235,7 @@ var translationsSk = {
     ABOUT: {
         HEADER: 'Dovoľte nám, aby sme sa Vám predstavili...',
         P1: 'Dovoľte nám, aby sme sa Vám predstavili...',
-        P2: 'Škôlka a jasle Štvorlístok plné detí sú miestom, ktoré nás robí naozaj šťastnými a naplnenými. Našou prácou sa snažíme deťom odovzdať praktické skúsenosti a poznania na ktorých môžu v budúcnosti stavať. Sme tím mladých ľudí, ktorí usmerňujú Vaše detí, a vedú ich k správnym postojom do života. Máme deti, milujeme ich, chceme im dať to najlepšie, a to znamená okrem iného aj maximálnu starostlivosť, rozumné postoje a dobré vzdelanie. ',
+        P2: 'Škôlka a jasle štvorlístok plné detí sú miestom, ktoré nás robí naozaj šťastnými a naplnenými. Našou prácou sa snažíme deťom odovzdať praktické skúsenosti a poznania na ktorých môžu v budúcnosti stavať. Sme tím mladých ľudí, ktorí usmerňujú Vaše detí, a vedú ich k správnym postojom do života. Máme deti, milujeme ich, chceme im dať to najlepšie, a to znamená okrem iného aj maximálnu starostlivosť, rozumné postoje a dobré vzdelanie. ',
         P3: 'Naša materská škôlka a jasličky štvorlístok vznikli z dôvodu potreby zosúladenia rodinného a pracovného života zamestnaných rodičov. Ranné detstvo považujeme za kľúčové a centrálne obdobie pre ich životnú cestu a formovanie osobnosti, a práve preto si myslíme, že je veľmi dôležité aby toto obdobie dieťa prežilo v podnetnom a láskavom prostredí. V spolupráci s rodičmi napomáhame deťom formovať si zdravé korene, ktoré z deti vytvoria fyzicky, emocionálne, mentálne, citovo rozvinuté a charakterové osobnosti. ',
         P4: 'Filozofia, ktorou sa riadime je pomôcť rodine vychovávať a rozvíjať samostatné, tvoriace a zdravo sebavedomé deti. Charakterizuje nás rodinná atmosféra v rodinnom prostredí (deti sa u nás cítia ako doma) kde je pre dieťa radosť byť. Naším cieľom je vytvárať inšpiratívne a láskyplné prostredie pre prirodzený a radostný rozvoj detskej osobnosti, podporovať ich prirodzený vývoj opierajúci sa o vlastnú skúsenosť, sebestačnosť, sebadôveru, vzájomný rešpekt a lásku. Zároveň však vedieme deti k samostatnosti a zodpovednosti. Pripravujeme ich na dôležité životné chvíle (napr. vstup do materskej škôlky, vstup do základnej školy) a nenásilnou formou sa učia nadväzovať sociálne vzťahy, spoznávať okolitý svet a učia sa rešpektovať seba samých ako aj druhých. Rešpektujeme senzitívne obdobia a potreby detí, poskytujeme im individuálny prístup a napomáhame im k spoznaniu pozitívnej formy vlastného sebavyjadrenia. ',
         MOTTO_HEADER: 'OTVÁRAME DEŤOM SVET POZNÁVANIA A ŠÍRIME LÁSKU'
@@ -376,6 +384,7 @@ var translationsSk = {
         LI17: 'plavecký výcvik',
         LI18: 'korčuľovanie',
         PANEL_FOOTER1: 'Krúžky nám zabezpečuje OZ krúžkovo:',
+        PANEL_FOOTER2: ' a happy kids:',
         H5: 'Záhradka detí',
         LI19: 'v našich zariadeniach máme ovocnú, zeleninovú a bylinkovú záhradku, ktorej plody sú výsledkom práce detí',
         LI20: 'deti sa učia ako si z malinkého semienka dokážeme vypestovať zeleninu a rôzne bylinky',
@@ -392,6 +401,7 @@ var translationsSk = {
         LI3: 'Rodič na úrad dokladá občiansky preukaz a rodný list dieťaťa',
         LI4: 'Zmluvu o poskytovaní starostlivosti o dieťa uzatvorenú s poskytovateľom starostlivosti'
     },
+    STATE_BONUS_TOOLTIP: 'Štát poskytuje príspevok rodičom alebo zákonnému zástupcovi dieťaťa na úhradu za starostlivosť o dieťa',
     RUZINOV: {
         TABLE_OF_CONTENTS: 'Kam ďalej?',
         RUZINOV: 'Ružinov',
@@ -451,7 +461,7 @@ var translationsSk = {
                 TD3_3: 'učenie sa básní a piesní',
                 TD3_4: 'ranná elipsa/lekcia dňa',
                 TD3_5: 'edukačné aktivity: výtvarné, hudobné, hudobno-pohybové, grafomotorické, dramatické, atď., aktivity realizované formou hry',
-                TD3_6: 'vzdelávacia činnosť, didaktický výučba',
+                TD3_6: 'vzdelávacia činnosť, didaktická výučba',
                 TH4: '09:05 - 09:35',
                 TD4_1: 'starostlivosť o jedáleň, príprava na desiatu (vykonáva dieťa)',
                 TD4_2: 'osobná hygiena',
@@ -491,7 +501,7 @@ var translationsSk = {
                 TD3_3: 'učenie sa básní a piesní',
                 TD3_4: 'ranná elipsa/lekcia dňa',
                 TD3_5: 'edukačné aktivity: výtvarné, hudobné, hudobno-pohybové, grafomotorické, dramatické, atď., aktivity realizované formou hry',
-                TD3_6: 'vzdelávacia činnosť, didaktický výučba',
+                TD3_6: 'vzdelávacia činnosť, didaktická výučba',
                 TH4: '10:00 - 10:30',
                 TD4_1: 'osobná hygiena',
                 TD4_2: 'desiata',
@@ -533,10 +543,10 @@ var translationsSk = {
             P2: 'V prípade zápisu dieťaťa do súkromnej škôlky alebo jaslí štvorlístok na obdobie 3. mesiace dopredu a viac sa uzatvára zmluva o uzatvorení budúcej zmluvy.',
             P3: 'Poplatok za zápisné je v sume <b>10,- Eur</b> (zahŕňa vystavenie dokumentov potrebných pre prijatie dieťaťa do zariadenia - poplatok sa uhrádza v prvej vystavenej faktúre)',
             H1: 'Akcia',
-            H2: 'Pre zápis od <b>15. 06. 2016 do 15. 07. 2016</b> na nový školský rok',
-            P4: 'Pre deti vo veku 5r. a viac	<b>zľava 20%</b> (na prvých 6 mesiacov školného/platí pre celodenný celomesačný paušál)',
-            H3: 'Pre zápis po <b>15. 07. 2016</b> na nový školský rok ',
-            P5: 'Pre deti vo veku 5r. a viac <b>zľava 10%</b> (na prvých 6 mesiacov školného/platí pre celodenný celomesačný paušál)'
+            H2: 'Pre <b>prvých 6</b> prihlásených detí ',
+            P4: 'Zľava <b>10%</b> z mesačného paušálu na prvých 5 mesiacov.',
+            H3: 'Pre <b>ďalších 6</b> prihlásených detí',
+            P5: 'Zľava <b>5%</b> z mesačného paušálu na prvých 5 mesiacov.'
         },
         PRICELIST: {
             PRICELIST: 'Cenník',
@@ -552,9 +562,9 @@ var translationsSk = {
             HALF_MONTH: 'Skrátená dochádzka',
             P2: '(12x mesačne)',
             PRICE3: '310€',
-            H4: 'Štvorlístkový škôlkari',
+            H4: 'Štvorlístkoví škôlkari',
             P3: '(deti staršie ako 3 roky)',
-            TIME3: '07:00-17:00',
+            TIME3: '07:00-12:45',
             PRICE4: '300€',
             PRICE5: '370€',
             PRICE6: '290€',
@@ -633,9 +643,10 @@ var translationsSk = {
             LI5 : 'matematiky',
             P4: 'Usilujeme sa usporiadať denné činnosti tak, aby bol život detí v štvorlístku radostný a zaujímavý.',
             ANTS: {
-                TH1: '06:30 - 08:00',
+                TH1: '06:30 - 07:40',
                 TD1_1: 'ranná družina',
                 TD1_2: 'schádzanie detí',
+                TD1_3 : 'delenie detí do skupiniek',
                 TH2: '08:00 - 08:10',
                 TD2_1: 'ranná rozcvička',
                 TH3: '08:10 - 08:40',
@@ -665,7 +676,7 @@ var translationsSk = {
                 TD11_2 : 'postupný odchod detí domov'
             },
             SUNS: {
-                TH1: '07:00 - 08:00',
+                TH1: '06:30 - 08:00',
                 TD1_1: 'ranná družina',
                 TD1_2: 'schádzanie detí',
                 TD1_3: 'príprava prostredia/starostlivosť o triedy',
@@ -683,7 +694,7 @@ var translationsSk = {
                 TD3_3: 'učenie sa básní a piesní',
                 TD3_4: 'ranná elipsa/lekcia dňa',
                 TD3_5: 'edukačné aktivity: výtvarné, hudobné, hudobno-pohybové, grafomotorické, dramatické, atď., aktivity realizované formou hry',
-                TD3_6: 'vzdelávacia činnosť, didaktický výučba',
+                TD3_6: 'vzdelávacia činnosť, didaktická výučba',
                 TH4: '09:05 - 09:35',
                 TD4_1: 'starostlivosť o jedáleň, príprava na desiatu (vykonáva dieťa)',
                 TD4_2: 'osobná hygiena',
@@ -705,7 +716,7 @@ var translationsSk = {
                 TD10_3: 'odchod detí domov'
             },
             FROGS: {
-                TH1: '07:00 - 08:00',
+                TH1: '06:30 - 08:00',
                 TD1_1: 'ranná družina',
                 TD1_2: 'schádzanie detí',
                 TD1_3: 'príprava prostredia/starostlivosť o triedy',
@@ -723,7 +734,7 @@ var translationsSk = {
                 TD3_3: 'učenie sa básní a piesní',
                 TD3_4: 'ranná elipsa/lekcia dňa',
                 TD3_5: 'edukačné aktivity: výtvarné, hudobné, hudobno-pohybové, grafomotorické, dramatické, atď., aktivity realizované formou hry',
-                TD3_6: 'vzdelávacia činnosť, didaktický výučba',
+                TD3_6: 'vzdelávacia činnosť, didaktická výučba',
                 TH4: '10:00 - 10:30',
                 TD4_1: 'osobná hygiena',
                 TD4_2: 'desiata',
@@ -847,8 +858,8 @@ var translationsSk = {
         H4: 'Alebo nás kontaktujte pomocou tohto formuláru...',
         YOUR_EMAIL: 'Vaša e-mailová adresa',
         MESSAGE: 'Správa'
-        
-    }
+    },
+    SHOW : 'Zobraziť'
 };
 
 var translationsEn = {

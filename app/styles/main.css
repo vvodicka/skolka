@@ -55,6 +55,7 @@ body {
     font-size: 1vw;
     background: orange !important;
     float: left;
+    z-index: 999;
 }
 
 .sub-menu-tooltip {

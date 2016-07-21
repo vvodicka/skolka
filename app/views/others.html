@@ -1,0 +1,82 @@
+<div ng-show="bigScreen" class="big-screen-short-image-container">
+    <img src="./images/kidsShort.jpg" style="width: 100%;" alt="Kids desktop"/>
+</div>
+
+<md-content ng-class="{'main-content-padding' : bigScreen}">
+    <div class="page-content">
+        <div style="text-align: center;">
+            <h2 class="custom-page-header" ng-class="{'custom-page-header-big-screen' : bigScreen}"
+                translate="OTHERS_INDEX"></h2>
+        </div>
+
+        <md-content class="md-padding" layout-xs="column" layout-sm="column" layout="row">
+            <md-card flex style="background: #F5F5F5">
+                <md-card-title>
+                    <md-card-title-text>
+                        <h3 class="green-text" translate="HOTEL"></h3>
+                        <span class="md-subhead" translate="HOTEL_TOOLTIP"></span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-button class="md-fab md-primary" style="background: #658202"><span translate="SHOW"
+                                                                                           ng-click="go('/hotel')"></span>
+                    </md-button>
+                </md-card-actions>
+            </md-card>
+            <md-card flex style="background: #F5F5F5">
+                <md-card-title>
+                    <md-card-title-text>
+                        <h3 class="green-text" translate="HEALTHY_KINDERGARTEN"></h3>
+                        <span class="md-subhead" translate="HEALTHY_KINDERGARTEN_TOOLTIP"></span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-button class="md-fab md-primary" style="background: #658202"><span translate="SHOW"
+                                                                                           ng-click="go('/healthy-kindergarten')"></span>
+                    </md-button>
+                </md-card-actions>
+            </md-card>
+            <md-card flex style="background: #F5F5F5">
+                <md-card-title>
+                    <md-card-title-text>
+                        <h3 class="green-text" translate="STATE_BONUS"></h3>
+                        <span class="md-subhead" translate="STATE_BONUS_TOOLTIP"></span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-button class="md-fab md-primary" style="background: #658202"><span translate="SHOW"
+                                                                                           ng-click="go('/state-bonus')"></span>
+                    </md-button>
+                </md-card-actions>
+            </md-card>
+        </md-content>
+        <md-content class="md-padding" layout-xs="column" layout-sm="column" layout="row">
+            <md-card flex style="background: #F5F5F5">
+                <md-card-title>
+                    <md-card-title-text>
+                        <h3 class="green-text" translate="PARTY"></h3>
+                        <span class="md-subhead" translate="PARTY_TOOLTIP"></span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-button class="md-fab md-primary" style="background: #658202"><span translate="SHOW"
+                                                                                           ng-click="go('/party')"></span>
+                    </md-button>
+                </md-card-actions>
+            </md-card>
+            <md-card flex style="background: #F5F5F5">
+                <md-card-title>
+                    <md-card-title-text>
+                        <h3 class="green-text" translate="OZ"></h3>
+                        <span class="md-subhead" translate="OZ_TOOLTIP"></span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-button class="md-fab md-primary" style="background: #658202"><span translate="SHOW"
+                                                                                           ng-click="go('/oz')"></span>
+                    </md-button>
+                </md-card-actions>
+            </md-card>
+        </md-content>
+    </div>
+</md-content>
