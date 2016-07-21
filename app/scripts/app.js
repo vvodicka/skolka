@@ -24,7 +24,9 @@ angular
         'jkuri.gallery',
         'ui.select',
         'ui.bootstrap',
-        'uiGmapgoogle-maps'
+        'uiGmapgoogle-maps',
+        'services',
+        'config'
     ])
     .config(function ($routeProvider, $translateProvider) {
         $routeProvider

@@ -530,3 +530,7 @@ a.green-link:hover {
 .party-table tr:not(:first-child) td{
     padding-top: 1vh;
 }
+
+.gallery-image {
+    width: 500px;
+}
