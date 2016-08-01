@@ -1,7 +1,13 @@
 <img src="./images/kidsMobile.png" style="width: 100%; padding: 0" ng-show="!bigScreen" alt="Kids Mobile"/>
 <div ng-show="bigScreen" class="big-screen-image-container">
     <img src="./images/kidsDesktop.jpg" style="width: 100%;" alt="Kids desktop"/>
-    <div ng-class="{'main-content-padding' : bigScreen}" class="big-screen-motto" translate="MOTTO"></div>
+    <div ng-class="{'main-content-padding' : bigScreen}" class="big-screen-motto">
+        <span translate="MOTTO"></span>
+        <a class="fb-link external-link" href="https://www.facebook.com/sukromnaskolka" target="_blank">
+            <img style="height: 2vw" src="../images/FB-f-Logo__blue_512.png">
+            <span translate="FB"></span>
+        </a>
+    </div>
     <div ng-class="{'main-content-padding' : bigScreen}" class="big-screen-header-montessori-link">
         <a href="#/montessori"><span translate="MONTESSORI.LINK1"></span> <span class="montessori-highlight"
                                                                                 translate="MONTESSORI.LINK2"></span>
@@ -53,7 +59,9 @@
         <div layout>
             <div flex="85" flex-md="75" flex-sm="100" flex-xs="100">
                 <p translate="HOMEPAGE.P1"></p>
-                <p><span translate="HOMEPAGE.P2"></span> <a class="green-link" href="#/montessori" translate="HOMEPAGE.A1"></a> <span translate="HOMEPAGE.P2_1"></span> </p>
+                <p><span translate="HOMEPAGE.P2"></span> <a class="green-link" href="#/montessori"
+                                                            translate="HOMEPAGE.A1"></a> <span
+                        translate="HOMEPAGE.P2_1"></span></p>
                 <p translate="HOMEPAGE.P3"></p>
                 <p translate="HOMEPAGE.P4"></p>
                 <p translate="HOMEPAGE.P5"></p>

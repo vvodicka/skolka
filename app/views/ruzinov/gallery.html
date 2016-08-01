@@ -8,7 +8,22 @@
             <h2 class="custom-page-header" ng-class="{'custom-page-header-big-screen' : bigScreen}"
                 translate="RUZINOV.GALLERY"></h2>
         </div>
-        <ng-gallery images="images"></ng-gallery>
+        <div layout layout-padding>
+            <div flex class="panel panel-default" style="padding: 0">
+                <div class="panel-heading">
+                    <span translate="RUZINOV.GALLERY.H1"></span>
+                    <a class="external-link" style="color: #3b5998" href="https://www.facebook.com/sukromnaskolka" target="_blank">
+                        <span translate="RUZINOV.GALLERY.A1"></span>
+                        <img style="height: 1.5vw" src="../images/FB-f-Logo__blue_512.png">
+                    </a>
+                </div>
+                <div class="panel-body">
+                    <ul class="custom-ul">
+                        <ng-gallery images="images"></ng-gallery>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
     <div ng-include src="'./views/ruzinov/table-of-contents.html'"></div>
 </md-content>

@@ -185,6 +185,13 @@ md-toolbar.top-toolbar {
     font-size: 1.5vw;
 }
 
+.fb-link {
+    height: 45px;
+    float: right;
+    color: white !important;
+    text-align: right;
+}
+
 .mobile-screen-motto {
     font-size: 2em;
     text-align: center;
@@ -533,4 +540,14 @@ a.green-link:hover {
 
 .gallery-image {
     width: 500px;
+}
+
+.fb-icon {
+    position: relative;
+    bottom: 15vw;
+    margin-bottom: -2vw;
+    left: 12vw;
+    display: inline-block;
+    color: white;
+    height: 2vw;
 }
