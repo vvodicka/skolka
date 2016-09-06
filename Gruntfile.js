@@ -76,7 +76,14 @@ module.exports = function (grunt) {
                     context: '/skolka-api',
                     host: 'krt.yweb.sk',
                     port: 80,
-                    changeOrigin: true
+                    secure: false,
+                    https: false,
+                    xforward: false,
+                    rejectUnauthorized: false,
+                    changeOrigin: true,
+                    headers: {
+                        host: 'krt.yweb.sk'
+                    }
                 }
             ],
             livereload: {
