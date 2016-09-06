@@ -8,12 +8,14 @@
  * Controller of the skolkaApp
  */
 angular.module('skolkaApp')
-    .controller('RuzinovgalleryCtrl', function ($scope, Gallery, IMAGES_URL) {
+    .controller('RuzinovgalleryCtrl', function ($scope, Gallery) {
         $scope.images = [];
 
-        Gallery.getFolderContents("ruzinov").then(function (response) {
-            response.map(function (image) {
-                $scope.images.push({thumb: IMAGES_URL + '/ruzinov/' + image, img: IMAGES_URL + '/ruzinov/' + image})
+        Gallery.getPaths().then(function(paths) {
+            Gallery.getFolderContents("ruzinov").then(function (response) {
+                response.map(function (image) {
+                    $scope.images.push({thumb: paths.IMAGES_URL + '/ruzinov/' + image, img: paths.IMAGES_URL + '/ruzinov/' + image})
+                });
             });
         });
     });

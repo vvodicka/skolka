@@ -25,8 +25,7 @@ angular
         'ui.select',
         'ui.bootstrap',
         'uiGmapgoogle-maps',
-        'services',
-        'config'
+        'services'
     ])
     .config(function ($routeProvider, $translateProvider) {
         $routeProvider
