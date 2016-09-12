@@ -23,6 +23,12 @@ angular.module('skolkaApp')
             $scope.mediumScreen = medium;
         });
 
+        $scope.$watch(function () {
+            return $mdMedia('lg');
+        }, function (largeScreen) {
+            $scope.largeScreen = largeScreen;
+        });
+
         $scope.selectedLanguage = {code : 'sk'};
 
         $scope.languages = [

@@ -509,6 +509,17 @@ a.green-link:hover {
     border: .3vw solid orange;
 }
 
+.text-image-fader {
+    width: 30%;
+    float: left;
+    border: .3vw solid orange;
+    margin-right: 1vw;
+}
+
+.text-image-fader ul {
+    border: 0.1vw solid orange;
+}
+
 .orange-text {
     color: orange;
 }

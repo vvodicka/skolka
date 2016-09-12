@@ -866,7 +866,7 @@ var translationsSk = {
         P25: 'Chcete nám niečo ponúknuť?',
         MAIL1: 'info@detske-centrum.sk',
         MAIL2: 'pollakova@detske-centrum.sk',
-        MAIL3: 'radoslav.filac@gmail.com',
+        MAIL3: 'filac@detske-centrum.sk ',
         H4: 'Alebo nás kontaktujte pomocou tohto formuláru...',
         YOUR_EMAIL: 'Vaša e-mailová adresa',
         MESSAGE: 'Správa',
