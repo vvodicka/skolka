@@ -10,7 +10,7 @@
 angular.module('skolkaApp')
   .controller('CommonCtrl', function ($scope, $mdMedia, $translate, $location, $timeout) {
 
-    $scope.isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+    $scope.isSafari = false;
 
     $scope.$watch(function () {
       return $mdMedia('gt-sm');
