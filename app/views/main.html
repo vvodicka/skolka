@@ -1,14 +1,14 @@
 <img src="./images/kidsMobile.png" style="width: 100%; padding: 0" ng-show="!bigScreen" alt="Kids Mobile"/>
 <div ng-show="bigScreen" class="big-screen-image-container">
     <img src="./images/kidsDesktop.jpg" style="width: 100%;" alt="Kids desktop"/>
-    <div ng-class="{'main-content-padding' : bigScreen}" class="big-screen-motto">
+    <div ng-class="{'main-content-padding' : bigScreen, 'big-screen-motto-safari' : isSafari}" class="big-screen-motto">
         <span translate="MOTTO"></span>
         <a class="fb-link external-link" href="https://www.facebook.com/sukromnaskolka" target="_blank">
-            <img style="height: 2vw" src="./images/fb.png">
+            <img style="height: 1.2em" src="./images/fb.png">
             <span translate="FB"></span>
         </a>
     </div>
-    <div ng-class="{'main-content-padding' : bigScreen}" class="big-screen-header-montessori-link">
+    <div ng-class="{'main-content-padding' : bigScreen, 'big-screen-header-montessori-link-safari' : isSafari}" class="big-screen-header-montessori-link">
         <a href="#/montessori"><span translate="MONTESSORI.LINK1"></span> <span class="montessori-highlight"
                                                                                 translate="MONTESSORI.LINK2"></span>
         </a>
@@ -103,7 +103,7 @@
                 <p translate="HOMEPAGE.P4"></p>
                 <p translate="HOMEPAGE.P5"></p>
             </div>
-            <div flex layout-margin ng-if="bigScreen">
+            <div flex="30" layout-margin ng-if="bigScreen">
                 <img class="small-homepage-image" src="./images/photos/1.jpg" alt="img1"/>
                 <img class="small-homepage-image" src="./images/photos/3.jpg" alt="img2"/>
                 <img ng-show="mediumScreen" class="small-homepage-image" src="./images/photos/4.jpg" alt="img3"/>

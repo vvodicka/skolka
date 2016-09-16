@@ -160,6 +160,10 @@ md-toolbar.top-toolbar {
     height: 105px;
 }
 
+md-toolbar.top-toolbar-safari {
+    padding-right: 25%;
+}
+
 .main-header {
     font-size: 2.5em;
     color: #90b702;
@@ -189,6 +193,11 @@ md-toolbar.top-toolbar {
     font-size: 1.5vw;
 }
 
+.big-screen-motto-safari {
+    bottom: 50px !important;
+    font-size: 1.5em;
+}
+
 .fb-link {
     height: 45px;
     float: right;
@@ -207,6 +216,11 @@ md-toolbar.top-toolbar {
     bottom: 18vw;
     text-align: right;
     font-size: 1.5vw;
+}
+
+.big-screen-header-montessori-link-safari {
+    bottom: 180px !important;
+    font-size: 1.5em;
 }
 
 .big-screen-header-montessori-link a {
