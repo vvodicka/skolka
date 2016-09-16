@@ -17,6 +17,12 @@ angular.module('skolkaApp')
         });
 
         $scope.$watch(function () {
+            return $mdMedia('gt-lg');
+        }, function (big) {
+            $scope.veryBigScreen = big;
+        });
+
+        $scope.$watch(function () {
             return $mdMedia('md');
         }, function (medium) {
             $scope.mediumScreenMenuItem = medium ? 'medium-screen-menu-item' : '';
