@@ -59,10 +59,11 @@
                                 <img class="logo-img" src="images/leaf.png" alt="Leaf"/>
                             </div>
                             <div class="big-screen-menu" style="height: 85px; width: 100%"
-                                 ng-if="bigScreen">
+                                 ng-if="bigScreen"
+                            ng-class="{'very-big-screen' : veryBigScreen}">
                                 <!--polozky nech su v opacnom smere ako ich chceme-->
                                 <md-button class="md-raised big-menu-item" href="#/contact"
-                                           ng-class="mediumScreenMenuItem"
+                                           ng-class="{mediumScreenMenuItem}"
                                            aria-label="{{'CONTACT' | translate}}">
                                     <span translate="CONTACT"></span>
                                 </md-button>

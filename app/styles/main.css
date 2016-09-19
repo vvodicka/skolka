@@ -118,6 +118,10 @@ md-tooltip {
     text-align: right;
 }
 
+.very-big-screen .md-button {
+    line-height: 5vh;
+}
+
 .mobile-menu-list {
     padding-left: 0;
     text-align: center;
