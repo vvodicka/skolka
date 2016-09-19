@@ -152,8 +152,8 @@ md-tooltip {
 }
 
 md-toolbar.top-toolbar {
-    background: white;
     height: 105px;
+    background: rgb(250,250,250);
 }
 
 md-toolbar.top-toolbar-safari {
