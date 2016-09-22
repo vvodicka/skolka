@@ -19,7 +19,7 @@ angular.module('skolkaApp')
                 };
 
                 $scope.showMap = true;
-            }, 100);
+            }, 0);
         });
 
         $scope.zoomToRuzinov = function () {

@@ -568,7 +568,7 @@ var translationsSk = {
             PRICE3: '310€',
             H4: 'Štvorlístkoví škôlkari',
             P3: '(deti staršie ako 3 roky)',
-            TIME3: '07:00-12:45',
+            TIME3: '07:00-17:00',
             PRICE4: '300€',
             PRICE5: '370€',
             PRICE6: '290€',
