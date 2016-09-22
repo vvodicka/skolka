@@ -96,14 +96,7 @@ md-tooltip {
     font-size: 1em;
 }
 
-.angular-google-map {
-    height: 100%;
-}
 
-.angular-google-map-container {
-    height: 100%;
-    width: 100%;
-}
 
 .mobile-menu-item {
     color: #658202 !important;
@@ -465,6 +458,7 @@ a.green-link:hover {
 
 .angular-google-map-container {
     width: 100%;
+    display: flex;
 }
 
 .angular-google-map-container:before{
